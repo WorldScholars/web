@@ -69,7 +69,9 @@ index = do
 		br
 		"Here are a few of the places we have been."
 	H.div ! class_ "clients-logo wow fadeIn" ! dataAttribute "wow-duration" "1000ms" ! dataAttribute "wow-delay" "600ms" $ do
-	    H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/ggu_logo.png" ! class_ "img-responsive" ! alt ""
+	    H.div ! class_ "col-xs-3 col-sm-2" $ do
+	      a ! href "#" $ img ! src "images/home/ggu_logo.png" ! class_ "img-responsive" ! alt ""
+	      p "Nonsan, South Korea"
 	    H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/client2.png" ! class_ "img-responsive" ! alt ""
 	    H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/client3.png" ! class_ "img-responsive" ! alt ""
 	    H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/client4.png" ! class_ "img-responsive" ! alt ""

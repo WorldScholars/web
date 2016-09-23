@@ -11,7 +11,7 @@ import qualified Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes
 import qualified Text.Blaze.Html5.Attributes as A
 
---import Pages.People.Everyone
+import qualified Pages.People.Everyone as E
 
 htmlHeader :: Html
 htmlHeader =
@@ -34,16 +34,13 @@ htmlHeader =
 		li $ a ! href "index.html" $ "Home"
 	        li $ a ! href "about.html" $ "About"
 		--should i have a drop down for every person?
-                {-li ! class_ "dropdown" $ do
-		    a ! href "portfolio.html" $ do
-			"Portfolio"
+                li ! class_ "dropdown" $ do
+		    a ! href "#" $ do
+			"People"
 			i ! class_ "fa fa-angle-down" $ mempty
-		    ul ! class_ "sub-menu" $ do
-			li $ a ! href "portfolio.html" $ "Portfolio Default"
-			li $ a ! href "portfoliofour.html" $ "Isotope 3 Columns + Right Sidebar"
-			li $ a ! href "portfolioone.html" $ "3 Columns + Right Sidebar"
-			li $ a ! href "portfoliotwo.html" $ "3 Columns + Left Sidebar"
-			li $ a ! href "portfoliothree.html" $ "2 Columns"
-		-}	
+		    ul ! class_ "sub-menu" $ 
+		      mapM_
+			(\p -> li $ a ! href (toValue $ E.linkTo p) $ (string $ E.name p))
+		        E.everyone	
 
 
