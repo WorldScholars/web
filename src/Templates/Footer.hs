@@ -14,6 +14,7 @@ htmlFooter :: Html
 htmlFooter =
     footer ! A.id "footer" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
 	H.div ! class_ "col-sm-12 text-center bottom-separator" $ img ! src "images/home/under.png" ! class_ "img-responsive inline" ! alt ""
+	H.div ! class_ "col-md-1 col-sm-1" $ return ()
 	H.div ! class_ "col-md-4 col-sm-6" $ H.div ! class_ "testimonial bottom" $ do
 	    h2 "Testimonial"
 	    H.div ! class_ "media" $ do
@@ -26,7 +27,7 @@ htmlFooter =
 		H.div ! class_ "media-body" $ do
 		    blockquote "I did two great things in my life, freeing the slaves and hiring the World Scholars"
 		    h3 $ a ! href "" $ "- Abraham Lincoln"
-	H.div ! class_ "col-md-3 col-sm-6" $ H.div ! class_ "contact-info bottom" $ do
+	H.div ! class_ "col-md-3 col-sm-5" $ H.div ! class_ "contact-info bottom" $ do
 	    h2 "Contacts"
 	    address $ do
 		"E-mail:"
@@ -42,13 +43,13 @@ htmlFooter =
 		br
 		"United States of America"
 		br
-	H.div ! class_ "col-md-4 col-sm-12" $ H.div ! class_ "contact-form bottom" $ do
+{-	H.div ! class_ "col-md-4 col-sm-12" $ H.div ! class_ "contact-form bottom" $ do
 	    h2 "Send a message"
 	    H.form ! A.id "main-contact-form" ! name "contact-form" ! method "post" ! action "sendemail.php" $ do
 		H.div ! class_ "form-group" $ input ! type_ "text" ! name "name" ! class_ "form-control" ! required "required" ! placeholder "Name"
 		H.div ! class_ "form-group" $ input ! type_ "email" ! name "email" ! class_ "form-control" ! required "required" ! placeholder "Email Id"
 		H.div ! class_ "form-group" $ textarea ! name "message" ! A.id "message" ! required "required" ! class_ "form-control" ! rows "8" ! placeholder "Your text here" $ mempty
-		H.div ! class_ "form-group" $ input ! type_ "submit" ! name "submit" ! class_ "btn btn-submit" ! value "Submit"
+		H.div ! class_ "form-group" $ input ! type_ "submit" ! name "submit" ! class_ "btn btn-submit" ! value "Submit"-}
 	H.div ! class_ "col-sm-12" $ H.div ! class_ "copyright-text text-center" $ do
 	    p "World Scholar 2016. All Rights Reserved."
     -- /#footer
