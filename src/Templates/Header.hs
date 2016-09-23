@@ -11,6 +11,8 @@ import qualified Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes
 import qualified Text.Blaze.Html5.Attributes as A
 
+--import Pages.People.Everyone
+
 htmlHeader :: Html
 htmlHeader =
     header ! A.id "header" $ do
@@ -31,7 +33,8 @@ htmlHeader =
 	    H.div ! class_ "collapse navbar-collapse" $ ul ! class_ "nav navbar-nav navbar-right" $ do
 		li $ a ! href "index.html" $ "Home"
 	        li $ a ! href "about.html" $ "About"
-		{-li ! class_ "dropdown" $ do
+		--should i have a drop down for every person?
+                {-li ! class_ "dropdown" $ do
 		    a ! href "portfolio.html" $ do
 			"Portfolio"
 			i ! class_ "fa fa-angle-down" $ mempty
@@ -41,6 +44,6 @@ htmlHeader =
 			li $ a ! href "portfolioone.html" $ "3 Columns + Right Sidebar"
 			li $ a ! href "portfoliotwo.html" $ "3 Columns + Left Sidebar"
 			li $ a ! href "portfoliothree.html" $ "2 Columns"
-			-}
+		-}	
 
 
