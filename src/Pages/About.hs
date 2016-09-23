@@ -1,19 +1,18 @@
 {-# LANGUAGE OverloadedStrings #-}
-module About where
+{-# LANGUAGE RecordWildCards   #-}
+module Pages.About where
 
 import Prelude
 import qualified Prelude as P
 import Data.Monoid (mempty)
 
+import Text.Blaze
 import Text.Blaze.Html5
 import qualified Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes
 import qualified Text.Blaze.Html5.Attributes as A
 
-import Head
-import Header
-import Scripts
-import Footer
+import Pages.People.Everyone
 
 about :: Html
 about = do
@@ -56,24 +55,15 @@ about = do
 		li ! dataAttribute "target" "#team-carousel" ! dataAttribute "slide-to" "1" $ mempty
 	    --  Wrapper for slides 
 	    H.div ! class_ "carousel-inner" $ do
-		mapM_ person
-		  [("images/aboutus/1.jpg","Mark Santolucito","Yale CS PhD Candidate")
-		  ,("images/aboutus/2.jpg","Rahul","Yale CS PhD Candidate")
-		  ,("images/aboutus/3.jpg","Aaron Profumo","Yale CS PhD Candidate")
-		  ,("images/aboutus/4.jpg","Dao Chantes","Yale CS PhD Candidate")
-		  ,("images/aboutus/2.jpg","Chris Klumpp","Yale CS PhD Candidate")
-		  ,("images/aboutus/1.jpg","Maria Hwang","Yale CS PhD Candidate")
-		  ,("images/aboutus/4.jpg","Diana LeDang","Yale CS PhD Candidate")
-		  ,("images/aboutus/3.jpg","Sangwoo Lee","Yale CS PhD Candidate")
-		  ,("images/aboutus/1.jpg","Stephan Brunner","Yale CS PhD Candidate")
-		  ,("images/aboutus/4.jpg","Rahel Kroeker","Yale CS PhD Candidate")]
+		mapM_ renderPersonStub everyone
 
-person (imgLink, name, position) =
+renderPersonStub :: Person -> Html
+renderPersonStub person@Person{..} =
       H.div ! class_ "col-sm-3 col-xs-6" $ H.div ! class_ "team-single-wrapper" $ do
     	H.div ! class_ "team-single" $ do
-    	    H.div ! class_ "person-thumb" $ img ! src imgLink ! class_ "img-responsive" ! alt ""
+    	    H.div ! class_ "person-thumb" $ img ! src headshotLink ! class_ "img-responsive" ! alt ""
     	    H.div ! class_ "social-profile" $ ul ! class_ "nav nav-pills" $ do
-    		li $ a ! href "./santolucito" $ "more info"
+    		li $ a ! href (toValue $ linkTo person) $ "more info"
     	H.div ! class_ "person-info" $ do
-    	    h2 name
-    	    p position
+    	    h2 $ string name
+    	    p title

@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Header where
+module Templates.Header where
 
 import Prelude
 import qualified Prelude as P

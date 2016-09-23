@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Head where
+module Templates.Head where
 
 import Data.Monoid (mempty)
 

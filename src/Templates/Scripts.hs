@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Scripts where
+module Templates.Scripts where
 
 import Prelude
 import qualified Prelude as P

@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Footer where
+module Templates.Footer where
 
 import Prelude
 import qualified Prelude as P

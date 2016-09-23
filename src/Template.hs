@@ -10,10 +10,10 @@ import qualified Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes
 import qualified Text.Blaze.Html5.Attributes as A
 
-import Head
-import Header
-import Scripts
-import Footer
+import Templates.Head
+import Templates.Header
+import Templates.Scripts
+import Templates.Footer
 
 
 embedInTemplate :: Html -> Html
