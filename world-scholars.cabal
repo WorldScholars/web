@@ -20,9 +20,9 @@ executable world-scholars
   main-is:             Main.hs
   -- other-modules:       
   other-extensions:    OverloadedStrings
-  build-depends:       base >=4.8 && <4.9, 
-                       blaze-html >=0.8 && <0.9,
-                       blaze-markup >=0.7,
+  build-depends:       base >=4.8 ,
+                       blaze-html >=0.8,
+                       blaze-markup >=0.8,
                        bytestring,
                        split
   hs-source-dirs:      src

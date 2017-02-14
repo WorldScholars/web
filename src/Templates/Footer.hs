@@ -18,22 +18,22 @@ htmlFooter =
 	H.div ! class_ "col-md-4 col-sm-6" $ H.div ! class_ "testimonial bottom" $ do
 	    h2 "Testimonial"
 	    H.div ! class_ "media" $ do
-		H.div ! class_ "pull-left" $ a ! href "#" $ img ! src "images/home/profile1.png" ! alt ""
+		H.div ! class_ "pull-left" $ a ! href "#" $ img ! src "images/headshots/Han.jpg" ! alt ""
 		H.div ! class_ "media-body" $ do
-		    blockquote "My univeristy is forever indebted to these awesome folks."
+		    blockquote "After a week-long seminar from the World Scholars, I saw a renewed passion for learning on campus for months."
 		    h3 $ a ! href "#" $ "- President Han, Geumgang University"
-	    H.div ! class_ "media" $ do
+	    {-H.div ! class_ "media" $ do
 		H.div ! class_ "pull-left" $ a ! href "#" $ img ! src "images/home/profile2.png" ! alt ""
 		H.div ! class_ "media-body" $ do
-		    blockquote "I did two great things in my life, freeing the slaves and hiring the World Scholars"
-		    h3 $ a ! href "" $ "- Abraham Lincoln"
-	H.div ! class_ "col-md-3 col-sm-5" $ H.div ! class_ "contact-info bottom" $ do
+		    blockquote "..."
+		    h3 $ a ! href "" $ "- ..."-}
+	H.div ! class_ "col-md-5 col-sm-5" $ H.div ! class_ "contact-info bottom" $ do
 	    h2 "Contacts"
 	    address $ do
 		"E-mail:"
-		a ! href "mailto:someone@example.com" $ "email@email.com"
+		a ! href "mailto:mark.santolucito@yale.edu" $ "mark.santolucito@yale.edu"
 		br
-		"Phone: +1 (123) 456 7890"
+		"Phone: +1 (413) 570 3116"
 		br
 	    h2 "Address"
 	    address $ do

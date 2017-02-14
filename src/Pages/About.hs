@@ -25,7 +25,7 @@ about = do
 	img ! src "images/aboutus/CEO.png" ! class_ "margin-bottom" ! alt ""
 	h1 ! class_ "margin-bottom" $ "A letter from our CEO"
 	p $ do
-	    "The World Scholars Program is one of man's great acheivements in the 21st century"
+	    "The World Scholars Program has been an impactful program both for the students involved and the instructors."
 	    br
 	    "-Dr. Maria Hwang, Ed.D."
     
@@ -45,9 +45,9 @@ about = do
     section ! A.id "team" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
 	h1 ! class_ "title text-center wow fadeInDown" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ "Meet the Team"
 	p ! class_ "text-center wow fadeInDown" ! dataAttribute "wow-duration" "400ms" ! dataAttribute "wow-delay" "400ms" $ do
-	    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+	    "Our team is an eclectic group of young professionals at the top of their field."
 	    br
-	    "Ut enim ad minim veniam, quis nostrud"
+	    "This team has been working together on similar projects since 2013."
 	H.div ! A.id "team-carousel" ! class_ "carousel slide wow fadeIn" ! dataAttribute "ride" "carousel" ! dataAttribute "wow-duration" "400ms" ! dataAttribute "wow-delay" "400ms" $ do
 	    --  Indicators 
 	    ol ! class_ "carousel-indicators visible-xs" $ do
@@ -55,7 +55,9 @@ about = do
 		li ! dataAttribute "target" "#team-carousel" ! dataAttribute "slide-to" "1" $ mempty
 	    --  Wrapper for slides 
 	    H.div ! class_ "carousel-inner" $ do
-		mapM_ renderPersonStub everyone
+        	H.div ! class_ "row" $ mapM_ renderPersonStub (take 4 everyone)
+		H.div ! class_ "row" $ mapM_ renderPersonStub (take 4 $ drop 4 everyone)
+		H.div ! class_ "row" $ mapM_ renderPersonStub (take 4 $ drop 8 everyone)
 
 renderPersonStub :: Person -> Html
 renderPersonStub person@Person{..} =
