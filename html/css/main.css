@@ -793,6 +793,7 @@ ul.sub-menu {
 
 .team-single {
   position: relative;
+  width: 250px;
 }
 
 .person-thumb {

@@ -61,7 +61,7 @@ about = do
 
 renderPersonStub :: Person -> Html
 renderPersonStub person@Person{..} =
-      H.div ! class_ "col-sm-3 col-xs-6" $ H.div ! class_ "team-single-wrapper" $ do
+      H.div ! class_ "col-sm-3 col-xs-10" $ H.div ! class_ "team-single-wrapper" $ do
     	H.div ! class_ "team-single" $ do
     	    H.div ! class_ "person-thumb" $ img ! src headshotLink ! class_ "img-responsive" ! alt ""
     	    H.div ! class_ "social-profile" $ ul ! class_ "nav nav-pills" $ do

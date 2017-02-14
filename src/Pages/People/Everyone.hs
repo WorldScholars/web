@@ -43,7 +43,7 @@ addHeadshot p = p {headshotLink=fromString $ (("images/headshots/")++(head $tail
 
 linkTo :: Person -> String
 linkTo p =
-  (last $ splitOn " " $ name p)++".html"
+  (head$ tail $ splitOn " " $ name p)++".html"
 
 data Person = Person {
   headshotLink :: AttributeValue,
