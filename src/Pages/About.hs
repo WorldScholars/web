@@ -25,7 +25,7 @@ about = do
 	img ! src "images/aboutus/CEO.png" ! class_ "margin-bottom" ! alt ""
 	h1 ! class_ "margin-bottom" $ "A letter from our CEO"
 	p $ do
-	    "The World Scholars Program has been an impactful program both for the students involved and the instructors."
+	    "From years of teaching, years of being a student in different capacities, and years of observing my parents teach, I have witnessed the power of providing educational opportunities in any learning environment. Education has become an over-specified and over-defined term as we navigate through the failures and successes in history, defined by the accomplishments we have achieved in life. However, as John Dewey once mentioned, \"education is not preparation for life; education is life itself\". In any circumstance, we can find learning, we can find opportunities, and we can find growth. Alongside my fellow World Scholars, I have witnessed talent that utilizes every bit of our lives to find learning and meaning in them."
 	    br
 	    "-Dr. Maria Hwang, Ed.D."
     

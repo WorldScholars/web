@@ -18,7 +18,7 @@ index = do
 	H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "main-slider" $ do
 	    H.div ! class_ "slide-text" $ do
 		h1 "Bringing the world to you"
-		p "The World Scholars program is a collective of talented young professionals, dedicated to sharing their educational experiences around the globe. In particular, we bring opporunity out of the ivory tower, to schools that aim to enrich their students lives with a once in a lifetime opportunity."
+		p "The World Scholars program is a collective of talented young professionals, dedicated to sharing their educational experiences around the globe. In particular, we bring opportunity out of the ivory tower, to schools that aim to enrich their students' lives with a once in a lifetime opportunity."
 		a ! href "#" ! class_ "btn btn-common" $ "CONTACT US"
 	    img ! src "images/home/slider/hill.png" ! class_ "slider-hill" ! alt "slider image"
 	    img ! src "images/home/slider/house.png" ! class_ "slider-house" ! alt "slider image"
@@ -45,12 +45,12 @@ index = do
 	    H.div ! class_ "col-sm-5 wow fadeInLeft" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ img ! src "images/home/IMG_0009.JPG" ! class_ "img-responsive" ! alt ""
 	    H.div ! class_ "col-sm-6 wow fadeInRight" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ do
 		h2 "Interactive Learning"
-		p "Learning happens both inside the classroom and out. The World Scholar Program is not only a seminar series, but an entire experience for the school. Combining traditional lectures, with hand-on activites and active learning, students come away from the Wrold Scholars program with a renewed sense of vigour and exploration in their studies."
+		p "Learning happens both inside the classroom and out. The World Scholar Program is not only a seminar series, but an entire experience for the school. Combining traditional lectures, with hand-on activities and active learning, students come away from the World Scholars program with a renewed sense of vigour and exploration in their studies."
 	
 	H.div ! class_ "single-features" $ do
 	    H.div ! class_ "col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ do
 		h2 "Passion for Humanities and Sciences"
-		p "From Acting to Computer Science, the world scholars bring a range of experince to campus that enlives the atmposphere, and asks students to push beyond their comfort zone."
+		p "From Acting to Computer Science, the world scholars bring a range of experience to campus that enlivens the atmosphere, and asks students to push beyond their comfort zone."
 	    H.div ! class_ "col-sm-5 wow fadeInRight" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ img ! src "images/home/IMG_1211.JPG" ! class_ "img-responsive" ! alt ""
 	
 	H.div ! class_ "single-features" $ do

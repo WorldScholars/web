@@ -12,3 +12,5 @@ $ cabal install
 to build the html
 
 $ .cabal-sandbox/bin/world_scholars 
+
+cabal run ; cp -r html/* ../WorldScholars.github.io/ ; cd ../WorldScholars.github.io/ ; gitsend ; cd ../web

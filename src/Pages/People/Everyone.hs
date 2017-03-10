@@ -37,6 +37,7 @@ everyone = sortWith name $ map addHeadshot
   ,sangwoo
   ,stefan
   ,klumpp
+  ,felix
   ]
 
 addHeadshot p = p {headshotLink=fromString $ (("images/headshots/")++(head $tail $splitOn " " $ name p)++".jpg")}
@@ -102,8 +103,8 @@ santolucito = Person{
 
 maria = Person{
   headshotLink = "",
-  name = "Maria Hwang",
-  title = "EdD, Columbia University",
+  name = "Maria Hwang (CEO)",
+  title = "Biomedical Informatics Reserach Scientist, Columbia University Medical Campus ; EdD, Columbia University",
   bio = ""
 }
 
@@ -124,8 +125,8 @@ murphy = Person{
 jacob = Person{
   headshotLink = "",
   name = "Jacob Li (CFO)",
-  title = "Yale University",
-  bio = ""
+  title = "MA - Analytic Philosophy of Religion, Yale University",
+  bio = "Before joining World Scholars, he was a Venture Creation Fellow intern at the Yale Entrepreneurial Institute of Yale University, where he helped build Rallybus project. He was also an instructional technologist at Yale College, a technical assistant for Professor Akhil Amar, and a core member of the non-profit organization clinic at Yale Law School. During his time at Yale, he led workshops and case studies for summer Chinese visiting students at the Yale School of Management, and spoke at the Yale Global Alumni Leadership Forum. In addition to his service for the university, he volunteered his time generously with the Yale Alumni Association, helping with planning events and supervising undergraduate interns. As President of the Yale Asian Students Association while attending Yale, he organized many events on campus to promote the well-being of the Asian community.  Jacob holds a masters degree in analytic philosophy of religion from Yale University. In 2012 he received the prestigious John Templeton Fellowship to attend the University of Notre Dame as a visiting graduate scholar in philosophy and ethics."
 }
 
 sangwoo = Person{
@@ -134,6 +135,14 @@ sangwoo = Person{
   title = "EdM Harvard University",
   bio = ""
 }
+
+klein = Person{
+  headshotLink = "",
+  name = "Felix Klein",
+  title = "PhD Candidate, Saarbrucken University",
+  bio = "My research interests lie in the areas of synthesis and infinite games. In particular, I am interested in improving the synthesis process by finding suitable criteria that efficiently bound the solution space. Furthermore, I study the creation of easy to verify certificates for the synthesized solutions and corresponding game models to support these techniques."
+}
+
 {-Prelude.map f
   [("images/aboutus/1.jpg","Mark Santolucito","Yale CS PhD Candidate","...")
   ,("images/aboutus/2.jpg","Rahul","Yale CS PhD Candidate")
