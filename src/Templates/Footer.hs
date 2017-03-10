@@ -18,16 +18,16 @@ htmlFooter =
 	H.div ! class_ "col-md-4 col-sm-6" $ H.div ! class_ "testimonial bottom" $ do
 	    h2 "Testimonial"
 	    H.div ! class_ "media" $ do
-		H.div ! class_ "pull-left" $ a ! href "#" $ img ! src "images/home/profile1.png" ! alt ""
+		H.div ! class_ "pull-left" $ a ! href "#" $ img ! src "images/headshots/Han.jpg" ! alt ""
 		H.div ! class_ "media-body" $ do
-		    blockquote "I am very grateful to have had the World Scholars run a week long session at my univeristy. I saw a renewed excitment all over campus for the rest of the semester."
+		    blockquote "After a week-long seminar from the World Scholars, I saw a renewed passion for learning on campus for months."
 		    h3 $ a ! href "#" $ "- President Han, Geumgang University"
-	    H.div ! class_ "media" $ do
+	    {-H.div ! class_ "media" $ do
 		H.div ! class_ "pull-left" $ a ! href "#" $ img ! src "images/home/profile2.png" ! alt ""
 		H.div ! class_ "media-body" $ do
 		    blockquote "..."
-		    h3 $ a ! href "" $ "- ..."
-	H.div ! class_ "col-md-3 col-sm-5" $ H.div ! class_ "contact-info bottom" $ do
+		    h3 $ a ! href "" $ "- ..."-}
+	H.div ! class_ "col-md-5 col-sm-5" $ H.div ! class_ "contact-info bottom" $ do
 	    h2 "Contacts"
 	    address $ do
 		"E-mail:"

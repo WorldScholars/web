@@ -25,7 +25,7 @@ about = do
 	img ! src "images/aboutus/CEO.png" ! class_ "margin-bottom" ! alt ""
 	h1 ! class_ "margin-bottom" $ "A letter from our CEO"
 	p $ do
-	    "The World Scholars Program is one of man's great acheivements in the 21st century"
+	    "From years of teaching, years of being a student in different capacities, and years of observing my parents teach, I have witnessed the power of providing educational opportunities in any learning environment. Education has become an over-specified and over-defined term as we navigate through the failures and successes in history, defined by the accomplishments we have achieved in life. However, as John Dewey once mentioned, \"education is not preparation for life; education is life itself\". In any circumstance, we can find learning, we can find opportunities, and we can find growth. Alongside my fellow World Scholars, I have witnessed talent that utilizes every bit of our lives to find learning and meaning in them."
 	    br
 	    "-Dr. Maria Hwang, Ed.D."
     
@@ -45,9 +45,9 @@ about = do
     section ! A.id "team" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
 	h1 ! class_ "title text-center wow fadeInDown" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ "Meet the Team"
 	p ! class_ "text-center wow fadeInDown" ! dataAttribute "wow-duration" "400ms" ! dataAttribute "wow-delay" "400ms" $ do
-	    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+	    "Our team is an eclectic group of young professionals at the top of their field."
 	    br
-	    "Ut enim ad minim veniam, quis nostrud"
+	    "This team has been working together on similar projects since 2013."
 	H.div ! A.id "team-carousel" ! class_ "carousel slide wow fadeIn" ! dataAttribute "ride" "carousel" ! dataAttribute "wow-duration" "400ms" ! dataAttribute "wow-delay" "400ms" $ do
 	    --  Indicators 
 	    ol ! class_ "carousel-indicators visible-xs" $ do
@@ -55,11 +55,13 @@ about = do
 		li ! dataAttribute "target" "#team-carousel" ! dataAttribute "slide-to" "1" $ mempty
 	    --  Wrapper for slides 
 	    H.div ! class_ "carousel-inner" $ do
-		mapM_ renderPersonStub everyone
+        	H.div ! class_ "row" $ mapM_ renderPersonStub (take 4 everyone)
+		H.div ! class_ "row" $ mapM_ renderPersonStub (take 4 $ drop 4 everyone)
+		H.div ! class_ "row" $ mapM_ renderPersonStub (take 4 $ drop 8 everyone)
 
 renderPersonStub :: Person -> Html
 renderPersonStub person@Person{..} =
-      H.div ! class_ "col-sm-3 col-xs-6" $ H.div ! class_ "team-single-wrapper" $ do
+      H.div ! class_ "col-sm-3 col-xs-10" $ H.div ! class_ "team-single-wrapper" $ do
     	H.div ! class_ "team-single" $ do
     	    H.div ! class_ "person-thumb" $ img ! src headshotLink ! class_ "img-responsive" ! alt ""
     	    H.div ! class_ "social-profile" $ ul ! class_ "nav nav-pills" $ do
