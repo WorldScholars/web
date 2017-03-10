@@ -51,5 +51,5 @@ htmlFooter =
 		H.div ! class_ "form-group" $ textarea ! name "message" ! A.id "message" ! required "required" ! class_ "form-control" ! rows "8" ! placeholder "Your text here" $ mempty
 		H.div ! class_ "form-group" $ input ! type_ "submit" ! name "submit" ! class_ "btn btn-submit" ! value "Submit"-}
 	H.div ! class_ "col-sm-12" $ H.div ! class_ "copyright-text text-center" $ do
-	    p "World Scholar 2016. All Rights Reserved."
+	    p "World Scholar 2017. All Rights Reserved."
     -- /#footer

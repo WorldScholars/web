@@ -85,7 +85,7 @@ dao = Person{
   headshotLink = "",
   name = "Pantiphar Dao Chantes",
   title = "Doctoral Candidate, Columbia University",
-  bio = "Dao is a doctoral candidate studying Instructional Technology and Media at Teachers College, Columbia University. Her research focuses on the design and development of interactive media (such as computer games) for teaching and learning. Before coming to the United States, Dao was born and raised in Bangkok, Thailand where she earned a bachelor degree in industrial engineering. Dao is a visual designer and an amateur artist. She has done many kinds of design projects such as instructional materials, graphical user interfaces, websites, educational games, posters/banners/logos, wedding invitations, etc. See more at <a href=\"http://www.daochantes.com\">daochantes.com</a>."
+  bio = "Dao is a doctoral candidate studying Instructional Technology and Media at Teachers College, Columbia University. Her research focuses on the design and development of interactive media (such as computer games) for teaching and learning. Before coming to the United States, Dao was born and raised in Bangkok, Thailand where she earned a bachelor degree in industrial engineering. Dao is a visual designer and an amateur artist. She has done many kinds of design projects such as instructional materials, graphical user interfaces, websites, educational games, posters/banners/logos, wedding invitations, etc. See more at daochantes.com."
 }
 
 diana = Person{
@@ -113,8 +113,8 @@ stefan = Person{
   headshotLink = "",
   name = "Stefan Brunner",
   title = "Projektmanager bei Stiftung Merkator",
-  bio = " Stefan Brunner is a project manager at the Mercator Foundation Switzerland, where he is leading a three-year pilot-project, that creates support structures at Swiss universities for student initiatives and projects. He is further responsible for the foundation's support to youth in the areas of volunteering and active in its role in international youth exchange and international cooperation. He holds a Masters degree in International Affairs from the Graduate Institute of International and Development Studies in Geneva and has been a visiting fellow at the McMillan Center for International and Area Studies at Yale University. Among his working experiences are engagements with the United Nations on the classification of internationally responding urban search and rescue teams and with EAPPI as a human rights observer in the occupied Palestinian territories. He is the author of the Impact Compendium on Youth Exchange - An overview of scientific research results on the impact of intercultural exchanges, which has been published in German, English, and French (availble <a href=\"http://eee-yfu.org/research/intermundo-compendium-reveals-the-impact-of-exchanges\">online</a>)."
-}
+  bio = " Stefan Brunner is a project manager at the Mercator Foundation Switzerland, where he is leading a three-year pilot-project, that creates support structures at Swiss universities for student initiatives and projects. He is further responsible for the foundation's support to youth in the areas of volunteering and active in its role in international youth exchange and international cooperation. He holds a Masters degree in International Affairs from the Graduate Institute of International and Development Studies in Geneva and has been a visiting fellow at the McMillan Center for International and Area Studies at Yale University. Among his working experiences are engagements with the United Nations on the classification of internationally responding urban search and rescue teams and with EAPPI as a human rights observer in the occupied Palestinian territories. He is the author of the Impact Compendium on Youth Exchange - An overview of scientific research results on the impact of intercultural exchanges, which has been published in German, English, and French"
+  }
 
 murphy = Person{
   headshotLink = "",
