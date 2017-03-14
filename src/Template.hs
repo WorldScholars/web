@@ -19,10 +19,10 @@ import Templates.Footer
 embedInTemplate :: Html -> Html
 embedInTemplate x = do
     docTypeHtml ! lang "en" $ do
-        htmlHead
-	body $ do
-	    htmlHeader
-	    x
-	    htmlFooter
-	    htmlScripts
+      htmlHead
+      body $ do
+          htmlHeader
+          x
+          htmlFooter
+          htmlScripts
 
