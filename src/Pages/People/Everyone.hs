@@ -37,20 +37,28 @@ everyone = sortWith name $ map addHeadshot
   ,sangwoo
   ,stefan
   ,klumpp
+  ,fiona
 --  ,felix
   ]
 
-addHeadshot p = p {headshotLink=fromString $ (("images/headshots/")++(head $tail $splitOn " " $ name p)++".jpg")}
+addHeadshot p = p {headshotLink=fromString $ (("images/headshots/")++([head $ name p])++(head $tail $splitOn " " $ name p)++".jpg")}
 
 linkTo :: Person -> String
 linkTo p =
-  (head$ tail $ splitOn " " $ name p)++".html"
+  ([head $ name p]) ++ (head$ tail $ splitOn " " $ name p)++".html"
 
 data Person = Person {
   headshotLink :: AttributeValue,
   name :: String,
   title :: Html,
   bio :: Html
+}
+
+fiona = Person{
+  headshotLink = "",
+  name = "Fiona Santolucito",
+  title = "Johns Hopkins University",
+  bio = "Fiona Santolucito is a rising Senior at Johns Hopkins University as a Hodson Trust Scholar. She is fluent in Mandarin Chinese (HSK-5) and has studied at Beijing #80 High School. She has also studied at Yonsei University, South Korea, where she worked with The Associated Press to promote children's health issues in North Korea. Fiona worked with Tuscany Strategy, an education and health care consulting firm, for two years where she built models for business opportunities."
 }
 
 klumpp = Person{
