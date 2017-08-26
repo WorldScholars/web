@@ -28,12 +28,12 @@ htmlFooter =
                 blockquote "..."
                 h3 $ a ! href "" $ "- ..."-}
       H.div ! class_ "col-md-5 col-sm-5" $ H.div ! class_ "contact-info bottom" $ do
-          h2 "Contacts"
+          h2 "Contact Us"
           address $ do
             "E-mail:"
-            a ! href "mailto:mark.santolucito@yale.edu" $ "mark.santolucito@yale.edu"
+            a ! href "mailto:fiona@worldscholars.global" $ "fiona@worldscholars.global"
             br
-            "Phone: +1 (413) 570 3116"
+            "Phone: +1 (413) 949 2073"
             br
           h2 "Address"
           address $ do

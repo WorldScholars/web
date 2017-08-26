@@ -6,7 +6,7 @@ to be later renamed worldscholar.github.io when ready to be online
 items marked with * are at least partially non-programming tasks
 
 
-- [ ] https certificate
+- [ ] https certificate (requires move to non-github web server)
 - [ ] move 'Meet the team' to People page
 - [ ] make people tab a link
 - [ ] Fix Fionas picture and title (Director of Operations)

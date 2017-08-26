@@ -35,7 +35,7 @@ htmlHeader =
               li $ a ! href "about.html" $ "About"
             --should i have a drop down for every person?
               li ! class_ "dropdown" $ do
-                a ! href "#" $ do
+                a ! href "people.html" $ do
                   "People"
                   i ! class_ "fa fa-angle-down" $ mempty
                 ul ! class_ "sub-menu" $ 

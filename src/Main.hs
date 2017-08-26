@@ -7,6 +7,7 @@ import GHC.IO.Encoding
 
 import Pages.Index
 import Pages.About
+import Pages.People
 import Pages.People.Everyone
 
 import Template
@@ -16,6 +17,7 @@ main = do
   setLocaleEncoding utf8
   makePage "html/index.html" index
   makePage "html/about.html" about
+  makePage "html/people.html" people
   writeEveryone
 
 writeEveryone :: IO()  
