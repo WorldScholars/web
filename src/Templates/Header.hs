@@ -17,10 +17,8 @@ htmlHeader :: Html
 htmlHeader =
     header ! A.id "header" $ do
       H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 overflow" $ H.div ! class_ "social-icons pull-right" $ ul ! class_ "nav nav-pills" $ do
-          li $ a ! href "" $ i ! class_ "fa fa-facebook" $ mempty
+          li $ a ! href "https://www.facebook.com/pages/World-Scholars-LLC/324454181347591" $ i ! class_ "fa fa-facebook" $ mempty
           li $ a ! href "" $ i ! class_ "fa fa-twitter" $ mempty
-          li $ a ! href "" $ i ! class_ "fa fa-google-plus" $ mempty
-          li $ a ! href "" $ i ! class_ "fa fa-dribbble" $ mempty
           li $ a ! href "" $ i ! class_ "fa fa-linkedin" $ mempty
       H.div ! class_ "navbar navbar-inverse" $ H.div ! class_ "container" $ do
           H.div ! class_ "navbar-header" $ do

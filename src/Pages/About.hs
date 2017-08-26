@@ -16,12 +16,17 @@ import Pages.People.Everyone
 
 about :: Html
 about = do
-    {-section ! A.id "page-breadcrumb" $ H.div ! class_ "vertical-center sun" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "action" $ H.div ! class_ "col-sm-12" $ do
-      h1 ! class_ "title" $ "About Us"
-      p "Who we are and where we come from"-}
+
+    -- /#company-information
+    section ! A.id "team" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
+      h1 ! class_ "title text-center wow fadeInDown" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ "About Us"
+      p ! class_ "text-center wow fadeInDown" ! A.style "padding-left:12%;padding-right:12%" ! dataAttribute "wow-duration" "400ms" ! dataAttribute "wow-delay" "400ms" $ do
+          "World Scholars LLC helps facilitate dialogue between East Asian students and Western professionals and academics on the merits of a liberal arts education. We firmly believe that education must be a holistic experience, and this is reflected in our programs which tie together diverse and unique activities and programs outside the classroom to world class lectures and workshops from educators and professors at the top of their fields. World Scholars commitment to making liberal arts educational experiences accessible to students regardless of socio-economic background is reflected in our service to low income students in Korea and first generation Chinese Americans."
+          br
+          "World Scholars is committed to making liberal arts educational experiences accessible to students regardless of socio-economic background."
     
     -- /#page-breadcrumb
-    section ! A.id "about-company" ! class_ "padding-top wow fadeInUp" ! dataAttribute "wow-duration" "400ms" ! dataAttribute "wow-delay" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
+    section ! A.id "about-company" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" ! dataAttribute "wow-delay" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       img ! src "images/aboutus/CEO.png" ! class_ "margin-bottom" ! alt ""
       h1 ! class_ "margin-bottom" $ "A letter from our CEO"
       p $ do
