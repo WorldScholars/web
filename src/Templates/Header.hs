@@ -29,7 +29,7 @@ htmlHeader =
                 H.span ! class_ "icon-bar" $ mempty
                 H.span ! class_ "icon-bar" $ mempty
                 H.span ! class_ "icon-bar" $ mempty
-            a ! class_ "navbar-brand" ! href "index.html" $ h1 $ img ! src "images/logo.png" ! alt "logo"
+            a ! class_ "navbar-brand" ! href "index.html" $ h1 $ img ! src "images/logo.png" ! alt "logo" ! width "18%"
           H.div ! class_ "collapse navbar-collapse" $ ul ! class_ "nav navbar-nav navbar-right" $ do
               li $ a ! href "index.html" $ "Home"
               li $ a ! href "about.html" $ "About"
