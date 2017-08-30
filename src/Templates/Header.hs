@@ -12,6 +12,7 @@ import Text.Blaze.Html5.Attributes
 import qualified Text.Blaze.Html5.Attributes as A
 
 import qualified Pages.People.Everyone as E
+import qualified Pages.Programs.AllPrograms as P
 
 htmlHeader :: Html
 htmlHeader =
@@ -40,5 +41,16 @@ htmlHeader =
                   mapM_
                   (\p -> li $ a ! href (toValue $ E.linkTo p) $ (string $ E.name p))
                     E.everyone      
+              li ! class_ "dropdown" $ do
+                a ! href "programs.html" $ do
+                  "Programs"
+                  i ! class_ "fa fa-angle-down" $ mempty
+                ul ! class_ "sub-menu" $ do
+                  li "Upcoming"
+                  mapM_
+                    (\p -> li $ a ! href (toValue $ P.linkTo p) $ (string $ (P.name p)))
+                    P.allPrograms
+                  li "Past"
+
 
 

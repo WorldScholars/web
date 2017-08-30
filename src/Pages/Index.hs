@@ -72,6 +72,9 @@ index = do
 	    H.div ! class_ "col-xs-3 col-sm-2" $ do
 	      a ! href "#" $ img ! src "images/home/ggu_logo.png" ! class_ "img-responsive" ! alt ""
 	      p "Nonsan, South Korea"
+	    H.div ! class_ "col-xs-3 col-sm-2" $ do
+	      a ! href "#" $ img ! src "images/home/woodbridge.png" ! class_ "img-responsive" ! alt ""
+	      p "Woodbridge, Conneticut"
 	    {-H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/client2.png" ! class_ "img-responsive" ! alt ""
 	    H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/client3.png" ! class_ "img-responsive" ! alt ""
 	    H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/client4.png" ! class_ "img-responsive" ! alt ""
