@@ -22,10 +22,12 @@ makeProgramPage  Program{..} = do
     
 
 allPrograms :: [Program]
-allPrograms = sortWith dates
-  [--feb2017
-  aug2017
-  --,feb2018
+allPrograms = sortWith epoch
+  [
+   may2016
+  ,feb2017
+  ,aug2017
+  ,feb2018
   ]
 
 
@@ -37,17 +39,45 @@ data Program = Program {
   name :: String,
   location :: String,
   dates :: String,
+  epoch :: Int,
   summary :: String,
   mainPic :: AttributeValue
 }
 
+may2016 = Program{
+  name = "World Scholars in Korea"
+ ,location = "Nonsan, South Korea"
+ ,dates = "May 2016"
+ ,epoch = 1462111307
+ ,summary = "This week long series hosted at Guemgang University brought 9 World Scholars to campus for lectures and one-on-one sessions."
+ ,mainPic = ""
+}
+
+feb2017 = Program{
+  name = "???"
+ ,location = "New Haven, CT"
+ ,dates = "Feb 2017"
+ ,epoch = 1485957707
+ ,summary = "This 10 day program was run in partnership with GYDO"
+ ,mainPic = ""
+}
+
 aug2017 = Program{
   name = "SAT+"
- ,location = "Woodbridge"
+ ,location = "Woodbridge, CT"
  ,dates = "Aug 2017"
+ ,epoch = 1501596107
  ,summary = "This month long program comibined SAT prep with passion projects"
  ,mainPic = ""
 }
 
+feb2018 = Program{
+  name = "International Symposium"
+ ,location = "New Haven, CT"
+ ,dates = "Feb 2018"
+ ,epoch = 1517493707
+ ,summary = "This 10 day program will..."
+ ,mainPic = ""
+}
 sortWith :: Ord b => (a -> b) -> [a] -> [a]
 sortWith f = L.sortBy (\x y -> compare (f x) (f y))

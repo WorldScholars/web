@@ -14,6 +14,9 @@ import qualified Text.Blaze.Html5.Attributes as A
 import qualified Pages.People.Everyone as E
 import qualified Pages.Programs.AllPrograms as P
 
+import Data.Time.Clock.POSIX
+import System.IO.Unsafe
+
 htmlHeader :: Html
 htmlHeader =
     header ! A.id "header" $ do
@@ -49,8 +52,12 @@ htmlHeader =
                   li "Upcoming"
                   mapM_
                     (\p -> li $ a ! href (toValue $ P.linkTo p) $ (string $ (P.name p)))
-                    P.allPrograms
+                    (filter (\p -> P.epoch p >= today) P.allPrograms)
                   li "Past"
+                  mapM_
+                    (\p -> li $ a ! href (toValue $ P.linkTo p) $ (string $ (P.name p)))
+                    (filter (\p -> P.epoch p < today) P.allPrograms)
 
+today = round (unsafePerformIO getPOSIXTime)
 
 
