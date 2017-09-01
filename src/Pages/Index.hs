@@ -38,6 +38,8 @@ index = do
 	   [("images/home/icon1.png","New Perspective","Bringing an international experience to local students")
 	   ,("images/home/icon2.png","New Perspective","Bringing an international experience to local students")
 	   ,("images/home/icon3.png","New Perspective","Bringing an international experience to local students")]-}
+
+
     
     -- /#action
     section ! A.id "features" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
