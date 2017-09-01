@@ -16,7 +16,7 @@ items marked with * are at least partially non-programming tasks
 - [ ] * create social media pages
 - [ ] update social media icon links in header
 - [ ] change width to scale to % of screen (this is a problem on large displays) (only if it is possible to scale font size to screen as well)
-- [ ] add 'Program' dropdown tab with upcoming (Feb 2018) and past
+- [X] add 'Program' dropdown tab with upcoming (Feb 2018) and past
 - [ ] * Make video trailer for Feb 2018 (<1 min) (animation infographic -> shots of teaching -> message from Executive Team), (ideally no frame - maybe cannot use youtube embed)
 - [ ] * Overview paragraph for Feb 2018
 - [ ] * Schedule for Feb 2018
