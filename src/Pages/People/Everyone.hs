@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards   #-}
 
-module Pages.People.Everyone where
+module Pages.People.Everyone (everyone, Person(..),linkTo,makeBio) where
 
 import Text.Blaze.Html5 hiding (map,head)
 import qualified Text.Blaze.Html5 as H hiding (head)
@@ -41,6 +41,9 @@ everyone = sortWith name $ map addHeadshot
   ,fiona
 --  ,felix
   ]
+
+sortWith :: Ord b => (a -> b) -> [a] -> [a]
+sortWith f = L.sortBy (\x y -> compare (f x) (f y))
 
 addHeadshot p = p {headshotLink=fromString $ (("images/headshots/")++([head $ name p])++(head $tail $splitOn " " $ name p)++".jpg")}
 
@@ -153,6 +156,3 @@ klein = Person{
   bio = "My research interests lie in the areas of synthesis and infinite games. In particular, I am interested in improving the synthesis process by finding suitable criteria that efficiently bound the solution space. Furthermore, I study the creation of easy to verify certificates for the synthesized solutions and corresponding game models to support these techniques."
 } 
 
-
-sortWith :: Ord b => (a -> b) -> [a] -> [a]
-sortWith f = L.sortBy (\x y -> compare (f x) (f y))

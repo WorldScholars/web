@@ -13,6 +13,7 @@ import qualified Text.Blaze.Html5.Attributes as A
 
 import qualified Pages.People.Everyone as E
 import qualified Pages.Programs.AllPrograms as P
+import qualified Pages.Programs.Util as P
 
 import Data.Time.Clock.POSIX
 import System.IO.Unsafe

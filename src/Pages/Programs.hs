@@ -13,6 +13,7 @@ import Text.Blaze.Html5.Attributes
 import qualified Text.Blaze.Html5.Attributes as A
 
 import Pages.Programs.AllPrograms
+import Pages.Programs.Util
 
 programs :: Html
 programs = do

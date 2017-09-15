@@ -11,6 +11,7 @@ import qualified Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes
 import qualified Text.Blaze.Html5.Attributes as A
 
+import Templates.Blocks
 
 index :: Html
 index = do
@@ -43,23 +44,10 @@ index = do
     
     -- /#action
     section ! A.id "features" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
-	H.div ! class_ "single-features" $ do
-	    H.div ! class_ "col-sm-5 wow fadeInLeft" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ img ! src "images/home/IMG_0009.JPG" ! class_ "img-responsive" ! alt ""
-	    H.div ! class_ "col-sm-6 wow fadeInRight" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ do
-		h2 "Interactive Learning"
-		p "Learning happens both inside the classroom and out. The World Scholar Program is not only a seminar series, but an entire experience for the school. Combining traditional lectures, with hand-on activities and active learning, students come away from the World Scholars program with a renewed sense of vigour and exploration in their studies."
-	
-	H.div ! class_ "single-features" $ do
-	    H.div ! class_ "col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ do
-		h2 "Passion for Humanities and Sciences"
-		p "From Acting to Computer Science, the world scholars bring a range of experience to campus that enlivens the atmosphere, and asks students to push beyond their comfort zone."
-	    H.div ! class_ "col-sm-5 wow fadeInRight" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ img ! src "images/home/IMG_1211.JPG" ! class_ "img-responsive" ! alt ""
-	
-	H.div ! class_ "single-features" $ do
-	    H.div ! class_ "col-sm-5 wow fadeInLeft" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ img ! src "images/home/IMG_1376.JPG" ! class_ "img-responsive" ! alt ""
-	    H.div ! class_ "col-sm-6 wow fadeInRight" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ do
-		h2 "Experienced and Enthusiastic"
-		p "The world scholars come from both academia and industry, giving students a look into what sort of careers are possible when you dream big."
+	textRightImg "images/home/IMG_0009.JPG" "Interactive Learning" "Learning happens both inside the classroom and out. The World Scholar Program is not only a seminar series, but an entire experience for the school. Combining traditional lectures, with hand-on activities and active learning, students come away from the World Scholars program with a renewed sense of vigour and exploration in their studies."
+	textLeftImg "images/home/IMG_1211.JPG" "Passion for Humanities and Sciences" "From Acting to Computer Science, the world scholars bring a range of experience to campus that enlivens the atmosphere, and asks students to push beyond their comfort zone."
+	textRightImg "images/home/IMG_1376.JPG" "Experienced and Enthusiastic" "The world scholars come from both academia and industry, giving students a look into what sort of careers are possible when you dream big."
+
     -- /#features
     
     section ! A.id "clients" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12" $ do
