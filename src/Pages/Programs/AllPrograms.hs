@@ -32,7 +32,7 @@ may2016 = Program{
  ,epoch = 1462111307
  ,summary = "This week long series hosted at Guemgang University brought 9 World Scholars to campus for lectures and one-on-one sessions."
  ,mainPic = "images/home/IMG_0009.JPG"
- ,captionedPics = replicate 4  (("images/home/IMG_0009.JPG":: AttributeValue,"Caption goes here"))
+ ,captionedPics = replicate 4  (("images/home/IMG_0009.JPG":: AttributeValue,"Teaching outside the classroom"))
  ,extraHTML = do
     h1 "" 
 }
@@ -43,7 +43,7 @@ feb2017 = Program{
  ,dates = "Feb 2017"
  ,epoch = 1485957707
  ,summary = "There were 300 applicants for 15 spots for this 10 day program. The overall aim of the program is to create a greater awareness in the minds of the delegation to understand the philosophy and the practice of education outside China, and to learn new skills in the area of liberal arts, which are not emphasized in their current degree program."
- ,mainPic = "images/home/IMG_0009.JPG"
+ ,mainPic = "images/home/dinner.jpg"
  ,captionedPics = []
  ,extraHTML = h1 ""
 }
