@@ -30,9 +30,13 @@ may2016 = Program{
  ,location = "Nonsan, South Korea"
  ,dates = "May 2016"
  ,epoch = 1462111307
- ,summary = "This week long series hosted at Guemgang University brought 9 World Scholars to campus for lectures and one-on-one sessions."
+ ,summary = "This week long series hosted at Guemgang University brought 9 World Scholars to campus for lectures and one-on-one sessions. Each World Scholar presented a lecture/workshop on the particular field of interest. Each lecture included Korean language translation support so that every student benefited from the experience, no matter their prior experience."
  ,mainPic = "images/home/IMG_0009.JPG"
- ,captionedPics = replicate 4  (("images/home/IMG_0009.JPG":: AttributeValue,"Teaching outside the classroom"))
+ ,captionedPics = [
+   ("images/programs/ggu1.jpg":: AttributeValue,"Students working on group projects in the GGU library."),
+   ("images/programs/ggu2.jpg":: AttributeValue,"Dr. Maria Hwang working with students on innovation."),
+   ("images/programs/ggu3.jpg":: AttributeValue,"Learning computer science."),
+   ("images/programs/ggu4.jpg":: AttributeValue,"Rahel Kroeker works with students in small groups")]
  ,extraHTML = do
     h1 "" 
 }

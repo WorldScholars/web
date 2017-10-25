@@ -16,7 +16,7 @@ import Data.List.Split
 makeProgramPage :: Program -> Html
 makeProgramPage  Program{..} = do
     section ! A.id (fromString $ "about-"++(name)) ! class_ "padding-top wow fadeInUp" ! dataAttribute "wow-duration" "400ms" ! dataAttribute "wow-delay" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
-      img ! src mainPic ! class_ "margin-bottom" ! A.style "width:25%" ! alt ""
+      img ! src mainPic ! class_ "margin-bottom" ! A.style "width:40%" ! A.style "min-width:250px" ! alt ""
       h1 ! class_ "margin-bottom" ! A.style "text-center" $ string $ name
       h2 ! class_ "margin-bottom" ! A.style "text-center" $ string $ dates
       mapM_ ((p ! A.style "text-align:left" ). do toHtml) (lines summary)
