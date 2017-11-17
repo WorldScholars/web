@@ -13,7 +13,7 @@ import qualified Text.Blaze.Html5.Attributes as A hiding (name)
 
 
 import Pages.Programs.Util
-import Pages.Programs.Feb2018
+import Pages.Programs.June2018
 
 
 allPrograms :: [Program]
@@ -22,7 +22,7 @@ allPrograms = sortWith epoch
    may2016
   ,feb2017
   ,aug2017
-  ,feb2018
+  ,june2018
   ]
 
 may2016 = Program{

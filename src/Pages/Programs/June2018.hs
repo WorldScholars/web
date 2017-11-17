@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Pages.Programs.Feb2018 (feb2018) where
+module Pages.Programs.June2018 (june2018) where
 
 import Text.Blaze.Html5 hiding (map,head,summary)
 import qualified Text.Blaze.Html5 as H hiding (head,summary)
@@ -14,7 +14,7 @@ import Templates.Blocks
 
 import Pages.Programs.Util
 
-feb2018 = Program{
+june2018 = Program{
   name = "Intercultural Exchange through the Lens of Liberal Arts"
  ,location = "New Haven, CT"
  ,dates = "June 2018"

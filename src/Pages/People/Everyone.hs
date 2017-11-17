@@ -137,7 +137,7 @@ murphy = Person{
 
 jacob = Person{
   headshotLink = "",
-  name = "Jacob Li (CFO)",
+  name = "Jacob Xiaoman Li (CFO)",
   title = "The Methodology of Philosophy",
   bio = "Before joining World Scholars, he was a Venture Creation Fellow intern at the Yale Entrepreneurial Institute of Yale University, where he helped build Rallybus project. He was also an instructional technologist at Yale College, a technical assistant for Professor Akhil Amar, and a core member of the non-profit organization clinic at Yale Law School. During his time at Yale, he led workshops and case studies for summer Chinese visiting students at the Yale School of Management, and spoke at the Yale Global Alumni Leadership Forum. In addition to his service for the university, he volunteered his time generously with the Yale Alumni Association, helping with planning events and supervising undergraduate interns. As President of the Yale Asian Students Association while attending Yale, he organized many events on campus to promote the well-being of the Asian community.  Jacob holds a masters degree in analytic philosophy of religion from Yale University. In 2012 he received the prestigious John Templeton Fellowship to attend the University of Notre Dame as a visiting graduate scholar in philosophy and ethics."
 }
