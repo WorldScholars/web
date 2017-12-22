@@ -7,6 +7,7 @@ import GHC.IO.Encoding
 
 import Pages.Index
 import Pages.About
+import Pages.FAQ
 import Pages.People
 import qualified Pages.People.Everyone as E
 import Pages.Programs
@@ -22,6 +23,7 @@ main = do
   makePage "html/about.html" about
   makePage "html/people.html" people
   makePage "html/programs.html" programs
+  makePage "html/faq.html" faq
   writeEveryone
   writePrograms
 

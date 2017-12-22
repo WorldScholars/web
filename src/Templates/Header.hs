@@ -58,6 +58,7 @@ htmlHeader =
                   mapM_
                     (\p -> li $ a ! href (toValue $ P.linkTo p) $ (string $ (P.name p)))
                     (filter (\p -> P.epoch p < today) P.allPrograms)
+              li $ a ! href "faq.html" $ "FAQ"
 
 today = round (unsafePerformIO getPOSIXTime)
 

@@ -13,7 +13,7 @@ import qualified Text.Blaze.Html5.Attributes as A hiding (name)
 
 
 import Pages.Programs.Util
-import Pages.Programs.June2018
+import Pages.Programs.Feb2018
 
 
 allPrograms :: [Program]
@@ -22,7 +22,7 @@ allPrograms = sortWith epoch
    may2016
   ,feb2017
   ,aug2017
-  ,june2018
+  ,feb2018
   ]
 
 may2016 = Program{
@@ -48,7 +48,11 @@ feb2017 = Program{
  ,epoch = 1485957707
  ,summary = "There were 300 applicants for 15 spots for this 10 day program. The overall aim of the program is to create a greater awareness in the minds of the delegation to understand the philosophy and the practice of education outside China, and to learn new skills in the area of liberal arts, which are not emphasized in their current degree program."
  ,mainPic = "images/home/dinner.jpg"
- ,captionedPics = []
+ ,captionedPics = [
+   ("images/programs/feb2017/aaronClass.jpg":: AttributeValue,"Aaron Profumo works with students on understanding theater."),
+   ("images/programs/feb2017/natHist.jpg":: AttributeValue,"Students take guided tour of the Peabody Natural History Museum."),
+   ("images/programs/feb2017/jacobClass.jpg":: AttributeValue,"Jacob Lee gives an lecture on philosophy."),
+   ("images/programs/feb2017/musicClass.jpg":: AttributeValue,"A music lecture gives students a first hand look into the piece they will hear later that night.")]
  ,extraHTML = h1 ""
 }
 
