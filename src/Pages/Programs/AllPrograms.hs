@@ -61,11 +61,18 @@ aug2017 = Program{
  ,location = "Woodbridge, CT"
  ,dates = "Aug 2017"
  ,epoch = 1501596107
- ,summary = 
-   "This month long program comibined SAT prep with passion projects.\n"++
-   "What is a Passion Project? In America and around the globe, educators are moving away from test-centric summative evaluations for learning. The educational landscape is moving towards a formative assessment in which students are expressing their learning in a more comprehensive way through projects. Project-based learning is the inspiration behind Passion Projects. We value the multi-dimensional ways of expressing learning through topics that students care about and we want to make sure that we provide an opportunity for students to make that happen. The Passion Projects will allow students to collaborate, innovate, and design a project (whether it be an idea or a product) of their choosing and we will facilitate to see through the project's completion.\n"++
-"By participating in the World Scholars program, students will develop the skills to present themselves, not just as strong students, but as future leaders. The final project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their passion project after the program, but all students will use those skills to find the next passion project to work on.\n"++
-"To participate in the next SAT+ program and start your own passion project, email us at fiona@worldscholars.global"
+ ,summary = do
+   "This month long program comibined SAT prep with passion projects."
+   br
+   br
+   "What is a Passion Project? In America and around the globe, educators are moving away from test-centric summative evaluations for learning. The educational landscape is moving towards a formative assessment in which students are expressing their learning in a more comprehensive way through projects. Project-based learning is the inspiration behind Passion Projects. We value the multi-dimensional ways of expressing learning through topics that students care about and we want to make sure that we provide an opportunity for students to make that happen. The Passion Projects will allow students to collaborate, innovate, and design a project (whether it be an idea or a product) of their choosing and we will facilitate to see through the project's completion."
+   br
+   br
+   "By participating in the World Scholars program, students will develop the skills to present themselves, not just as strong students, but as future leaders. The final project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their passion project after the program, but all students will use those skills to find the next passion project to work on."
+   br
+   br
+   "To participate in the next SAT+ program and start your own passion project, email us at "
+   a ! href "mailto:fiona@worldscholars.global" $ "fiona@worldscholars.global"
 --"To participate in the next SAT+ program and start your own passion project, email us at <a href=\"mailto:fiona@worldscholars.global\">fiona@worldscholars.global</a>"
             --a ! href "mailto:fiona@worldscholars.global" $ "fiona@worldscholars.global"
  ,mainPic = "images/home/class.jpg"

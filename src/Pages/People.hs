@@ -25,20 +25,6 @@ people = do
           br
           "This team has been working together on similar projects since 2013."
 
-
-    
-     -- /#services
-    section ! A.id "action" $ H.div ! class_ "vertical-center" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "action count" $ do
-         h2 "Collectively, we represent..."
-         mapM_ 
-            (\(x,y) -> do 
-            H.div ! class_ "col-sm-3 text-center wow bounceIn" ! dataAttribute "wow-duration" "1000ms" ! dataAttribute "wow-delay" "300ms" $ do
-                h1 ! class_ "timer bold" ! dataAttribute "to" x ! dataAttribute "speed" "3000" ! dataAttribute "from" "0" $ mempty
-                h3 y)
-          [("34","Academic Papers"),("6","Countries"),("19","Degrees"),("78","Years of Experience")]
-    
-
-
     -- /#people profiles
     section ! A.id "profiles" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
       H.div ! A.id "team-carousel" ! class_ "carousel slide wow fadeIn" ! dataAttribute "ride" "carousel" ! dataAttribute "wow-duration" "400ms" ! dataAttribute "wow-delay" "400ms" $ do

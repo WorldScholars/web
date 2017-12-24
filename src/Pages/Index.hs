@@ -20,7 +20,7 @@ index = do
 	    H.div ! class_ "slide-text" $ do
 		h1 "Bringing the world to you"
 		p "The World Scholars program is a collective of talented young professionals, dedicated to sharing their educational experiences around the globe. In particular, we bring opportunity out of the ivory tower, to schools that aim to enrich their students' lives with a once in a lifetime opportunity."
-		a ! href "#" ! class_ "btn btn-common" $ "CONTACT US"
+		a ! href "mailto:fiona@worldscholars.global" ! class_ "btn btn-common" $ "CONTACT US"
 	    img ! src "images/home/slider/hill.png" ! class_ "slider-hill" ! alt "slider image"
 	    img ! src "images/home/slider/house.png" ! class_ "slider-house" ! alt "slider image"
 	    img ! src "images/home/slider/sun.png" ! class_ "slider-sun" ! alt "slider image"

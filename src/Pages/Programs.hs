@@ -35,5 +35,5 @@ renderProgramStub program@Program{..} =
 	    H.div ! class_ "col-sm-5 wow fadeInLeft" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ img ! src mainPic ! class_ "img-responsive" ! alt ""
 	    H.div ! class_ "col-sm-6 wow fadeInRight" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ do
 		h2 $ a ! href (toValue $ linkTo program) $ string (name ++ " - " ++ dates)
-		p $ string summary
+		p summary
      

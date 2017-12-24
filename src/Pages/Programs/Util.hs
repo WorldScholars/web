@@ -19,7 +19,7 @@ makeProgramPage  Program{..} = do
       img ! src mainPic ! class_ "margin-bottom" ! A.style "width:40%" ! A.style "min-width:250px" ! alt ""
       h1 ! class_ "margin-bottom" ! A.style "text-center" $ string $ name
       h2 ! class_ "margin-bottom" ! A.style "text-center" $ string $ dates
-      mapM_ ((p ! A.style "text-align:left" ). do toHtml) (lines summary)
+      p ! A.style "padding-left:12%;padding-right:12%;text-align:left" $ summary
       H.div ! class_ "margin-bottom" $ mapM_ renderExtraPic (take 4 captionedPics)
       H.div ! class_ "margin-bottom" $ extraHTML
       
@@ -40,7 +40,7 @@ data Program = Program {
   location :: String,
   dates :: String,
   epoch :: Int,
-  summary :: String,
+  summary :: Html,
   mainPic :: AttributeValue,
   captionedPics :: [(AttributeValue,String)],
   extraHTML :: Html

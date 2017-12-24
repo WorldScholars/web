@@ -6,6 +6,8 @@ import qualified Text.Blaze.Html5 as H
 import GHC.IO.Encoding
 
 import Pages.Index
+import Pages.ThankYou
+import Pages.Apply
 import Pages.About
 import Pages.FAQ
 import Pages.People
@@ -21,11 +23,13 @@ main = do
   setLocaleEncoding utf8
   makePage "html/index.html" index
   makePage "html/about.html" about
-  makePage "html/people.html" people
+  makePage "html/apply.html" apply
   makePage "html/programs.html" programs
   makePage "html/faq.html" faq
   writeEveryone
   writePrograms
+  
+  makePage "html/thankyou.html" thankyou
 
 writeEveryone :: IO()  
 writeEveryone = 
