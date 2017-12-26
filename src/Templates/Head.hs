@@ -30,6 +30,13 @@ htmlHead =
     link ! rel "apple-touch-icon-precomposed" ! sizes "114x114" ! href "images/ico/apple-touch-icon-114-precomposed.png"
     link ! rel "apple-touch-icon-precomposed" ! sizes "72x72" ! href "images/ico/apple-touch-icon-72-precomposed.png"
     link ! rel "apple-touch-icon-precomposed" ! href "images/ico/apple-touch-icon-57-precomposed.png"
+    preEscapedToHtml $ unlines [
+            "<!-- Global site tag (gtag.js) - Google Analytics -->",
+            "        <script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-111625545-1\"></script>",
+            "        <script>",
+            "        window.dataLayer = window.dataLayer || [];",
+            "        function gtag(){dataLayer.push(arguments);}",
+            "        gtag('js', new Date());",
 
-
-
+            "        gtag('config', 'UA-111625545-1');",
+            "        </script>"]
