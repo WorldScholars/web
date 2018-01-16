@@ -49,25 +49,3 @@ index = do
 	textRightImg "images/home/IMG_1376.JPG" "Experienced and Enthusiastic" "The world scholars come from both academia and industry, giving students a look into what sort of careers are possible when you dream big."
 
     -- /#features
-    
-    section ! A.id "clients" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12" $ do
-	H.div ! class_ "clients text-center wow fadeInUp" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ do
-	    p $ img ! src "images/home/clients.png" ! class_ "img-responsive" ! alt ""
-	    h1 ! class_ "title" $ "Past hosts"
-	    p $ do
-		"The World Scholars have been on tour before, visiting schools around the world."
-		br
-		"Here are a few of the places we have been."
-	H.div ! class_ "clients-logo wow fadeIn" ! dataAttribute "wow-duration" "1000ms" ! dataAttribute "wow-delay" "600ms" $ do
-	    H.div ! class_ "col-xs-3 col-sm-2" $ do
-	      a ! href "#" $ img ! src "images/home/ggu_logo.png" ! class_ "img-responsive" ! alt ""
-	      p "Nonsan, South Korea"
-	    H.div ! class_ "col-xs-3 col-sm-2" $ do
-	      a ! href "#" $ img ! src "images/home/woodbridge.png" ! class_ "img-responsive" ! alt ""
-	      p "Woodbridge, Conneticut"
-	    {-H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/client2.png" ! class_ "img-responsive" ! alt ""
-	    H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/client3.png" ! class_ "img-responsive" ! alt ""
-	    H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/client4.png" ! class_ "img-responsive" ! alt ""
-	    H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/client5.png" ! class_ "img-responsive" ! alt ""
-	    H.div ! class_ "col-xs-3 col-sm-2" $ a ! href "#" $ img ! src "images/home/client6.png" ! class_ "img-responsive" ! alt ""-}
-    -- /#clients

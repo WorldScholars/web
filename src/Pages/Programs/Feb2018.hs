@@ -28,6 +28,7 @@ feb2018 = Program{
  ,mainPic = "images/home/winter-campus.jpg"
  ,captionedPics = []
  ,extraHTML = do
+   h2 ! A.style "color:red" $ "Due to number of high quality applicants requesting financial aid, this program has been postponed until the summer while we organize to provide adequate assistance for all qualified students. Stay tuned for updates!"
    blockquote $ do 
      "A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly." 
      em "Specialization is for insects."
@@ -36,8 +37,10 @@ feb2018 = Program{
      textLeftImg "images/programs/feb2017/aaronClass.jpg" "Classes" "Our classes examine a wide range of topics from a multicultural lens to prepare students to make the leap from a student of the classroom to a student of life. Our lecturers expect students to step outside of their comfort zone and make unexpected connections with a diverse group of peers. Students should be prepared to fully engage in discussion style teaching. Some topics from previous programs include \"The Science of Business\", \"Education Across Cultures\", \"Computer Science Without Computers\", and \"The Methodology of Philosophy\". Our roster of instructors is continually updated - a final schedule will be released as the program start date nears."
      textRightImg "images/home/skyline.JPG" "Trips to Boston and New York" "Led by World Scholars' staff members, our students will visit both the professional and educational institutions in Boston and New York City, one of the world's major commercial, financial, and cultural centers. The organizations we visited in the past include Goldman Sachs, JP Morgan Chase, Columbia University, and Metropolitan Museum of Arts. This trip will take place at the end of the program, the weekend before students return home."
      textLeftImg "images/home/evening.JPG" "Evening Activities" "Evening activities are designed to complement the program to give students a truly well-rounded education. Evening activities are paired with lectures during the day from experts in the field, exposing students to the theory and practice behind the events of the evening. This year's activities will include a guided tour of the Natural History Museum, a play at the Yale Repertory Theater, seeing a Yale vs Quinnipiac Hockey game, and a performance by the Yale Concert Band. Attending these extracurricular events gives students a deep cultural experience in the liberal arts."
-     img ! src "images/programs/feb2018/Schedule.png" ! alt "schedule" ! width "88%"
-     h1 ! class_ "margin-bottom" $ "Deadline to apply is January 12"
-     h1 ! class_ "margin-bottom" $ a ! href "apply.html" $ "Apply now"
+     --img ! src "images/programs/feb2018/Schedule.png" ! alt "schedule" ! width "88%"
+     h1 ! class_ "margin-bottom" $ "Deadline to apply was January 12"
+     --h1 ! class_ "margin-bottom" $ a ! href "apply.html" $ "Apply now"
+     object ! A.data_ "https://adobeindd.com/view/publications/6803dbf4-7962-4ae1-a831-2a37731f629a/wt7o/publication-web-resources/pdf/WS_February_Brochure_v2.pdf" ! A.type_ "application/pdf" ! width "88%" ! height "900px" $ do
+       a ! href "https://indd.adobe.com/view/6803dbf4-7962-4ae1-a831-2a37731f629a" $ "Download a brochure"
 }
 

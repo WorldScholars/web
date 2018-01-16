@@ -51,7 +51,7 @@ feb2017 = Program{
  ,captionedPics = [
    ("images/programs/feb2017/aaronClass.jpg":: AttributeValue,"Aaron Profumo works with students on understanding theater."),
    ("images/programs/feb2017/natHist.jpg":: AttributeValue,"Students take guided tour of the Peabody Natural History Museum."),
-   ("images/programs/feb2017/jacobClass.jpg":: AttributeValue,"Jacob Lee gives an lecture on philosophy."),
+   ("images/programs/feb2017/jacobClass.jpg":: AttributeValue,"Jacob Lee gives a lecture on philosophy."),
    ("images/programs/feb2017/musicClass.jpg":: AttributeValue,"A music lecture gives students a first hand look into the piece they will hear later that night.")]
  ,extraHTML = h1 ""
 }
