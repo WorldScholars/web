@@ -21,8 +21,19 @@ faq = do
     -- /#company-information
     section ! A.id "team" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
       h1 ! class_ "title text-center wow fadeInDown" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ "FAQ"
-      mapM_ makeLink allFAQs
-      mapM_ makeQuestions allFAQs
+
+      --h3 ! A.style "text-decoration: underline" $ "Domestic Programs"
+      h3 "[Domestic Programs]"
+      mapM_ makeLink domesticFAQs
+      mapM_ makeQuestions domesticFAQs
+
+      br
+      br
+
+      --h3 ! A.style "text-decoration: underline" $ "International Programs"
+      h3 "[International Programs]"
+      mapM_ makeLink internationalFAQs
+      mapM_ makeQuestions internationalFAQs
 
 makeLink (title,anch,_) = li $ a ! href (mappend "#" anch) $ title
 
@@ -30,7 +41,26 @@ makeQuestions (title,anchor,content) = do
     a ! A.id anchor $ h2 ! class_ "title text-left wow fadeInDown" ! dataAttribute "wow-duration" "500ms" $ title
     p ! class_ "wow fadeInDown" ! A.style "padding-left:12%;padding-right:12%" ! dataAttribute "wow-duration" "400ms" ! dataAttribute "wow-delay" "400ms" $ do content
 
-allFAQs = [
+
+-------
+--
+-- Domestic
+--
+-------
+
+domesticFAQs = [
+    tuition
+  ]
+  
+
+
+-------
+--
+-- International
+--
+-------
+
+internationalFAQs = [
     howtoapply
   , dates
   , scholarship
@@ -58,7 +88,7 @@ dates =
   ("Important Dates", "dates", "You will be notified via email of our decision by no later than January 15th. Application closes on January 12th. Please indicate if you will need a letter of invitation for a visa in the application. Those who need a visa will be contacted separately about the visa.")
 
 acceptance = ("What happens after I am accepted?", "acceptance", do
-  "Below is an overview of what the detailed ‘Acceptance Letter’ will provide. We will be in personal contact with the admitted student to answer any questions and provide support for an easy and smooth travel and fun and meaningful experience with our program. A third party smartphone application (e.g., Whats App) will be set up so that constant communication between the students and the staff is possible."
+  "Below is an overview of what the detailed ‘Acceptance Letter’ will provide. We will be in personal contact with the admitted student to answer any questions and provide support for an easy and smooth travel and fun and meaningful experience with our program. A third party smartphone application (e.g., WhatsApp) will be set up so that constant communication between the students and the staff is possible."
   br
   "You will receive a detailed email from us. It will include: "
   H.div ! class_ "wow fadeInDown" ! A.style "padding-left:12%;padding-right:12%" ! dataAttribute "wow-duration" "400ms" ! dataAttribute "wow-delay" "450ms" $ do

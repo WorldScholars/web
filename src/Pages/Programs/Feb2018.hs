@@ -20,10 +20,9 @@ feb2018 = Program{
  ,dates = "February 2018"
  ,epoch = 1517493707
  ,summary = do
-    "This two week program runs from February 11 - February 24, 2018. It brings together students from 5 different countries, and a broad spectrum of socio-economic backgrounds to provide a multicultural, diverse, and unique educational experience. Some of the program highlights are listed below. The application deadline is January 12. Applicants will be notified of acceptance by January 15. Due to the small discussion style classes, this program is limited to 20 participants."
+    p "This two week program runs from February 11 - February 24, 2018. It brings together students from 5 different countries, and a broad spectrum of socio-economic backgrounds to provide a multicultural, diverse, and unique educational experience. Some of the program highlights are listed below. The application deadline is January 12. Applicants will be notified of acceptance by January 15. Due to the small discussion style classes, this program is limited to 20 participants."
     br
-    br
-    "Program cost is $2199 USD, which includes tuition, events, special dinners, and all domestic travel. This does not include international travel and room and board. Some need-based scholarships are available. For more information please make a note on your application, or reach out to us via email at "
+    p "Program cost is $2199 USD, which includes tuition, events, special dinners, and all domestic travel. This does not include international travel and room and board. Some need-based scholarships are available. For more information please make a note on your application, or reach out to us via email at "
     a ! href "mailto:fiona@worldscholars.global" $ "fiona@worldscholars.global"
  ,mainPic = "images/home/winter-campus.jpg"
  ,captionedPics = []

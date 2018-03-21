@@ -12,7 +12,7 @@ full:
 
 deploy: full
 	cd ../WorldScholars.github.io
-	git add .
+	git add -u .
 	git commit -am 'autocommit'
 	git push
 	cd ../web

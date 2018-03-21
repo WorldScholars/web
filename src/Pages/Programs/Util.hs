@@ -19,9 +19,9 @@ makeProgramPage  Program{..} = do
       img ! src mainPic ! class_ "margin-bottom" ! A.style "width:40%" ! A.style "min-width:250px" ! alt ""
       h1 ! class_ "margin-bottom" ! A.style "text-center" $ string $ name
       h2 ! class_ "margin-bottom" ! A.style "text-center" $ string $ dates
-      p ! A.style "padding-left:12%;padding-right:12%;text-align:left" $ summary
+      H.div ! A.style "padding-left:12%;padding-right:12%;text-align:left" $ summary
       H.div ! class_ "margin-bottom" $ mapM_ renderExtraPic (take 4 captionedPics)
-      H.div ! class_ "margin-bottom" $ extraHTML
+      H.div ! class_ "margin-bottom" ! A.style "padding-left:12%;padding-right:12%;text-align:left" $ extraHTML
       
 renderExtraPic (pic,c) = do
   H.div ! class_ "col-sm-3 col-xs-10" $ do

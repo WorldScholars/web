@@ -36,7 +36,7 @@ htmlHeader =
           H.div ! class_ "collapse navbar-collapse" $ ul ! class_ "nav navbar-nav navbar-right" $ do
               li $ a ! href "index.html" $ "Home"
               li $ a ! href "about.html" $ "About"
-              li $ a ! href "apply.html" $ "Apply"
+              --li $ a ! href "apply.html" $ "Apply"
               {-li ! class_ "dropdown" $ do
                 a ! href "people.html" $ do
                   "People"
@@ -57,7 +57,7 @@ htmlHeader =
                   li "Past"
                   mapM_
                     (\p -> li $ a ! href (toValue $ P.linkTo p) $ (string $ (P.name p)))
-                    (filter (\p -> P.epoch p < today) P.allPrograms)
+                    (reverse $ filter (\p -> P.epoch p < today) P.allPrograms)
               li $ a ! href "faq.html" $ "FAQ"
 
 today = round (unsafePerformIO getPOSIXTime)
