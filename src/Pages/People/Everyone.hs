@@ -25,20 +25,22 @@ makeBio Person{..} = do
 
 everyone :: [Person]
 --TODO can only display 12
-everyone = sortWith name $ map addHeadshot
-  [rahul
+everyone = --sortWith name $ 
+ map addHeadshot
+  [
+   maria
+  ,jacob
+  ,fiona
+  ,santolucito
   ,aaron
+  ,rahul
+  ,klumpp
   ,rahel
   ,dao
-  ,maria
-  ,santolucito
   ,murphy
   ,diana
-  ,jacob
---  ,sangwoo
   ,stefan
-  ,klumpp
-  ,fiona
+--  ,sangwoo
 --  ,felix
   ]
 
@@ -62,7 +64,7 @@ fiona = Person{
   headshotLink = "",
   name = "Fiona Santolucito (COO)",--NB fix this if we talk to investors
   title = "Organizing Opportunities",
-  bio = "Fiona Santolucito is a graduate of Johns Hopkins University as a Hodson Trust Scholar. She is fluent in Mandarin Chinese (HSK-5) and has studied at Beijing #80 High School. She has also studied at Yonsei University, South Korea, where she worked with The Associated Press to promote children's health issues in North Korea. Fiona worked with Tuscany Strategy, an education and health care consulting firm, for two years where she built models for business opportunities. Starting in the Fall of 2018, Fiona will begin a Masters program at the Yale Divinity School. Fiona acts as the Director of Operations at World Scholars."
+  bio = "Fiona Santolucito is a graduate of Johns Hopkins University as a Hodson Trust Scholar and is entering Yale University as a graduate student this fall. She is fluent in Mandarin Chinese (HSK-5) and has studied at Beijing #80 High School. She has also studied at Yonsei University, South Korea, where she worked with The Associated Press to promote children's health issues in North Korea. Fiona worked with Tuscany Strategy, an education and health care consulting firm, for two years where she built models for business opportunities. Fiona acts as the Director of Operations at World Scholars."
 }
 
 klumpp = Person{
@@ -83,7 +85,9 @@ aaron = Person{
   headshotLink = "",
   name = "Aaron Profumo",
   title = "Presenting your Best Self",
-  bio = "Aaron is an actor, producer, teacher, comic, improviser, and recent graduate of the Yale School of Drama where he received his MFA. As a teacher Aaron draws from a variety of disciplines ranging from Stanislavski, Grotowski, Linklater, Alexander, Fitzmaurice, Bogart, Le Coque, and others, forming a methodology that explores the mind/body divide in acting and creating fully expressive performers and artists that use their whole instrument with ease and free creative impulse. Aaron is a co-founder of RTCstudios, a multimedia arts company seeking to produce, fund, and fully incubate young and mid level budding artists from a range of mediums. www.AaronProfumo.com"
+  bio = do
+          p "Aaron is an actor, producer, teacher, comic, improviser, and recent graduate of the Yale School of Drama where he received his MFA. As a teacher Aaron draws from a variety of disciplines ranging from Stanislavski, Grotowski, Linklater, Alexander, Fitzmaurice, Bogart, Le Coque, and others, forming a methodology that explores the mind/body divide in acting and creating fully expressive performers and artists that use their whole instrument with ease and free creative impulse. Aaron is a co-founder of RTCstudios, a multimedia arts company seeking to produce, fund, and fully incubate young and mid level budding artists from a range of mediums."
+          a ! href "http://www.aaronprofumo.com" $ "www.AaronProfumo.com"
 }
 
 rahel = Person{
@@ -97,7 +101,9 @@ dao = Person{
   headshotLink = "",
   name = "Pantiphar Dao Chantes",
   title = "Design as a Philosophy",
-  bio = "Dao is a doctoral candidate studying Instructional Technology and Media at Teachers College, Columbia University. Her research focuses on the design and development of interactive media (such as computer games) for teaching and learning. Before coming to the United States, Dao was born and raised in Bangkok, Thailand where she earned a bachelor degree in industrial engineering. Dao is a visual designer and an amateur artist. She has done many kinds of design projects such as instructional materials, graphical user interfaces, websites, educational games, posters/banners/logos, wedding invitations, etc. See more at daochantes.com."
+  bio = do
+          p "Dao is a doctoral candidate studying Instructional Technology and Media at Teachers College, Columbia University. Her research focuses on the design and development of interactive media (such as computer games) for teaching and learning. Before coming to the United States, Dao was born and raised in Bangkok, Thailand where she earned a bachelor degree in industrial engineering. Dao is a visual designer and an amateur artist. She has done many kinds of design projects such as instructional materials, graphical user interfaces, websites, educational games, posters/banners/logos, wedding invitations, etc."
+          a ! href "http://www.daochantes.com" $ "www.daochantes.com"
 }
 
 diana = Person{
@@ -111,14 +117,18 @@ santolucito = Person{
   headshotLink = "",
   name = "Mark Santolucito",
   title = "Computer Science Without Computers",
-  bio = "Mark Santolucito is a Computer Science PhD student at Yale University, where he is studying programming languages with Ruzica Piskac. Mark originally started under the supervision of Paul Hudak, working on interactive computer music in and Functional Reactive Programming (FRP). Mark is now working with Ruzica Piskac on various forms of program synthesis. Recently, their work has focused on synthesis of FRP programs from logical specifications. Mark also graduated Cum Laude from Amherst College with a BA in both Computer Science and Music, where he was awarded the Best Computer Science Thesis Award in addition to the Lerner Piano Prize upon graduation. See more at marksantolucito.com. Mark also acts as the CTO for World Scholars."
+  bio = do 
+          p "Mark Santolucito is a Computer Science PhD student at Yale University, where he is studying programming languages with Ruzica Piskac. Mark started at Yale with Paul Hudak, working on interactive computer music and Functional Reactive Programming (FRP). Mark is now working with Ruzica Piskac on various forms of program synthesis. Recently, their work has focused on synthesis of FRP programs from logical specifications. Mark also graduated Cum Laude from Amherst College with a BA in both Computer Science and Music, where he was awarded the Best Computer Science Thesis Award in addition to the Lerner Piano Prize upon graduation. In the summer of 2018, Mark will work at Amazon applying his research in practice." 
+          a ! href "http://www.marksantolucito.com" $ "www.marksantolucito.com."
 }
 
 maria = Person{
   headshotLink = "",
   name = "Maria Hwang (CEO)",
   title = "Education Across Cultures",
-  bio = "Maria Hwang is a post-doctoral researcher at the Columbia University Medical Center's (CUMC) Biomedical Informatics Department working with Lena Mamykina. Maria received her doctorate of education at Teachers College, Columbia University in Instructional Technology and Media under the supervision of Charles Kinzer, focusing on persuasive messages for behavior change in a digital game environment. For her dissertation she developed a game, Monster Appetite, and embedded persuasive messages to see if people would be receptive to those tailored messages that emphasized consequences of a positive or negative behavior. She continues her research on persuasive messages at her post-doc at CUMC with diabetic patients."
+  bio = do
+          p "Maria Hwang is a post-doctoral researcher at the Columbia University Medical Center's (CUMC) Biomedical Informatics Department working with Lena Mamykina. Maria received her doctorate of education at Teachers College, Columbia University in Instructional Technology and Media under the supervision of Charles Kinzer, focusing on persuasive messages for behavior change in a digital game environment. For her dissertation she developed a game, Monster Appetite, and embedded persuasive messages to see if people would be receptive to those tailored messages that emphasized consequences of a positive or negative behavior. She continues her research on persuasive messages at her post-doc at CUMC with diabetic patients. In the Fall of 2019, Maria will begin a new position as a tenure-track Assistant Professor of Computer Science at the Fashion Institute of Technology (FIT) in NYC, NY."
+          a ! href "http://www.mariahwang.com" $ "www.mariahwang.com."
 }
 
 stefan = Person{
@@ -139,7 +149,7 @@ jacob = Person{
   headshotLink = "",
   name = "Jacob Li (CFO)",
   title = "The Methodology of Philosophy",
-  bio = "Before joining World Scholars, he was a Venture Creation Fellow intern at the Yale Entrepreneurial Institute of Yale University, where he helped build Rallybus project. He was also an instructional technologist at Yale College, a technical assistant for Professor Akhil Amar, and a core member of the non-profit organization clinic at Yale Law School. During his time at Yale, he led workshops and case studies for summer Chinese visiting students at the Yale School of Management, and spoke at the Yale Global Alumni Leadership Forum. In addition to his service for the university, he volunteered his time generously with the Yale Alumni Association, helping with planning events and supervising undergraduate interns. As President of the Yale Asian Students Association while attending Yale, he organized many events on campus to promote the well-being of the Asian community.  Jacob holds a masters degree in analytic philosophy of religion from Yale University. In 2012 he received the prestigious John Templeton Fellowship to attend the University of Notre Dame as a visiting graduate scholar in philosophy and ethics."
+  bio = "Prior to joining World Scholars, Jacob was a a venture creation intern at Yale Tsai Center for Innovative Thinking (formerly, \"Yale Entrepreneurial Institute\"), and organized one of the nation's first blockchain executive education partnering with Harvard and Yale law and management faculty members in early 2016. He also served as an instructional technologist at Yale College, a core member of Yale Law School Non-profit Organization Clinic, and a technical assistant for Professor Akhil Amar in 2014. Jacob Li is a 2012 John Templeton Fellowship recipient and a Yale graduate. "
 }
 
 sangwoo = Person{
