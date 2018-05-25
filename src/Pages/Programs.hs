@@ -27,13 +27,13 @@ programs = do
     -- /#program list
     section ! A.id "programs" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
          mapM_ renderProgramStub (reverse allPrograms)
-	
-	
+
+
 renderProgramStub :: Program -> Html
 renderProgramStub program@Program{..} =
-	H.div ! class_ "single-features" $ do
-	    H.div ! class_ "col-sm-5 wow fadeInLeft" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ img ! src mainPic ! class_ "img-responsive" ! alt ""
-	    H.div ! class_ "col-sm-6 wow fadeInRight" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ do
-		h2 $ a ! href (toValue $ linkTo program) $ string (name ++ " - " ++ dates)
-		p summary
+   H.div ! class_ "single-features" $ do
+      H.div ! class_ "col-sm-5 wow fadeInLeft" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ img ! src mainPic ! class_ "img-responsive" ! alt ""
+      H.div ! class_ "col-sm-6 wow fadeInRight" ! dataAttribute "wow-duration" "500ms" ! dataAttribute "wow-delay" "300ms" $ do
+          h2 $ a ! href (toValue $ linkTo program) $ string (name ++ " - " ++ dates)
+          p summary
      

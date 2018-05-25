@@ -14,7 +14,7 @@ full:
 deploy: full
 	cd ../WorldScholars.github.io && \
 	git pull && \
-	git add -u . && \
+	git add . && \
 	git commit -am 'autocommit' && \
 	git push && \
 	cd ../web

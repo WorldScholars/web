@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Pages.Programs.SATPlus2018 (sat2018) where
+module Pages.Programs.SATPlus2018 (sat2018, registration) where
 
 import Text.Blaze.Html5 hiding (map,head,summary)
 import qualified Text.Blaze.Html5 as H hiding (head,summary)
@@ -29,8 +29,8 @@ sat2018 = Program{
  ,captionedPics = []
  ,extraHTML = do
    p "Students may choose to register for either week or both weeks."
-   --myTable ([["August 6th - 10th",a ! href "/register.html" $ "Register Now"]
-   --         ,["August 13th - 17th",a ! href "/register.html" $ "Register Now"]]::[[Html]])
+   --myTable ([["August 6th - 10th", "See WeChat group for registration"]
+   --         ,["August 13th - 17th", "See WeChat group for registration"]]::[[Html]])
    myTable ([["August 6th - 10th", "Registration coming soon"]
             ,["August 13th - 17th", "Registration coming soon"]]::[[Html]])
    p "The program will run from 9:00 AM to 4:30 PM, Monday through Friday. Below is an outline of a student’s typical day."
@@ -43,14 +43,38 @@ sat2018 = Program{
             ,["1:30 PM", "SAT Math practice problems"]
             ,["2:30 PM", "Passion Project"]
             ,["4:30 PM", "Students picked up"]] :: [[String]])
+   H.div ! A.style "width:60%; margin:0 auto;" $ preEscapedToHtml youtubeEmbed
    p "What is a Passion Project? In America and around the globe, educators are moving away from test-centric summative evaluations for learning. The educational landscape is moving towards a formative assessment in which students are expressing their learning in a more comprehensive way through projects. Project-based learning is the inspiration behind Passion Projects. We value the multi-dimensional ways of expressing learning through topics that students care about and we want to make sure that we provide an opportunity for students to make that happen. The Passion Projects will allow students to collaborate, innovate, and design a project (whether it be an idea or a product) of their choosing and we will facilitate to see through the project's completion.  Guest lecturers will come on Tuesdays and Thursdays to expose students to potential academic and professional career paths as well as inspire Passion Project work."
    p "By participating in the World Scholars program, students will develop the skills to present themselves, not just as strong students, but as future leaders. The final project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their Passion Project after the program, but all students will use those skills to find the next Passion Project to work on."
    p "To participate in the next SAT+ program and start your own Passion Project, stay tuned for registration instructions. Enrollment for this program is capped at 20 student per week per section, and we run two sections simultaneously in both weeks."
    p "Price and location TBA"
-   a ! href "mailto:fiona@worldscholars.global" $ "fiona@worldscholars.global"
+   p $ do
+     "For more information please contact: "
+     a ! href "mailto:fiona@worldscholars.global" $ "fiona@worldscholars.global"
 }
 
+
+youtubeEmbed :: String 
+youtubeEmbed = "<iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/p2UQICvLgNM?rel=0&amp;showinfo=0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"
 
 myTable :: (ToMarkup a) => [[a]] -> Html
 myTable xs = table ! A.class_ "price-table" $ forM_ xs (tr . mapM_ (td . toHtml))
     
+
+registration:: String -> Html
+registration buttonHTML = do
+    section ! A.id "about-company" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
+      h1 ! class_ "margin-bottom" $ "SAT+ 2018 Registration"
+      p "Thank you for your interest in SAT+2018. Please register below using one of our payment methods."
+    section ! A.id "payment-options-check" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
+      H.div ! class_ "col-sm-6 text-center" $ do
+        h3 "Option 1: Check"
+        p "Please make the check payable to \"World Scholars LLC\" and include the student's name on the memo line. Additionally, please enclose a note with the sessions (week 1, week 2, or week 1&2) for which you are enrolling, as well as the parent's WeChat ID. If you have multiple children attending, please provide a separate check for each enrolling student."
+        dl $ do
+          dt "Address"
+          dd "World Scholars LLC"
+          dd "225 East 110th, Suite C"
+          dd "New York, NY 10029"
+      H.div ! class_ "col-sm-6 text-center" $ do
+        h3 "Option 2: Paypal"
+        preEscapedToHtml $ buttonHTML

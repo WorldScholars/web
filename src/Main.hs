@@ -7,6 +7,8 @@ import GHC.IO.Encoding
 
 import Pages.Index
 import Pages.ThankYou
+import Pages.ProgramCap
+
 import Pages.Apply
 import Pages.About
 import Pages.FAQ
@@ -14,6 +16,7 @@ import Pages.People
 import qualified Pages.People.Everyone as E
 import Pages.Programs
 import qualified Pages.Programs.AllPrograms as P
+import qualified Pages.Programs.SATPlus2018 as SAT2018
 import qualified Pages.Programs.Util as P
 
 import Template
@@ -29,7 +32,11 @@ main = do
   writeEveryone
   writePrograms
   
+  --makePage "html/programcap.html" programcap
   makePage "html/thankyou.html" thankyou
+
+  paypalButton <- readFile "src/paypalButton.html"
+  makePage "html/registration.html" $ SAT2018.registration paypalButton
 
 writeEveryone :: IO()  
 writeEveryone = 

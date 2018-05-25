@@ -37,9 +37,9 @@ htmlFooter =
             br
           h2 "Address"
           address $ do
-            "225 E 110st"
+            "225 E 110th, Suite C"
             br
-            "Manhattan NYC, NY"
+            "New York, NY"
             br
             "United States of America"
             br
