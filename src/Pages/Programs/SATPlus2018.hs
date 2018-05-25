@@ -24,15 +24,15 @@ sat2018 = Program{
  ,dates = "Aug 2018"
  ,epoch = 1534529026 
  ,summary = do
-   p "This year World Scholars will bring its SAT+ program back to the community, condensed into a two week program from August 6-17. This intensive SAT prep program goes beyond just preparing students for standardized testing, but helps hone their academic and interpersonal skills to prepare them for the college admissions process. The program is best suited for student in grades 9-12."
+   p "This year World Scholars will bring its SAT+ program back to the community, condensed into a two week program from August 6-17. This intensive SAT prep program goes beyond just preparing students for standardized testing, but helps hone their academic and interpersonal skills to prepare them for the college admissions process. The program is best suited for students in grades 9-12."
  ,mainPic = "images/home/class.jpg"
  ,captionedPics = []
  ,extraHTML = do
    p "Students may choose to register for either week or both weeks."
    --myTable ([["August 6th - 10th", "See WeChat group for registration"]
    --         ,["August 13th - 17th", "See WeChat group for registration"]]::[[Html]])
-   myTable ([["August 6th - 10th", "Registration coming soon"]
-            ,["August 13th - 17th", "Registration coming soon"]]::[[Html]])
+   myTable ([["August 6th - 10th", a ! href "registration.html" $ "Register now"]
+            ,["August 13th - 17th", a ! href "registation.html" $ "Register now"]]::[[Html]])
    p "The program will run from 9:00 AM to 4:30 PM, Monday through Friday. Below is an outline of a student’s typical day."
    myTable ([["8:55 AM", "Students dropped off"]
             ,["9:00 AM", "SAT English lecture"]
