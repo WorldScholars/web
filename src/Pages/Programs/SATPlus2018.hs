@@ -31,8 +31,8 @@ sat2018 = Program{
    p "Students may choose to register for either week or both weeks."
    --myTable ([["August 6th - 10th", "See WeChat group for registration"]
    --         ,["August 13th - 17th", "See WeChat group for registration"]]::[[Html]])
-   myTable ([["August 6th - 10th", a ! href "registration.html" $ "Register now"]
-            ,["August 13th - 17th", a ! href "registation.html" $ "Register now"]]::[[Html]])
+   myTable ([["August 6th - 10th", a !  href "registration.html" $ "Register now"]
+            ,["August 13th - 17th", a ! href "registration.html" $ "Register now"]]::[[Html]])
    p "The program will run from 9:00 AM to 4:30 PM, Monday through Friday. Below is an outline of a student’s typical day."
    myTable ([["8:55 AM", "Students dropped off"]
             ,["9:00 AM", "SAT English lecture"]
