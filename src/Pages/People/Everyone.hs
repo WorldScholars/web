@@ -147,7 +147,7 @@ murphy = Person{
 
 jacob = Person{
   headshotLink = "",
-  name = "Jacob Li (VP of Marketing)",
+  name = "Jacob Li (VP of Buisness Development)",
   title = "The Methodology of Philosophy",
   bio = "Prior to joining World Scholars, Jacob was a a venture creation intern at Yale Tsai Center for Innovative Thinking (formerly, \"Yale Entrepreneurial Institute\"), and organized one of the nation's first blockchain executive education partnering with Harvard and Yale law and management faculty members in early 2016. He also served as an instructional technologist at Yale College, a core member of Yale Law School Non-profit Organization Clinic, and a technical assistant for Professor Akhil Amar in 2014. Jacob Li is a 2012 John Templeton Fellowship recipient and a Yale graduate. "
 }

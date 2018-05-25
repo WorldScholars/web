@@ -65,16 +65,23 @@ registration:: String -> Html
 registration buttonHTML = do
     section ! A.id "about-company" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       h1 ! class_ "margin-bottom" $ "SAT+ 2018 Registration"
-      p "Thank you for your interest in SAT+2018. Please register below using one of our payment methods."
+      p "Thank you for your interest in SAT+2018. The cost the program this year is listed below. Please register using one of our payment methods."
+      myTable ([["Registation (One Time)", "$45"]
+               ,["Tuition (per week)", "$368"]
+               ,["Activity (per week)", "$118"]
+               ,["Venue & Tech (per week)", "$126"]] :: [[String]])
     section ! A.id "payment-options-check" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
       H.div ! class_ "col-sm-6 text-center" $ do
-        h3 "Option 1: Check"
-        p "Please make the check payable to \"World Scholars LLC\" and include the student's name on the memo line. Additionally, please enclose a note with the sessions (week 1, week 2, or week 1&2) for which you are enrolling, as well as the parent's WeChat ID. If you have multiple children attending, please provide a separate check for each enrolling student."
+        h2 "Option 1: Check"
+        p $ do
+          "Please make the check payable to \"World Scholars LLC\" and include the student's name on the memo line. Additionally, please print and fill out"
+          a ! href "Registration_Form.pdf" $ "this registration form"
+          "or include a note with the sessions (week 1, week 2, or both weeks) for which you are enrolling, prefered t-shirt size, as well as the parent's WeChat ID."
         dl $ do
           dt "Address"
           dd "World Scholars LLC"
           dd "225 East 110th, Suite C"
           dd "New York, NY 10029"
       H.div ! class_ "col-sm-6 text-center" $ do
-        h3 "Option 2: Paypal"
+        h2 "Option 2: Paypal"
         preEscapedToHtml $ buttonHTML
