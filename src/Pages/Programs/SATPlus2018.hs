@@ -47,7 +47,11 @@ sat2018 = Program{
    p "What is a Passion Project? In America and around the globe, educators are moving away from test-centric summative evaluations for learning. The educational landscape is moving towards a formative assessment in which students are expressing their learning in a more comprehensive way through projects. Project-based learning is the inspiration behind Passion Projects. We value the multi-dimensional ways of expressing learning through topics that students care about and we want to make sure that we provide an opportunity for students to make that happen. The Passion Projects will allow students to collaborate, innovate, and design a project (whether it be an idea or a product) of their choosing and we will facilitate to see through the project's completion.  Guest lecturers will come on Tuesdays and Thursdays to expose students to potential academic and professional career paths as well as inspire Passion Project work."
    p "By participating in the World Scholars program, students will develop the skills to present themselves, not just as strong students, but as future leaders. The final project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their Passion Project after the program, but all students will use those skills to find the next Passion Project to work on."
    p "To participate in the next SAT+ program and start your own Passion Project, stay tuned for registration instructions. Enrollment for this program is capped at 23 student per week per section, and we run two sections simultaneously in both weeks."
-   p "Price and location TBA"
+   p "This year our program will be located on the campus of Alburtus Magnus College, in Aquinas Hall. The prices for this summer are listed below"
+   myTable ([["Registation (One Time)", "$45"]
+            ,["Tuition (per week)", "$368"]
+            ,["Activity (per week)", "$118"]
+            ,["Venue & Tech (per week)", "$126"]] :: [[String]])
    p $ do
      "For more information please contact: "
      a ! href "mailto:fiona@worldscholars.global" $ "fiona@worldscholars.global"
@@ -72,7 +76,7 @@ registration buttonHTML = do
                ,["Venue & Tech (per week)", "$126"]] :: [[String]])
     section ! A.id "payment-options-check" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
       H.div ! class_ "col-sm-6 text-center" $ do
-        h2 "Option 1: Check"
+        h2 "Option 1: Check (Prefered)"
         p $ do
           "Please make the check payable to \"World Scholars LLC\" and include the student's name on the memo line. Additionally, please print and fill out"
           a ! href "Registration_Form.pdf" $ "this registration form"
@@ -85,3 +89,10 @@ registration buttonHTML = do
       H.div ! class_ "col-sm-6 text-center" $ do
         h2 "Option 2: Paypal"
         preEscapedToHtml $ buttonHTML
+      H.div ! class_ "col-sm-12 text-center" $ do
+        p "Thank you for choosing World Scholars this summer. Our refund policy is as follows:"
+        ul $ do
+          li "100% payment back (except the $45 registration fee) before July 1st"
+          li "70% payment back before July 15th"
+          li "40% payment before Aug 1st"
+          li "No refund on or after Aug 1st" 

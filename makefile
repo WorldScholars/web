@@ -12,6 +12,7 @@ full:
 	cp -r html/* ../WorldScholars.github.io
 
 deploy: full
+	git commit -am 'autocommit' && \
 	cd ../WorldScholars.github.io && \
 	git pull && \
 	git add . && \
