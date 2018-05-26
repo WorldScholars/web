@@ -13,6 +13,7 @@ full:
 
 deploy: full
 	git commit -am 'autocommit' && \
+        git push && \
 	cd ../WorldScholars.github.io && \
 	git pull && \
 	git add . && \
