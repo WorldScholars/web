@@ -69,18 +69,18 @@ registration:: String -> Html
 registration buttonHTML = do
     section ! A.id "about-company" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       h1 ! class_ "margin-bottom" $ "SAT+ 2018 Registration"
-      p "Thank you for your interest in SAT+2018. The cost the program this year is listed below. Please register using one of our payment methods."
+      p "Thank you for your interest in SAT+2018. The cost the program this year is listed below. Please register using one of our payment methods by June 15th. If your payment is not postmarked by June 15th, you will be moved to the end of the waitlist."
       myTable ([["Registation (One Time)", "$45"]
                ,["Tuition (per week)", "$368"]
                ,["Activity (per week)", "$118"]
                ,["Venue & Tech (per week)", "$126"]] :: [[String]])
     section ! A.id "payment-options-check" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
       H.div ! class_ "col-sm-6 text-center" $ do
-        h2 "Option 1: Check (Prefered)"
+        h2 "Option 1: Check (Preferred)"
         p $ do
           "Please make the check payable to \"World Scholars LLC\" and include the student's name on the memo line. Additionally, please print and fill out"
           a ! href "Registration_Form.pdf" $ "this registration form"
-          "or include a note with the sessions (week 1, week 2, or both weeks) for which you are enrolling, prefered t-shirt size, as well as the parent's WeChat ID."
+          "or include a note with the sessions (week 1, week 2, or both weeks) for which you are enrolling, preferred t-shirt size, as well as the parent's WeChat ID."
         dl $ do
           dt "Address"
           dd "World Scholars LLC"
