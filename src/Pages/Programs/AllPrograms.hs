@@ -66,12 +66,12 @@ aug2017 = Program{
  ,dates = "Aug 2017"
  ,epoch = 1501596107
  ,summary = do
-    p "This month long program combines SAT prep with passion projects."
+    p "This month long program combined SAT prep with passion projects. Designed for student grades 7-12, the program helped students not only prepare for college entrance exams, but also for long-term success after they arrive at college." 
  ,mainPic = "images/home/class.jpg"
  ,captionedPics = []
  ,extraHTML = do
    p "What is a Passion Project? In America and around the globe, educators are moving away from test-centric summative evaluations for learning. The educational landscape is moving towards a formative assessment in which students are expressing their learning in a more comprehensive way through projects. Project-based learning is the inspiration behind Passion Projects. We value the multi-dimensional ways of expressing learning through topics that students care about and we want to make sure that we provide an opportunity for students to make that happen. The Passion Projects will allow students to collaborate, innovate, and design a project (whether it be an idea or a product) of their choosing and we will facilitate to see through the project's completion."
-   p "By participating in the World Scholars program, students will develop the skills to present themselves, not just as strong students, but as future leaders. The final project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their passion project after the program, but all students will use those skills to find the next passion project to work on."
+   p "By participating in the SAT+ World Scholars program, students developed the skills to present themselves, not just as strong students, but as future leaders. The final passion project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their passion project after the program, but all students will use those skills to find the next passion project to work on."
    br
    p "To participate in the next SAT+ program and start your own passion project, email us at "
    a ! href "mailto:fiona@worldscholars.global" $ "fiona@worldscholars.global"

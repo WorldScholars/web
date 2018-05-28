@@ -50,8 +50,12 @@ makeQuestions (title,anchor,content) = do
 
 domesticFAQs = [
     tuition
+  , pickup
   ]
   
+pickup =
+   ("When is pickup/dropoff?", "pickup_dropoff", "For day programs, pickup and dropoff times are noted on the program page. Please note that late pickups beyond a certain time may incur an extra fee. See the program materials for further details.")
+
 
 
 -------
@@ -85,7 +89,7 @@ howtoapply =
       ". You will receive an email confirmation that we have received your application immediately upon submission. The application process should take no more than 20 minutes.")
 
 dates = 
-  ("Important Dates", "dates", "You will be notified via email of our decision by no later than January 15th. Application closes on January 12th. Please indicate if you will need a letter of invitation for a visa in the application. Those who need a visa will be contacted separately about the visa.")
+  ("Important Dates", "dates", "You will find all relevant dates for your program of interest on the program page. Please indicate if you will need a letter of invitation for a visa in the application. Those who need a visa will be contacted separately about the visa.")
 
 acceptance = ("What happens after I am accepted?", "acceptance", do
   "Below is an overview of what the detailed ‘Acceptance Letter’ will provide. We will be in personal contact with the admitted student to answer any questions and provide support for an easy and smooth travel and fun and meaningful experience with our program. A third party smartphone application (e.g., WhatsApp) will be set up so that constant communication between the students and the staff is possible."

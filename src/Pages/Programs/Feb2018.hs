@@ -20,6 +20,7 @@ feb2018 = Program{
  ,dates = "February 2018"
  ,epoch = 1517493707
  ,summary = do
+    p ! A.style "color:red" $ "Due to number of high quality applicants requesting financial aid, this program has been postponed while we organize to provide adequate assistance for all qualified students. Stay tuned for updates!"
     p "This two week program runs from February 11 - February 24, 2018. It brings together students from 5 different countries, and a broad spectrum of socio-economic backgrounds to provide a multicultural, diverse, and unique educational experience. Some of the program highlights are listed below. The application deadline is January 12. Applicants will be notified of acceptance by January 15. Due to the small discussion style classes, this program is limited to 20 participants."
     br
     p "Program cost is $2199 USD, which includes tuition, events, special dinners, and all domestic travel. This does not include international travel and room and board. Some need-based scholarships are available. For more information please make a note on your application, or reach out to us via email at "
@@ -27,7 +28,7 @@ feb2018 = Program{
  ,mainPic = "images/home/winter-campus.jpg"
  ,captionedPics = []
  ,extraHTML = do
-   h2 ! A.style "color:red" $ "Due to number of high quality applicants requesting financial aid, this program has been postponed until the summer while we organize to provide adequate assistance for all qualified students. Stay tuned for updates!"
+   h2 ! A.style "color:red" $ "Due to number of high quality applicants requesting financial aid, this program has been postponed while we organize to provide adequate assistance for all qualified students. Stay tuned for updates!"
    blockquote $ do 
      "A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly." 
      em "Specialization is for insects."
