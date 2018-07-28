@@ -42,6 +42,7 @@ main = do
   makePage "html/registration.html" $ SAT2018.registration paypalButton
 
   makePage "html/signup.html" signup
+  makePage "html/verify.html" verify
 
 writeEveryone :: IO()  
 writeEveryone = 
