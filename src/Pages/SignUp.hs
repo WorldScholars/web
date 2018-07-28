@@ -26,9 +26,9 @@ signup = do
 	  input ! type_ "password" ! A.id "password2InputRegister" ! placeholder "Confirm Password" ! pattern ".*" ! required ""
 	  input ! type_ "submit" ! value "Sign up"
 
-        script ! src "js/vendor/jquery-3.1.0.js" $ mempty
-        script ! src "js/vendor/bootstrap.min.js" $ mempty
-        script ! src "js/vendor/aws-cognito-sdk.min.js" $ mempty
-        script ! src "js/vendor/amazon-cognito-identity.min.js" $ mempty
-        script ! src "js/config.js" $ mempty
-        script ! src "js/cognito-auth.js" $ mempty
+        script ! src "aws_js/vendor/jquery-3.1.0.js" $ mempty
+        script ! src "aws_js/vendor/bootstrap.min.js" $ mempty
+        script ! src "aws_js/vendor/aws-cognito-sdk.min.js" $ mempty
+        script ! src "aws_js/vendor/amazon-cognito-identity.min.js" $ mempty
+        script ! src "aws_js/config.js" $ mempty
+        script ! src "aws_js/cognito-auth.js" $ mempty
