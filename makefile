@@ -8,7 +8,6 @@ full:
 	cabal install
 	rm -f html/*
 	.cabal-sandbox/bin/world-scholars
-	rm -f ../WorldScholars.github.io/*.html
 	cp -r html/* ../WorldScholars.github.io
 
 deploy: full

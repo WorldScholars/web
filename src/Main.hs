@@ -19,6 +19,9 @@ import qualified Pages.Programs.AllPrograms as P
 import qualified Pages.Programs.SATPlus2018 as SAT2018
 import qualified Pages.Programs.Util as P
 
+--User stuff
+import Pages.SignUp
+
 import Template
 
 main :: IO()
@@ -37,6 +40,8 @@ main = do
 
   paypalButton <- readFile "src/paypalButton.html"
   makePage "html/registration.html" $ SAT2018.registration paypalButton
+
+  makePage "html/signup.html" signup
 
 writeEveryone :: IO()  
 writeEveryone = 
