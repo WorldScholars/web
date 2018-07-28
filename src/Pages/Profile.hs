@@ -20,4 +20,5 @@ profile = do
       p ! A.id "username" $ ""
 
       awsScripts
+      script ! src "aws_js/profile.js" $ mempty
 
