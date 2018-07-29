@@ -20,8 +20,9 @@ import qualified Pages.Programs.SATPlus2018 as SAT2018
 import qualified Pages.Programs.Util as P
 
 --User stuff
-import Pages.SignInUp
-import Pages.Profile
+import Pages.Interactive.SignInUp
+import Pages.Interactive.Profile
+import Pages.Interactive.Scantron
 
 import Template
 
@@ -44,6 +45,7 @@ main = do
 
   writeSigninup
   makePage "html/profile.html" profile
+  makePage "html/scantron.html" scantron
 
 writeSigninup :: IO()
 writeSigninup = do

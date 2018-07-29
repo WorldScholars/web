@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards   #-}
-module Pages.Profile (profile) where
+module Pages.Interactive.Profile (profile) where
 
 import Prelude
 import qualified Prelude as P

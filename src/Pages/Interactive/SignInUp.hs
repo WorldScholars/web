@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards   #-}
-module Pages.SignInUp (signup,verify,signin) where
+module Pages.Interactive.SignInUp (signup,verify,signin) where
 
 import Prelude
 import qualified Prelude as P
