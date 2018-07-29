@@ -24,11 +24,12 @@ scantron = do
 
 multiChoice :: Int -> Html
 multiChoice qNum = do
+  H.span $ string $ "Q"++(show qNum)++" :"
   mapM_ oneChoice ["A","B","C","D"]
  where
   oneChoice :: String -> Html
   oneChoice choice = do
-    H.div! class_ "pretty p-fill p-round p-pulse" $ do
+    H.div! class_ "pretty p-default p-fill p-round p-pulse" $ do
       input ! type_ "radio" ! A.name (stringValue $ "question_"++(show qNum))
       H.div ! class_ "state" $ do
         H.label $ string choice
