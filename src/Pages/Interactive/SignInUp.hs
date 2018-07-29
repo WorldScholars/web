@@ -24,7 +24,6 @@ signup = do
           input ! type_ "password" ! A.id "passwordInputRegister" ! placeholder "Password" ! pattern ".*" ! required ""
           input ! type_ "password" ! A.id "password2InputRegister" ! placeholder "Confirm Password" ! pattern ".*" ! required ""
           input ! type_ "submit" ! value "Sign up"
-      awsScripts
 
 signin :: Html
 signin = do
@@ -35,7 +34,6 @@ signin = do
           input ! type_ "email" ! A.id "emailInputSignin" ! placeholder "Email" ! required ""
           input ! type_ "password" ! A.id "passwordInputSignin" ! placeholder "Password" ! pattern ".*" ! required ""
           input ! type_ "submit" ! value "Sign In"
-      awsScripts
 
 
 verify :: Html
@@ -47,5 +45,4 @@ verify = do
           input ! type_ "email" ! A.id "emailInputVerify" ! placeholder "Email" ! required ""
           input ! type_ "text" ! A.id "codeInputVerify" ! placeholder "Verification Code" ! pattern ".*" ! required ""
           input ! type_ "submit" ! value "Verify"
-      awsScripts
 

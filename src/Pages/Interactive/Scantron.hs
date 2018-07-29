@@ -18,12 +18,24 @@ scantron examNum = do
     section ! A.id "signup" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       h1 $ string $ "SAT Practice Exam #"++(show examNum)
     H.form ! A.id "scantronForm" ! A.name "scantronForm" ! class_ "text-center" $ do
+      numberInputSection 1 [16..20]
       multiChoiceSection "Math" 1 52
       multiChoiceSection "Math" 2 44
       multiChoiceSection "Math" 3 15
       multiChoiceSection "Math" 4 30
       button ! class_ "btn btn-primary" ! name "button" ! type_ "submit" $ "submit" 
-      
+
+numberInputSection :: Int -> [Int] -> Html
+numberInputSection secNum qNums = do
+  H.div ! class_ "row" $ do
+    mapM_ (numberInput secNum) qNums
+
+numberInput :: Int -> Int -> Html
+numberInput secNum qNum = do
+  H.div ! class_ "container" $ H.div ! class_ "col-sm-12 col-md-6 col-lg-3" $ do
+    input ! type_ "number" ! class_ "form-control" ! placeholder "0.00" 
+        ! A.name (stringValue $ "sec_"++(show secNum)++"_question_"++(show qNum))
+ 
 multiChoiceSection :: String -> Int -> Int -> Html
 multiChoiceSection secName secNum numQs = do 
   section ! A.id "page-breadcrumb" $ H.div ! class_ "vertical-center sun" $ H.div ! class_ "action" $ do
