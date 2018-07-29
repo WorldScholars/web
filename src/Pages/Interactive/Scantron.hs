@@ -16,14 +16,10 @@ import qualified Text.Blaze.Html5.Attributes as A
 scantron :: Html
 scantron = do
     section ! A.id "signup" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
-      h1 ! class_ "margin-bottom" $ "Sign up for an account on World Scholars"
       section ! class_ "form-wrap" $ do
-        h1 "Register"
-        H.form ! A.id "registrationForm" $ do
-          input ! type_ "email" ! A.id "emailInputRegister" ! placeholder "Email" ! pattern ".*" ! required ""
-          input ! type_ "password" ! A.id "passwordInputRegister" ! placeholder "Password" ! pattern ".*" ! required ""
-          input ! type_ "password" ! A.id "password2InputRegister" ! placeholder "Confirm Password" ! pattern ".*" ! required ""
-          input ! type_ "submit" ! value "Sign up"
+        h1 "Scantron"
+        H.form ! A.id "scantronForm" $ do
+          multiChoice 1
       awsScripts
 
 multiChoice :: Int -> Html
