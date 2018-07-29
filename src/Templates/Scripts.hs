@@ -19,6 +19,7 @@ htmlScripts =
     , "js/wow.min.js"
     , "js/jquery.countTo.js"
     , "js/main.js"
+    , "js/garlic.min.js"
     ]
 
 awsScripts :: Html

@@ -18,7 +18,7 @@ scantron = do
     section ! A.id "signup" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       section ! class_ "form-wrap" $ do
         h1 "Scantron"
-        H.form ! A.id "scantronForm" $ do
+        H.form ! A.id "scantronForm" ! customAttribute "data-persist" "garlic.js" $ do
           mapM_ multiChoice [1..10]
       awsScripts
 
@@ -33,3 +33,4 @@ multiChoice qNum = do
       input ! type_ "radio" ! A.name (stringValue $ "question_"++(show qNum))
       H.div ! class_ "state" $ do
         H.label $ string choice
+    br
