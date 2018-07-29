@@ -19,7 +19,7 @@ scantron = do
       section ! class_ "form-wrap" $ do
         h1 "Scantron"
         H.form ! A.id "scantronForm" $ do
-          multiChoice 1
+          mapM_ multiChoice [1..10]
       awsScripts
 
 multiChoice :: Int -> Html
