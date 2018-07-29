@@ -10,6 +10,8 @@ import qualified Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes
 import qualified Text.Blaze.Html5.Attributes as A
 
+import System.IO.Unsafe
+
 htmlScripts :: Html
 htmlScripts = do
   mapM_ (\x-> script ! type_ "text/javascript" ! src x $ mempty)
@@ -25,10 +27,7 @@ htmlScripts = do
   script ! type_ "text/javascript" $ clickRecorder
 
 -- TODO pass these values into an API call that records them, as well as the username, into the database
-clickRecorder = string $
-  "$('#scantronForm input').click(function () {"++
-  "  console.log($(this).attr('name') + \",\"+ $(this).val() + \",\" + Date.now());"++
-  " });"
+clickRecorder = string $ unsafePerformIO $ readFile "clickRecorder.js"
 
 awsScripts :: Html
 awsScripts =
