@@ -18,9 +18,11 @@ scantron = do
     section ! A.id "signup" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       section ! class_ "form-wrap" $ do
         h1 "Scantron"
-        H.form ! A.id "scantronForm" ! customAttribute "data-persist" "garlic" $ do
+        H.form ! A.id "scantronForm" $ do
           mapM_ multiChoice [1..10]
+
       awsScripts
+      script ! type_ "text/javascript" $ "$( function() { $('#scantronForm').sisyphus(); });"
 
 multiChoice :: Int -> Html
 multiChoice qNum = do
