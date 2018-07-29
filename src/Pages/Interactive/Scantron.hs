@@ -18,21 +18,19 @@ scantron = do
     section ! A.id "signup" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       section ! class_ "form-wrap" $ do
         h1 "Scantron"
-        H.form ! A.id "scantronForm" $ do
+        H.form ! A.id "scantronForm" ! A.name "scantronForm" $ do
           mapM_ multiChoice [1..10]
+          button ! class_ "btn btn-primary" ! name "button" ! type_ "submit" $ "submit" 
 
-      awsScripts
-      script ! type_ "text/javascript" $ "$( function() { $('#scantronForm').sisyphus(); });"
 
 multiChoice :: Int -> Html
 multiChoice qNum = do
   H.span $ string $ "Q"++(show qNum)++" :"
   mapM_ oneChoice ["A","B","C","D"]
   br
+  br
  where
   oneChoice :: String -> Html
   oneChoice choice = do
-    H.div! class_ "pretty p-default p-fill p-round p-pulse" $ do
-      input ! type_ "radio" ! A.name (stringValue $ "question_"++(show qNum))
-      H.div ! class_ "state" $ do
-        H.label $ string choice
+    input ! type_ "radio" ! A.id (stringValue choice) ! A.value (stringValue choice) ! A.name (stringValue $ "question_"++(show qNum))
+    H.label ! A.for (stringValue choice) $ string choice

@@ -3,6 +3,8 @@ module Templates.Head where
 
 import Data.Monoid (mempty)
 
+import Templates.Scripts
+
 import Text.Blaze.Html5
 import qualified Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes
@@ -21,7 +23,6 @@ htmlHead =
     link ! href "css/lightbox.css" ! rel "stylesheet"
     link ! href "css/main.css" ! rel "stylesheet"
     link ! href "css/responsive.css" ! rel "stylesheet"
-    link ! href "css/pretty-checkbox.min.css" ! rel "stylesheet"
     -- [if lt IE 9]>
     -- 	    <script src="js/html5shiv.js"></script>
     -- 	    <script src="js/respond.min.js"></script>
@@ -41,3 +42,4 @@ htmlHead =
 
             "        gtag('config', 'UA-111625545-1');",
             "        </script>"]
+    awsScripts
