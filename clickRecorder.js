@@ -12,6 +12,8 @@ $('#scantronForm input').click(function () {
   localStorage.setItem('clicks', JSON.stringify(clicks));
 });
 
+var WorldScholars = window.WorldScholars || {};
+
 $( "#scantronForm" ).submit(function( event ) {
   //localStorage is only removed when AWS lambda successfully executes
   //call the examWriter here some how
@@ -24,7 +26,7 @@ $( "#scantronForm" ).submit(function( event ) {
             method: 'POST',
             url: _config.api.invokeUrl + '/writeExam',
             headers: {
-                Authorization: authToken
+                Authorization: WorldScholars.authToken
             },
             data: JSON.stringify({
                 PickupLocation: {
