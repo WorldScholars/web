@@ -21,17 +21,17 @@ $( "#scantronForm" ).submit(function( event ) {
 });
 
     function writeExam(e) {
-    var authToken;
-    WorldScholars.authToken.then(function setAuthToken(token) {
-        if (token) {
-            authToken = token;
-        } else {
+        var authToken;
+        WorldScholars.authToken.then(function setAuthToken(token) {
+            if (token) {
+                authToken = token;
+            } else {
+                window.location.href = '/signin.html';
+            }
+        }).catch(function handleTokenError(error) {
+            alert(error);
             window.location.href = '/signin.html';
-        }
-    }).catch(function handleTokenError(error) {
-        alert(error);
-        window.location.href = '/signin.html';
-    });
+        });
         console.log(JSON.stringify($('#scantronForm').serializeArray()));
         console.log(localStorage.getItem('clicks'));
         console.log(authToken);
