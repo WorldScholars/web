@@ -23,7 +23,7 @@ $( "#scantronForm" ).submit(function( event ) {
 
     function writeExam(e) {
         console.log($(this).attr("action"));
-        console.log(localStorage.getItem('clicks');
+        console.log(localStorage.getItem('clicks'));
         $.ajax({
             method: 'POST',
             url: _config.api.invokeUrl + '/writeExam',
