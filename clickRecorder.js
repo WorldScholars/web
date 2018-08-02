@@ -43,7 +43,7 @@ $( "#scantronForm" ).submit(function( event ) {
                 Authorization: authToken
             },
             data: JSON.stringify({
-               clicks: localStorage.getItem('clicks'),
+               clicks: JSON.parse(localStorage.getItem('clicks')),
                examAnswers : $('#scantronForm').serializeArray()
             }),
             contentType: 'application/json',
