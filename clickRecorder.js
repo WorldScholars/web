@@ -42,7 +42,7 @@ $( "#scantronForm" ).submit(function( event ) {
             },
             data: JSON.stringify({
                clicks: localStorage.getItem('clicks'),
-               examAnswers : $(this).attr("action")
+               examAnswers : JSON.stringify($('#scantronForm').serializeArray())
             }),
             contentType: 'application/json',
             success: completeRequest,
