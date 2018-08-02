@@ -35,6 +35,7 @@ $( "#scantronForm" ).submit(function( event ) {
         console.log(JSON.stringify($('#scantronForm').serializeArray()));
         console.log(localStorage.getItem('clicks'));
         console.log(authToken);
+
         $.ajax({
             method: 'POST',
             url: _config.api.invokeUrl + '/writeExam',
@@ -43,7 +44,7 @@ $( "#scantronForm" ).submit(function( event ) {
             },
             data: JSON.stringify({
                clicks: localStorage.getItem('clicks'),
-               examAnswers : JSON.stringify($('#scantronForm').serializeArray())
+               examAnswers : $('#scantronForm').serializeArray()
             }),
             contentType: 'application/json',
             success: completeRequest,
