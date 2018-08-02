@@ -15,7 +15,8 @@ $('#scantronForm input').click(function () {
 $( "#scantronForm" ).submit(function( event ) {
   //localStorage is only removed when AWS lambda successfully executes
   //call the examWriter here some how
-  writeExam
+  writeExam();
+  alert("done");
 });
 
     function writeExam() {
