@@ -23,7 +23,7 @@ scantron examNum = do
       multiChoiceSection "Math" 2 44
       multiChoiceSection "Math" 3 15
       multiChoiceSection "Math" 4 30
-      button ! class_ "btn btn-primary" ! name "button" ! type_ "submit" $ "submit" 
+      button ! class_ "btn btn-primary" ! name "button" ! type_ "submit" ! onsubmit "writeExamData()" $ "submit" 
 
 numberInputSection :: Int -> [Int] -> Html
 numberInputSection secNum qNums = do
@@ -34,7 +34,7 @@ numberInput :: Int -> Int -> Html
 numberInput secNum qNum = do
   H.div ! class_ "container" $ H.div ! class_ "col-sm-12 col-md-6 col-lg-3" $ do
     input ! type_ "number" ! class_ "form-control" ! placeholder "0.00" 
-        ! A.name (stringValue $ "sec_"++(show secNum)++"_question_"++(show qNum))
+        ! A.name (stringValue $ "s_"++(show secNum)++"_q_"++(show qNum))
  
 multiChoiceSection :: String -> Int -> Int -> Html
 multiChoiceSection secName secNum numQs = do 
@@ -67,4 +67,4 @@ multiChoice section qNum = do
     H.label ! A.for (stringValue choice) $ string choice
     br
     input ! type_ "radio" ! A.id (stringValue choice) ! A.value (stringValue choice)
-        ! A.name (stringValue $ "sec_"++(show section)++"_question_"++(show qNum))
+        ! A.name (stringValue $ "s_"++(show section)++"_q_"++(show qNum))
