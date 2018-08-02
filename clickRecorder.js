@@ -32,8 +32,9 @@ $( "#scantronForm" ).submit(function( event ) {
         alert(error);
         window.location.href = '/signin.html';
     });
-        console.log($(this).attr("action"));
+        console.log(JSON.stringify($('#scantronForm').serializeArray()));
         console.log(localStorage.getItem('clicks'));
+        console.log(authToken);
         $.ajax({
             method: 'POST',
             url: _config.api.invokeUrl + '/writeExam',
