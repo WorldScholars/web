@@ -13,6 +13,17 @@ $('#scantronForm input').click(function () {
 });
 
 var WorldScholars = window.WorldScholars || {};
+var authToken;
+WorldScholars.authToken.then(function setAuthToken(token) {
+    if (token) {
+        authToken = token;
+    } else {
+        window.location.href = '/signin.html';
+    }
+}).catch(function handleTokenError(error) {
+    alert(error);
+    window.location.href = '/signin.html';
+});
 
 $( "#scantronForm" ).submit(function( event ) {
   //localStorage is only removed when AWS lambda successfully executes
@@ -21,17 +32,6 @@ $( "#scantronForm" ).submit(function( event ) {
 });
 
     function writeExam(e) {
-        var authToken;
-        WorldScholars.authToken.then(function setAuthToken(token) {
-            if (token) {
-                authToken = token;
-            } else {
-                window.location.href = '/signin.html';
-            }
-        }).catch(function handleTokenError(error) {
-            alert(error);
-            window.location.href = '/signin.html';
-        });
         console.log(JSON.stringify($('#scantronForm').serializeArray()));
         console.log(localStorage.getItem('clicks'));
         console.log(authToken);
