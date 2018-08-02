@@ -44,14 +44,14 @@ main = do
   makePage "html/registration.html" $ SAT2018.registration paypalButton
 
   writeSigninup
-  makePage "html/profile.html" profile
-  makePage "html/scantron.html" $ scantron 1
+  makeInteractivePage "html/profile.html" profile
+  makeInteractivePage "html/scantron.html" $ scantron 1
 
 writeSigninup :: IO()
 writeSigninup = do
-  makePage "html/signup.html" signup
-  makePage "html/verify.html" verify
-  makePage "html/signin.html" signin
+  makeInteractivePage "html/signup.html" signup
+  makeInteractivePage "html/verify.html" verify
+  makeInteractivePage "html/signin.html" signin
 
 writeEveryone :: IO()  
 writeEveryone = 
@@ -66,4 +66,7 @@ writePrograms  =
       P.allPrograms 
 
 makePage link p =
-  writeFile link $ renderHtml $ embedInTemplate p
+  writeFile link $ renderHtml $ embedInTemplate False p
+
+makeInteractivePage link p =
+  writeFile link $ renderHtml $ embedInTemplate True p

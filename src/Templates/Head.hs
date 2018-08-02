@@ -2,6 +2,7 @@
 module Templates.Head where
 
 import Data.Monoid (mempty)
+import Control.Monad (when)
 
 import Templates.Scripts
 
@@ -10,7 +11,7 @@ import qualified Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes
 import qualified Text.Blaze.Html5.Attributes as A
 
-htmlHead =
+htmlHead isInteractive =
   H.head $ do
     meta ! charset "utf-8"
     meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
@@ -42,4 +43,4 @@ htmlHead =
 
             "        gtag('config', 'UA-111625545-1');",
             "        </script>"]
-    awsScripts
+    when isInteractive awsScripts

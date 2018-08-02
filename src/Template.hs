@@ -16,10 +16,10 @@ import Templates.Scripts
 import Templates.Footer
 
 
-embedInTemplate :: Html -> Html
-embedInTemplate x = do
+embedInTemplate :: Bool -> Html -> Html
+embedInTemplate isInteractive x = do
     docTypeHtml ! lang "en" $ do
-      htmlHead
+      htmlHead isInteractive
       body $ do
           htmlHeader
           x
