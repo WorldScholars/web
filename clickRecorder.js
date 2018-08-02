@@ -18,17 +18,27 @@ $( "#scantronForm" ).submit(function( event ) {
   //localStorage is only removed when AWS lambda successfully executes
   //call the examWriter here some how
   writeExam(event);
-  alert("done");
 });
 
     function writeExam(e) {
+    var authToken;
+    WorldScholars.authToken.then(function setAuthToken(token) {
+        if (token) {
+            authToken = token;
+        } else {
+            window.location.href = '/signin.html';
+        }
+    }).catch(function handleTokenError(error) {
+        alert(error);
+        window.location.href = '/signin.html';
+    });
         console.log($(this).attr("action"));
         console.log(localStorage.getItem('clicks'));
         $.ajax({
             method: 'POST',
             url: _config.api.invokeUrl + '/writeExam',
             headers: {
-                Authorization: WorldScholars.authToken
+                Authorization: authToken
             },
             data: JSON.stringify({
                clicks: localStorage.getItem('clicks'),
