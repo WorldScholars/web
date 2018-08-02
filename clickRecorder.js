@@ -18,7 +18,9 @@ WorldScholars.authToken.then(function setAuthToken(token) {
     if (token) {
         authToken = token;
     } else {
-        window.location.href = '/signin.html';
+            if (window.location.pathname != "/signin.html"){
+                window.location.href = '/signin.html';
+            }
     }
 }).catch(function handleTokenError(error) {
     alert(error);
