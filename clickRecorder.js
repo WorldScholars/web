@@ -14,7 +14,7 @@ $('#scantronForm input').click(function () {
 
 (function rideScopeWrapper($) {
     var authToken;
-    WildRydes.authToken.then(function setAuthToken(token) {
+    WorldScholars.authToken.then(function setAuthToken(token) {
         if (token) {
             authToken = token;
         } else {
