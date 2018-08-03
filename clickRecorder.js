@@ -33,7 +33,7 @@ $('#scantronForm input').click(function () {
 
         $.ajax({
             method: 'POST',
-            url: _config.api.invokeUrl + '/writeExam',
+            url: _config.api.invokeUrl + '/examwrite',
             headers: {
                 Authorization: authToken
             },
