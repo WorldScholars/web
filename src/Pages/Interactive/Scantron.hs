@@ -23,7 +23,7 @@ scantron examNum = do
       multiChoiceSection "Math" 2 44
       multiChoiceSection "Math" 3 15
       multiChoiceSection "Math" 4 30
-      button ! class_ "btn btn-primary" ! A.name "scantronFormSubmitButton" ! type_ "submit" ! onsubmit "writeExamData()" $ "submit" 
+      button ! class_ "btn btn-primary" ! A.id "scantronFormSubmitButton" ! type_ "submit" ! onsubmit "writeExamData()" $ "submit" 
 
 numberInputSection :: Int -> [Int] -> Html
 numberInputSection secNum qNums = do
