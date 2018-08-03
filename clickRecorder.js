@@ -2,9 +2,17 @@ $('#scantronForm input').click(function () {
   //Localstorage only stores strings, so we convert between json
   var clicks = JSON.parse(localStorage.getItem('clicks')) || [] ;
 
+  var ans;
+  if $(this).val(){
+    ans = $(this).val()
+  }
+  else{
+    ans = "none"
+  }
+
   var oneClick = {
     question: $(this).attr('name'),
-    answer: $(this).val(),
+    answer: ans,
     timestamp: Date.now()
   }
   
@@ -58,7 +66,7 @@ $('#scantronForm input').click(function () {
     
     // Register click handler for form submit button
     $(function onDocReady() {
-        $('#scantronForm').click(writeExam);
+        $('#scantronFormSubmitButton').click(writeExam);
         $('#signOut').click(function() {
             WildRydes.signOut();
             alert("You have been signed out.");
