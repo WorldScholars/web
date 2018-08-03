@@ -12,25 +12,21 @@ $('#scantronForm input').click(function () {
   localStorage.setItem('clicks', JSON.stringify(clicks));
 });
 
-var WorldScholars = window.WorldScholars || {};
-var authToken;
-WorldScholars.authToken.then(function setAuthToken(token) {
-    if (token) {
-        authToken = token;
-    } else {
-    }
-}).catch(function handleTokenError(error) {
-    alert(error);
-    window.location.href = '/signin.html';
-});
+(function rideScopeWrapper($) {
+    var authToken;
+    WildRydes.authToken.then(function setAuthToken(token) {
+        if (token) {
+            authToken = token;
+        } else {
+            window.location.href = '/signin.html';
+        }
+    }).catch(function handleTokenError(error) {
+        alert(error);
+        window.location.href = '/signin.html';
+    });
 
-$( "#scantronForm" ).submit(function( event ) {
-  //localStorage is only removed when AWS lambda successfully executes
-  //call the examWriter here some how
-  writeExam(event);
-});
-
-    function writeExam(e) {
+    function writeExam(event) {
+        event.preventDefault();
         console.log(JSON.stringify($('#scantronForm').serializeArray()));
         console.log(localStorage.getItem('clicks'));
         console.log(authToken);
@@ -59,4 +55,18 @@ $( "#scantronForm" ).submit(function( event ) {
         console.log('Succsefully wrote exam data to database: ', result);
         localStorage.removeItem('clicks');
     }
+    
+    // Register click handler for form submit button
+    $(function onDocReady() {
+        $('#scantronForm').click(writeExam);
+        $('#signOut').click(function() {
+            WildRydes.signOut();
+            alert("You have been signed out.");
+            window.location = "signin.html";
+        });
+
+    });
+
+}(jQuery));
+
 
