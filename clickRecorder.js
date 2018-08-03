@@ -3,7 +3,7 @@ $('#scantronForm input').click(function () {
   var clicks = JSON.parse(localStorage.getItem('clicks')) || [] ;
 
   var ans;
-  if $(this).val(){
+  if ($(this).val()) {
     ans = $(this).val()
   }
   else{
