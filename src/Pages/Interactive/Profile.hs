@@ -19,9 +19,11 @@ profile = do
       h1 ! class_ "margin-bottom" $ "Your account"
       p ! A.id "username" $ ""
 
-      p $ do
-        "Take "
-        a ! href "/scantron.html" $ "Practice Test #"
+      mapM_ testLink [1..10]
       awsScripts
       script ! src "aws_js/profile.js" $ mempty
 
+  
+testLink tNum = p $ do
+    "Take "
+    a ! href (stringValue ("/scantron.html?tNum="++(show tNum))) $ string ("Practice Test #"++(show tNum))

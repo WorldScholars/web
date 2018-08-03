@@ -1,3 +1,18 @@
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
 $('#scantronForm input').click(function () {
   //Localstorage only stores strings, so we convert between json
   var clicks = JSON.parse(localStorage.getItem('clicks')) || [] ;
@@ -22,8 +37,9 @@ $('#scantronForm input').click(function () {
 
 (function rideScopeWrapper($) {
     var authToken;
+    console.log(window.location.origin == "file://")
     WorldScholars.authToken.then(function setAuthToken(token) {
-        if (token) {
+        if (token || (window.location.origin == "file://")) {
             authToken = token;
         } else {
             window.location.href = '/signin.html';
@@ -46,6 +62,7 @@ $('#scantronForm input').click(function () {
                 Authorization: authToken
             },
             data: JSON.stringify({
+               examNumber: getUrlParameter('tNum'),
                clicks: JSON.parse(localStorage.getItem('clicks')),
                examAnswers : $('#scantronForm').serializeArray()
             }),
@@ -66,6 +83,7 @@ $('#scantronForm input').click(function () {
     
     // Register click handler for form submit button
     $(function onDocReady() {
+        document.getElementById('testName').innerHTML += getUrlParameter('tNum');
         $('#scantronFormSubmitButton').click(writeExam);
         $('#signOut').click(function() {
             WildRydes.signOut();

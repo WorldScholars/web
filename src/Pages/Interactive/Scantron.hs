@@ -13,27 +13,31 @@ import qualified Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes
 import qualified Text.Blaze.Html5.Attributes as A
 
-scantron :: Int -> Html
-scantron examNum = do
+spacingStyle = "col-xs-12 col-sm-6 col-md-6 col-lg-3"
+
+scantron :: Html
+scantron = do
     section ! A.id "signup" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
-      h1 $ string $ "SAT Practice Exam #"++(show examNum)
+      h1 ! A.id "testName" $ string $ "SAT Practice Exam #"
     H.form ! A.id "scantronForm" ! A.name "scantronForm" ! class_ "text-center" $ do
-      numberInputSection 1 [16..20]
-      multiChoiceSection "Math" 1 52
-      multiChoiceSection "Math" 2 44
-      multiChoiceSection "Math" 3 15
-      multiChoiceSection "Math" 4 30
+      multiChoiceSection "Reading - 65 mins" 1 52
+      multiChoiceSection "Writing and Language - 35 mins" 2 44
+      multiChoiceSection "Math (No Calculator) - 25 mins" 3 15
+      numberInputSection 3 [16..20]
+      multiChoiceSection "Math (Calculator) - 55 mins" 4 30
+      numberInputSection 4 [31..38]
       button ! class_ "btn btn-primary" ! A.id "scantronFormSubmitButton" ! type_ "submit" ! onsubmit "writeExamData()" $ "submit" 
 
 numberInputSection :: Int -> [Int] -> Html
 numberInputSection secNum qNums = do
-  H.div ! class_ "row" $ do
+  H.div ! class_ "container" $ H.div ! class_ "row" $ do
     mapM_ (numberInput secNum) qNums
 
 numberInput :: Int -> Int -> Html
 numberInput secNum qNum = do
-  H.div ! class_ "container" $ H.div ! class_ "col-sm-12 col-md-6 col-lg-3" $ do
-    input ! type_ "number" ! class_ "form-control"
+ H.div ! class_ spacingStyle ! A.style "margin-bottom:10px" $ do
+    H.span ! A.style "margin-right:20px" $ string $ show qNum
+    input ! type_ "number" 
         ! A.name (stringValue $ "s_"++(show secNum)++"_q_"++(show qNum))
         ! A.value "0.00"
  
@@ -53,7 +57,7 @@ multiChoiceSection secName secNum numQs = do
 
 multiChoiceGroup :: Int -> (Int, Int) -> Html
 multiChoiceGroup secNum (start, end) = 
-    H.div ! class_ "col-sm-12 col-md-6 col-lg-3" $ do
+    H.div ! class_ spacingStyle $ do
       table ! A.class_ "answer-table" $ do
         mapM_ (multiChoice secNum) [start..end]
 

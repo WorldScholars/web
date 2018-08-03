@@ -45,7 +45,7 @@ main = do
 
   writeSigninup
   makeInteractivePage "html/profile.html" profile
-  makeInteractivePage "html/scantron.html" $ scantron 1
+  makeInteractivePage "html/scantron.html" scantron
 
 writeSigninup :: IO()
 writeSigninup = do
