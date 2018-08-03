@@ -35,6 +35,7 @@ numberInput secNum qNum = do
   H.div ! class_ "container" $ H.div ! class_ "col-sm-12 col-md-6 col-lg-3" $ do
     input ! type_ "number" ! class_ "form-control" ! placeholder "0.00" 
         ! A.name (stringValue $ "s_"++(show secNum)++"_q_"++(show qNum))
+        ! A.value "1"
  
 multiChoiceSection :: String -> Int -> Int -> Html
 multiChoiceSection secName secNum numQs = do 
