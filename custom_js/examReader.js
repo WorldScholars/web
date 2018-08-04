@@ -17,13 +17,10 @@
         console.log(authToken);
         $.ajax({
             method: 'GET',
-            url: _config.api.invokeUrl + '/examget',
+            url: _config.api.invokeUrl + '/examget?id='+examIdfromUrl,
             headers: {
                 Authorization: authToken
             },
-            data: JSON.stringify({
-              id: examIdfromUrl
-            }),
             contentType: 'application/json',
             success: completeRequest,
             error: function ajaxError(jqXHR, textStatus, errorThrown) {
