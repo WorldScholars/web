@@ -32,7 +32,7 @@
     }
 
     function completeRequest(results) {
-        examData = JSON.parse(results.body);
+        examData = results.body;
         document.getElementById('testName').innerHTML += examData.examNumber;
         document.getElementById('submitTime').innerHTML += examData.submittedAt;
 
