@@ -41,7 +41,9 @@
     
     // Register click handler for form submit button
     $(function onDocReady() {
-        getExamResults(getUrlParameter('id'));
+        if(window.location.pathname=="/examsummary.html"){
+            getExamResults(getUrlParameter('id'));
+        }
 
         $('#signOut').click(function() {
             WildRydes.signOut();
