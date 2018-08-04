@@ -21,6 +21,9 @@
             headers: {
                 Authorization: authToken
             },
+            data: JSON.stringify({
+              id: examIdfromUrl
+            }),
             contentType: 'application/json',
             success: completeRequest,
             error: function ajaxError(jqXHR, textStatus, errorThrown) {
