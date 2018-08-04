@@ -33,6 +33,7 @@
 
     function completeRequest(results) {
         examData = results;
+        console.log(examData);
         document.getElementById('testName').innerHTML += examData.examNumber;
         document.getElementById('submitTime').innerHTML += examData.submittedAt;
 
