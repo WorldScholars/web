@@ -14,6 +14,7 @@
 
     function getExamResults(examIdfromUrl) {
 
+        console.log(authToken);
         $.ajax({
             method: 'GET',
             url: _config.api.invokeUrl + '/examget',
@@ -23,7 +24,7 @@
             contentType: 'application/json',
             success: completeRequest,
             error: function ajaxError(jqXHR, textStatus, errorThrown) {
-                console.error('Error reading exam to database: ', textStatus, ', Details: ', errorThrown);
+                console.error('Error reading exam from database: ', textStatus, ', Details: ', errorThrown);
                 console.error('Response: ', jqXHR.responseText);
                 alert('An error occured when reading your exam:\n' + jqXHR.responseText);
             }
