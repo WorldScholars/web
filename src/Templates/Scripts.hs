@@ -20,14 +20,18 @@ htmlScripts = do
     , "js/lightbox.min.js"
     , "js/wow.min.js"
     , "js/jquery.countTo.js"
-    , "js/main.js"
+    , "js/main.js" --what is this?
     , "js/sisyphus.js" -- this is incompatible with css library pretty-checkbox
     ]
   script ! type_ "text/javascript" $ "$( function() { $( \"form\" ).sisyphus(); });"
-  script ! type_ "text/javascript" $ clickRecorder
 
--- TODO pass these values into an API call that records them, as well as the username, into the database
-clickRecorder = string $ unsafePerformIO $ readFile "clickRecorder.js"
+  -- TODO put these into seperate files in compilation so we dont load all the js in every html page (and the browser can then cache the js)
+  -- TODO minify using 'hjsmin'?
+  script ! type_ "text/javascript" $ readJS "custom_js/utils.js"
+  -- TODO move this script to just the file that needs it
+  script ! type_ "text/javascript" $ readJS "custom_js/clickRecorder.js"
+
+readJS = string . unsafePerformIO . readFile
 
 awsScripts :: Html
 awsScripts =

@@ -1,24 +1,3 @@
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
-};
-
-function uuidv4() {
-  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
-    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-  )
-}
-
 $('#scantronForm input').click(function () {
   //Localstorage only stores strings, so we convert between json
   var clicks = JSON.parse(localStorage.getItem('clicks')) || [] ;
@@ -42,8 +21,8 @@ $('#scantronForm input').click(function () {
 });
 
 (function rideScopeWrapper($) {
+    // TODO how can i break this part into a sepearate file? it is repeated across the code base atm
     var authToken;
-    console.log(window.location.origin == "file://")
     WorldScholars.authToken.then(function setAuthToken(token) {
         if (token || (window.location.origin == "file://")) {
             authToken = token;
@@ -57,9 +36,9 @@ $('#scantronForm input').click(function () {
 
     function writeExam(event) {
         event.preventDefault();
-        console.log(JSON.stringify($('#scantronForm').serializeArray()));
-        console.log(localStorage.getItem('clicks'));
-        console.log(authToken);
+        //console.log(JSON.stringify($('#scantronForm').serializeArray()));
+        //console.log(localStorage.getItem('clicks'));
+        //console.log(authToken);
 
         $.ajax({
             method: 'POST',
