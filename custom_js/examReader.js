@@ -17,11 +17,11 @@
         console.log(authToken);
         $.ajax({
             method: 'GET',
-            url: _config.api.invokeUrl + '/examget?id='+examIdfromUrl,
+            url: _config.api.invokeUrl + '/examget?id=' + examIdfromUrl,
             headers: {
                 Authorization: authToken
             },
-            //contentType: 'application/json',
+            contentType: 'application/json',
             success: completeRequest,
             error: function ajaxError(jqXHR, textStatus, errorThrown) {
                 console.error('Error reading exam from database: ', textStatus, ', Details: ', errorThrown);
@@ -41,7 +41,7 @@
     
     // Register click handler for form submit button
     $(function onDocReady() {
-        getExamResults(getUrlParameter('exam_uuid='));
+        getExamResults(getUrlParameter('id'));
 
         $('#signOut').click(function() {
             WildRydes.signOut();
