@@ -69,8 +69,10 @@ $('#scantronForm input').click(function () {
     
     // Register click handler for form submit button
     $(function onDocReady() {
-        document.getElementById('testName').innerHTML += getUrlParameter('tNum');
-        $('#scantronFormSubmitButton').click(writeExam);
+        if(window.location.pathname=="/scantron.html"){
+          document.getElementById('testName').innerHTML += getUrlParameter('tNum');
+          $('#scantronFormSubmitButton').click(writeExam);
+        }
         $('#signOut').click(function() {
             WildRydes.signOut();
             alert("You have been signed out.");
