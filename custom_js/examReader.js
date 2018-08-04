@@ -35,7 +35,7 @@
         examData = results;
         console.log(examData);
         document.getElementById('testName').innerHTML += examData.ExamNumber;
-        document.getElementById('submitTime').innerHTML += examData.submitTime;
+        document.getElementById('submissionTime').innerHTML += examData.submitTime;
 
         console.log('Succsefully read exam data from database: ', results);
     }
