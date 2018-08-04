@@ -21,7 +21,7 @@
             headers: {
                 Authorization: authToken
             },
-            contentType: 'application/json',
+            //contentType: 'application/json',
             success: completeRequest,
             error: function ajaxError(jqXHR, textStatus, errorThrown) {
                 console.error('Error reading exam from database: ', textStatus, ', Details: ', errorThrown);
