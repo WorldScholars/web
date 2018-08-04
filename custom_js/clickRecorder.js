@@ -1,6 +1,6 @@
 $('#scantronForm input').click(function () {
   //Localstorage only stores strings, so we convert between json
-  var clicks = JSON.parse(localStorage.getItem('clicks')) || [] ;
+  var clicks = JSON.parse(localStorage.getItem('clicks')) || {} ;
 
   var ans;
   if ($(this).val()) {
@@ -10,13 +10,13 @@ $('#scantronForm input').click(function () {
     ans = "none"
   }
 
+  var question = $(this).attr('name');
   var oneClick = {
-    question: $(this).attr('name'),
     answer: ans,
     timestamp: Date.now()
   }
   
-  clicks.push(oneClick)
+  clicks[question]=oneClick;
   localStorage.setItem('clicks', JSON.stringify(clicks));
 });
 
