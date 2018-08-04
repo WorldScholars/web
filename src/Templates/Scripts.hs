@@ -30,6 +30,7 @@ htmlScripts = do
   script ! type_ "text/javascript" $ readJS "custom_js/utils.js"
   -- TODO move this script to just the file that needs it
   script ! type_ "text/javascript" $ readJS "custom_js/clickRecorder.js"
+  script ! type_ "text/javascript" $ readJS "custom_js/examReader.js"
 
 readJS = string . unsafePerformIO . readFile
 
