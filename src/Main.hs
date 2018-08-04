@@ -23,6 +23,7 @@ import qualified Pages.Programs.Util as P
 import Pages.Interactive.SignInUp
 import Pages.Interactive.Profile
 import Pages.Interactive.Scantron
+import Pages.Interactive.ExamSummary
 
 import Template
 
@@ -46,6 +47,7 @@ main = do
   writeSigninup
   makeInteractivePage "html/profile.html" profile
   makeInteractivePage "html/scantron.html" scantron
+  makeInteractivePage "html/examsummary.html" examSummary
 
 writeSigninup :: IO()
 writeSigninup = do
