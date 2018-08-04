@@ -34,8 +34,8 @@
     function completeRequest(results) {
         examData = results;
         console.log(examData);
-        document.getElementById('testName').innerHTML += examData.examNumber;
-        document.getElementById('submitTime').innerHTML += examData.submittedAt;
+        document.getElementById('testName').innerHTML += examData.ExamNumber;
+        document.getElementById('submitTime').innerHTML += examData.submitTime;
 
         console.log('Succsefully read exam data from database: ', results);
     }
