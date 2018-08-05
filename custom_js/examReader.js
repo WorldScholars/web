@@ -58,6 +58,7 @@
           $('tbody').append(newRow);
         });
 
+        console.log(incorrectByCategory);
         document.getElementById('summary').innertHTML += incorrectByCategory.toString();
         console.log('Succsefully read exam data from database: ', results);
     }
