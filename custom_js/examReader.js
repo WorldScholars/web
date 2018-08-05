@@ -69,11 +69,6 @@
             getExamResults(getUrlParameter('id'));
         }
 
-        $('#signOut').click(function() {
-            WildRydes.signOut();
-            alert("You have been signed out.");
-            window.location = "signin.html";
-        });
 
     });
 

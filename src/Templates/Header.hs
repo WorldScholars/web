@@ -60,7 +60,11 @@ htmlHeader isInteractive =
                     (\p -> li $ a ! href (toValue $ P.linkTo p) $ (string $ (P.name p)))
                     (reverse $ filter (\p -> P.epoch p < today) P.allPrograms)
               li $ a ! href "faq.html" $ "FAQ"
-              when isInteractive $ li $ a ! href "profile.html" $ "Profile"
+              when isInteractive $ li $ 
+                li ! class_ "dropdown" $ do
+                  a ! href "profile.html" $ "Profile"
+                  i ! class_ "fa fa-angle-down" $ mempty
+                  li ! A.id "signOut" $ "Sign out"
               when (not isInteractive) $ li $ a ! href "signin.html" $ "Sign in"
 
 today = round (unsafePerformIO getPOSIXTime)
