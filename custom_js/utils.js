@@ -19,3 +19,7 @@ function uuidv4() {
   )
 }
 
+
+function readISODateString(d) {
+  return (new Date(d)).toString();
+}

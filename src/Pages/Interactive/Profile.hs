@@ -22,7 +22,7 @@ profile = do
       mapM_ testLink [1..10]
 
       h2 "Your past Exams"
-      table ! A.style "text-center" $ do
+      table ! A.class_ "answer-table" $ do
           thead $ tr $ do
               th "Exam Number"
               th "Submission Time"

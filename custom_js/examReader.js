@@ -35,7 +35,7 @@
         examData = results;
         console.log(examData);
         document.getElementById('testName').innerHTML += examData.ExamNumber;
-        document.getElementById('submissionTime').innerHTML += examData.submitTime;
+        document.getElementById('submissionTime').innerHTML += readISODateString(examData.submitTime);
         examData.Answers.forEach(function(ans){
           //TODO hardcoding parsing of section and question, this should just be in the json object
           sectionNum = ans.name[2];
