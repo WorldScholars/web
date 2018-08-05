@@ -66,6 +66,7 @@ htmlHeader isInteractive =
                     "Profile"
                     i ! class_ "fa fa-angle-down" $ mempty
                   ul ! class_ "sub-menu" $ do
+                    li $ a ! href "profile.html" $ "My Exams"
                     li ! A.id "signOut" $ a ! href "#" $ "Sign out"
               when (not isInteractive) $ li $ a ! href "signin.html" $ "Sign in"
 
