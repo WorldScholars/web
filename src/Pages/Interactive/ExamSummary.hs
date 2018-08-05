@@ -26,7 +26,6 @@ examSummary = do
           tbody mempty
 
 
-      awsScripts
       script ! src "aws_js/profile.js" $ mempty
 
   
