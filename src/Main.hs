@@ -45,15 +45,16 @@ main = do
   makePage "html/registration.html" $ SAT2018.registration paypalButton
 
   writeSigninup
-  makeInteractivePage "html/profile.html" profile
-  makeInteractivePage "html/scantron.html" scantron
-  makeInteractivePage "html/examsummary.html" examSummary
+  makeInteractivePage "html/profile.html" [] profile --TODO move profile.js here
+  makeInteractivePage "html/scantron.html" ["custom_js/clickRecorder.js"] scantron
+  makeInteractivePage "html/examsummary.html" ["custom_js/examReader.js"] examSummary
+
 
 writeSigninup :: IO()
 writeSigninup = do
-  makeInteractivePage "html/signup.html" signup
-  makeInteractivePage "html/verify.html" verify
-  makeInteractivePage "html/signin.html" signin
+  makeInteractivePage "html/signup.html" [] signup
+  makeInteractivePage "html/verify.html" [] verify
+  makeInteractivePage "html/signin.html" [] signin
 
 writeEveryone :: IO()  
 writeEveryone = 
@@ -68,7 +69,7 @@ writePrograms  =
       P.allPrograms 
 
 makePage link p =
-  writeFile link $ renderHtml $ embedInTemplate False p
+  writeFile link $ renderHtml $ embedInTemplate False [] p
 
-makeInteractivePage link p =
-  writeFile link $ renderHtml $ embedInTemplate True p
+makeInteractivePage link jsSources p =
+  writeFile link $ renderHtml $ embedInTemplate True jsSources p

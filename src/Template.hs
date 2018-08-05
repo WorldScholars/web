@@ -16,13 +16,13 @@ import Templates.Scripts
 import Templates.Footer
 
 
-embedInTemplate :: Bool -> Html -> Html
-embedInTemplate isInteractive x = do
+embedInTemplate :: Bool -> [String] -> Html -> Html
+embedInTemplate isInteractive jsSources x = do
     docTypeHtml ! lang "en" $ do
       htmlHead isInteractive
       body $ do
           htmlHeader isInteractive
           x
           htmlFooter
-          htmlScripts
+          htmlScripts jsSources
 

@@ -12,8 +12,8 @@ import qualified Text.Blaze.Html5.Attributes as A
 
 import System.IO.Unsafe
 
-htmlScripts :: Html
-htmlScripts = do
+htmlScripts :: [String] -> Html
+htmlScripts jsSources = do
   mapM_ (\x-> script ! type_ "text/javascript" ! src x $ mempty)
     [ "js/jquery.js"
     , "js/bootstrap.min.js"
@@ -28,9 +28,8 @@ htmlScripts = do
   -- TODO put these into seperate files in compilation so we dont load all the js in every html page (and the browser can then cache the js)
   -- TODO minify using 'hjsmin'?
   script ! type_ "text/javascript" $ readJS "custom_js/utils.js"
-  -- TODO move this script to just the file that needs it
-  script ! type_ "text/javascript" $ readJS "custom_js/clickRecorder.js"
-  script ! type_ "text/javascript" $ readJS "custom_js/examReader.js"
+  
+  mapM_ (\s -> script ! type_ "text/javascript" $ readJS s) jsSources
 
 readJS = string . unsafePerformIO . readFile
 
