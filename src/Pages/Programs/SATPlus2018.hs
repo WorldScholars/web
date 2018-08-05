@@ -38,10 +38,12 @@ sat2018 = Program{
    p $ do
      "Please sign the "
      a ! href "docs/Release+Consent.pdf" $ "release and consent forms" 
-     "for your student for this program. We will also have copies available on the first day of the program"
-   p "This year our program will be located on the campus of Yale University Divinity School (409 Prospect St)."
+     "for your student for this program. Please also sign the "
+     a ! href "docs/BehaviorPolicy.pdf" $ "classroom behavior form"
+     "We will also have copies available on the first day of the program if you are not able to print these ahead of time."
+   p "This year our program will be located on the campus of Yale University Divinity School (409 Prospect St). World Scholars teachers will be present to direct you to the appropriate location for parking, pickup, and dropoff."
    H.div ! A.style "width:60%; margin:0 auto;" $ preEscapedToHtml googleMapsEmbed
-   p "The program will run from 9:00 AM to 4:30 PM, Monday through Friday. Below is an outline of a student’s typical day."
+   p "The program will run from 9:00 AM to 4:30 PM, Monday through Friday. Below is an outline of a student’s typical day. The schedule will change slightly depending in the particular goals of the day (for example when full SAT practice exams are administered)."
    myTable ([["8:55 AM", "Students dropped off"]
             ,["9:00 AM", "SAT English lecture"]
             ,["10:00 AM", "SAT English practice problems"]
@@ -56,7 +58,7 @@ sat2018 = Program{
    H.div ! A.style "width:60%; margin:0 auto;" $ preEscapedToHtml youtubeEmbed
    p "What is a Passion Project? In America and around the globe, educators are moving away from test-centric summative evaluations for learning. The educational landscape is moving towards a formative assessment in which students are expressing their learning in a more comprehensive way through projects. Project-based learning is the inspiration behind Passion Projects. We value the multi-dimensional ways of expressing learning through topics that students care about and we want to make sure that we provide an opportunity for students to make that happen. The Passion Projects will allow students to collaborate, innovate, and design a project (whether it be an idea or a product) of their choosing and we will facilitate to see through the project's completion.  Guest lecturers will come on Tuesdays and Thursdays to expose students to potential academic and professional career paths as well as inspire Passion Project work."
    p "By participating in the World Scholars program, students will develop the skills to present themselves, not just as strong students, but as future leaders. The final project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their Passion Project after the program, but all students will use those skills to find the next Passion Project to work on."
-   p "To participate in the next SAT+ program and start your own Passion Project, stay tuned for registration instructions. Enrollment for this program is capped at 23 student per week per section, and we run two sections simultaneously in both weeks."
+   p "Enrollment for this program is capped at 23 student per week per section, and we run two sections simultaneously in both weeks."
    p "The prices for this summer are listed below"
    myTable ([["Registation (One Time)", "$45"]
             ,["Tuition (per week)", "$368"]
