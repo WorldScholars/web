@@ -23,5 +23,7 @@ examSummary = do
               th "Section"
               th "Question"
               th "Answer"
+              th "Correct Answer"
+              th "Question Type"
           tbody mempty
 

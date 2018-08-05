@@ -42,7 +42,12 @@
           questionNum = ans.name.substring(6);
           slash = "/";
           if (ans.value!="0.00"){
-            newRow = ('<tr><td>' + sectionNum + '<'+slash+'td><td>' + questionNum + '<'+slash+'td><td>' + ans.value + '<'+slash+'td><'+slash+'tr>');
+            newRow = '<tr><td>' + sectionNum + '<'+slash+'td>';
+            newRow += '<td>' + questionNum + '<'+slash+'td>';
+            newRow += '<td>' + ans.value + '<'+slash+'td>';
+            newRow += '<td>' + ans.correctAnswer + '<'+slash+'td>';
+            newRow += '<td>' + ans.questionType + '<'+slash+'td>';
+            newRow += '<'+slash+'tr>');
             $('tbody').append(newRow);
           }
         });
