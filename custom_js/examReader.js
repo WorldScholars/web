@@ -52,12 +52,16 @@
           switch (sectionNum) {
             case "1":
               sectionName = "Reading";
+              break;
             case "2":
               sectionName = "Writing and Language";
+              break;
             case "3":
               sectionName = "Math (no calculator)";
+              break;
             case "4":
               sectionName = "Math (calculator)";
+              break;
             default: 
               sectionName = "Section "+sectionNum;
           }
