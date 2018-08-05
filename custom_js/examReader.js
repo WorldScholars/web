@@ -36,6 +36,14 @@
         console.log(examData);
         document.getElementById('testName').innerHTML += examData.ExamNumber;
         document.getElementById('submissionTime').innerHTML += examData.submitTime;
+        examData.Answers.forEach(function(ans){
+          //TODO hardcoding parsing of section and question, this should just be in the json object
+          sectionNum = ans.name[2];
+          questionNum = ans.name.substring(6);
+          slash = "/";
+          newRow = ('<tr><td>' + sectionNum + '<'+slash+'td><td>' + questionNum + '<'+slash+'td><td>' + ans.value + '<'+slash+'td><'+slash+'tr>');
+          $('tbody').append(newRow);
+        });
 
         console.log('Succsefully read exam data from database: ', results);
     }
