@@ -14,7 +14,6 @@
 
     function getExamResults(examIdfromUrl) {
 
-        console.log(authToken);
         $.ajax({
             method: 'GET',
             url: _config.api.invokeUrl + '/examget?id=' + examIdfromUrl,
@@ -33,7 +32,6 @@
 
     function completeRequest(results) {
         examData = results;
-        console.log(examData);
         document.getElementById('testName').innerHTML += examData.ExamNumber;
         document.getElementById('submissionTime').innerHTML += readISODateString(examData.submitTime);
         var incorrectByCategory = {};
