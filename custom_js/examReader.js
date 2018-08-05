@@ -46,7 +46,7 @@
           }
           else {
             bgColor = '#fb7a4a';
-            incorrectByCategory[ans.questionType] = (incorrectByCategory[ans.questionType || 0) + 1;
+            incorrectByCategory[ans.questionType] = (incorrectByCategory[ans.questionType] || 0) + 1;
           }
           newRow  = '<tr style=\"background-color:' + bgColor + '\">';
           newRow += '<td>' + sectionNum + '<'+slash+'td>';
