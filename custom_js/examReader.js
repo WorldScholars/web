@@ -47,7 +47,7 @@
             newRow += '<td>' + ans.value + '<'+slash+'td>';
             newRow += '<td>' + ans.correctAnswer + '<'+slash+'td>';
             newRow += '<td>' + ans.questionType + '<'+slash+'td>';
-            newRow += '<'+slash+'tr>');
+            newRow += '<'+slash+'tr>';
             $('tbody').append(newRow);
           }
         });
