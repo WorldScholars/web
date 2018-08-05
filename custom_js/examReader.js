@@ -50,13 +50,13 @@
           }
           var sectionName;
           switch (sectionNum) {
-            case 1:
+            case "1":
               sectionName = "Reading";
-            case 2:
+            case "2":
               sectionName = "Writing and Language";
-            case 3:
+            case "3":
               sectionName = "Math (no calculator)";
-            case 4:
+            case "4":
               sectionName = "Math (calculator)";
             default: 
               sectionName = "Section "+sectionNum;
