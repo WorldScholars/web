@@ -41,7 +41,14 @@
           sectionNum = ans.name[2];
           questionNum = ans.name.substring(6);
           slash = "/";
-          newRow = '<tr><td>' + sectionNum + '<'+slash+'td>';
+          if (ans.value==ans.correctAnswer) {
+            bgColor = 'springgreen'
+          }
+          else {
+            bgCol = '#fb7a4a'
+          }
+          newRow  = '<tr style=\"background-color:' + bgCol + '\">';
+          newRow += '<td>' + sectionNum + '<'+slash+'td>';
           newRow += '<td>' + questionNum + '<'+slash+'td>';
           newRow += '<td>' + ans.value + '<'+slash+'td>';
           newRow += '<td>' + ans.correctAnswer + '<'+slash+'td>';
