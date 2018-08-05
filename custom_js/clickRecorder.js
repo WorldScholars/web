@@ -65,6 +65,8 @@ $('#scantronForm input').click(function () {
     function completeRequest(result) {
         console.log('Succsefully wrote exam data to database: ', result);
         localStorage.removeItem('clicks');
+        $('form').sisyphus().manuallyReleaseData(); <- "()"
+        window.location.href = "/profile.html";
     }
     
     // Register click handler for form submit button
