@@ -63,7 +63,7 @@
           }
 
           newRow  = '<tr style=\"background-color:' + bgColor + '\">';
-          newRow += '<td>' + sectionNum + '<'+slash+'td>';
+          newRow += '<td>' + sectionName + '<'+slash+'td>';
           newRow += '<td>' + questionNum + '<'+slash+'td>';
           newRow += '<td>' + ans.value + '<'+slash+'td>';
           newRow += '<td>' + ans.correctAnswer + '<'+slash+'td>';
