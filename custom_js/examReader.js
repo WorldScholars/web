@@ -36,6 +36,7 @@
         console.log(examData);
         document.getElementById('testName').innerHTML += examData.ExamNumber;
         document.getElementById('submissionTime').innerHTML += readISODateString(examData.submitTime);
+        var incorrectByCategory = {};
         examData.Answers.forEach(function(ans){
           //TODO hardcoding parsing of section and question, this should just be in the json object
           sectionNum = ans.name[2];
@@ -47,6 +48,7 @@
           }
           else {
             bgColor = '#fb7a4a';
+            incorrectByCategory[ans.questionType] = (incorrectByCategory[ans.questionType || 0) + 1;
           }
           newRow  = '<tr style=\"background-color:' + bgColor + '\">';
           newRow += '<td>' + sectionNum + '<'+slash+'td>';
@@ -58,6 +60,7 @@
           $('tbody').append(newRow);
         });
 
+        document.getElementById('summary').innertHTML += incorrectByCategory.toString();
         console.log('Succsefully read exam data from database: ', results);
     }
     

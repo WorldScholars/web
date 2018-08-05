@@ -26,4 +26,5 @@ examSummary = do
               th "Correct Answer"
               th "Question Type"
           tbody mempty
+      p ! A.id "summary" $ ""
 
