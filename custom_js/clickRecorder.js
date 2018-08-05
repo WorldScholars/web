@@ -40,6 +40,8 @@ $('#scantronForm input').click(function () {
         //console.log(localStorage.getItem('clicks'));
         //console.log(authToken);
 
+        filteredExamAnswers = $('#scantronForm').serializeArray().filter(ans => ans.value != "0.00")
+
         $.ajax({
             method: 'POST',
             url: _config.api.invokeUrl + '/examwrite',
@@ -50,7 +52,7 @@ $('#scantronForm input').click(function () {
                examId: uuidv4(),
                examNumber: getUrlParameter('tNum'),
                clicks: JSON.parse(localStorage.getItem('clicks')),
-               examAnswers : $('#scantronForm').serializeArray()
+               examAnswers : filteredExamAnswers
             }),
             contentType: 'application/json',
             success: completeRequest,
@@ -65,7 +67,7 @@ $('#scantronForm input').click(function () {
     function completeRequest(result) {
         console.log('Succsefully wrote exam data to database: ', result);
         localStorage.removeItem('clicks');
-        $('form').sisyphus().manuallyReleaseData(); <- "()"
+        $('form').sisyphus().manuallyReleaseData();
         window.location.href = "/profile.html";
     }
     
