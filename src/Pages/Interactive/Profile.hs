@@ -20,6 +20,14 @@ profile = do
       p ! A.id "username" $ ""
 
       mapM_ testLink [1..10]
+
+      h2 "Your past Exams"
+      table ! A.style "text-center" $ do
+          thead $ tr $ do
+              th "Exam Number"
+              th "Submission Time"
+              th "Link to results"
+          tbody mempty
       awsScripts
       script ! src "aws_js/profile.js" $ mempty
 
