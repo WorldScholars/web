@@ -42,7 +42,7 @@
           sectionNum = ans.name[2];
           questionNum = ans.name.substring(6);
           //$('tbody').append('<tr><td>'+sectionNum+'</td><td>'+questionNum+'</td><td>'+ans.value+'</td></tr>');
-        });/*
+        });*/
 
         console.log('Succsefully read exam data from database: ', results);
     }

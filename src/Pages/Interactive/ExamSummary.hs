@@ -22,7 +22,7 @@ examSummary = do
           thead $ tr $ do
               th "Section"
               th "Question"
-              th "Answer "
+              th "Answer"
           tbody mempty
 
 
