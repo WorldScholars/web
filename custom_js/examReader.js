@@ -41,8 +41,10 @@
           sectionNum = ans.name[2];
           questionNum = ans.name.substring(6);
           slash = "/";
-          newRow = ('<tr><td>' + sectionNum + '<'+slash+'td><td>' + questionNum + '<'+slash+'td><td>' + ans.value + '<'+slash+'td><'+slash+'tr>');
-          $('tbody').append(newRow);
+          if (ans.value!="0.00"){
+            newRow = ('<tr><td>' + sectionNum + '<'+slash+'td><td>' + questionNum + '<'+slash+'td><td>' + ans.value + '<'+slash+'td><'+slash+'tr>');
+            $('tbody').append(newRow);
+          }
         });
 
         console.log('Succsefully read exam data from database: ', results);
