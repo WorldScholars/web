@@ -19,6 +19,12 @@ signup = do
       h1 ! class_ "margin-bottom" $ "Sign up for an account on World Scholars"
       section ! class_ "form-wrap" $ do
         h1 "Register"
+        p "Your password must have at least one of each:"
+        ul $ do
+          li "number"
+          li "special character"
+          li "uppercase letter"
+          li "lowercase letter"
         H.form ! A.id "registrationForm" $ do
           input ! type_ "email" ! A.id "emailInputRegister" ! placeholder "Email" ! pattern ".*" ! required ""
           input ! type_ "password" ! A.id "passwordInputRegister" ! placeholder "Password" ! pattern ".*" ! required ""

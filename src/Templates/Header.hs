@@ -66,7 +66,7 @@ htmlHeader isInteractive =
                     "Profile"
                     i ! class_ "fa fa-angle-down" $ mempty
                   ul ! class_ "sub-menu" $ do
-                    li ! A.id "signOut" $ "Sign out"
+                    li ! A.id "signOut" $ a ! href "#" $ "Sign out"
               when (not isInteractive) $ li $ a ! href "signin.html" $ "Sign in"
 
 today = round (unsafePerformIO getPOSIXTime)
