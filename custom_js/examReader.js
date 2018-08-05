@@ -60,6 +60,7 @@
               sectionName = "Math (calculator)";
             default: 
               sectionName = "Section "+sectionNum;
+          }
 
           newRow  = '<tr style=\"background-color:' + bgColor + '\">';
           newRow += '<td>' + sectionNum + '<'+slash+'td>';

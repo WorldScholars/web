@@ -19,7 +19,7 @@ profile = do
       h1 ! class_ "margin-bottom" $ "Your account"
       p ! A.id "username" $ ""
 
-      mapM_ testLink [1..10]
+      mapM_ testLink [4]
 
       h2 "Your past Exams"
       table ! A.class_ "answer-table" $ do
