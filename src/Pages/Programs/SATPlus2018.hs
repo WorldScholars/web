@@ -31,8 +31,12 @@ sat2018 = Program{
    p "Students may choose to register for either week or both weeks."
    --myTable ([["August 6th - 10th", "See WeChat group for registration"]
    --         ,["August 13th - 17th", "See WeChat group for registration"]]::[[Html]])
-   myTable ([["August 6th - 10th", a !  href "registration.html" $ "Register now"]
+   myTable ([["August 6th - 10th", "Registration now closed"] --a !  href "registration.html" $ "Register now"]
             ,["August 13th - 17th", a ! href "registration.html" $ "Register now"]]::[[Html]])
+   p $ do
+     "Please sign the "
+     a ! href "docs/Release+Consent.pdf" $ "release and consent forms" 
+     "for your student for this program. We will also have copies available on the first day of the program"
    p "The program will run from 9:00 AM to 4:30 PM, Monday through Friday. Below is an outline of a student’s typical day."
    myTable ([["8:55 AM", "Students dropped off"]
             ,["9:00 AM", "SAT English lecture"]
@@ -47,7 +51,9 @@ sat2018 = Program{
    p "What is a Passion Project? In America and around the globe, educators are moving away from test-centric summative evaluations for learning. The educational landscape is moving towards a formative assessment in which students are expressing their learning in a more comprehensive way through projects. Project-based learning is the inspiration behind Passion Projects. We value the multi-dimensional ways of expressing learning through topics that students care about and we want to make sure that we provide an opportunity for students to make that happen. The Passion Projects will allow students to collaborate, innovate, and design a project (whether it be an idea or a product) of their choosing and we will facilitate to see through the project's completion.  Guest lecturers will come on Tuesdays and Thursdays to expose students to potential academic and professional career paths as well as inspire Passion Project work."
    p "By participating in the World Scholars program, students will develop the skills to present themselves, not just as strong students, but as future leaders. The final project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their Passion Project after the program, but all students will use those skills to find the next Passion Project to work on."
    p "To participate in the next SAT+ program and start your own Passion Project, stay tuned for registration instructions. Enrollment for this program is capped at 23 student per week per section, and we run two sections simultaneously in both weeks."
-   p "This year our program will be located on the campus of Albertus Magnus College, in Aquinas Hall. The prices for this summer are listed below"
+   p "This year our program will be located on the campus of Yale University Divinity School (409 Prospect St)."
+   H.div ! A.style "width:60%; margin:0 auto;" $ preEscapedToHtml googleMapsEmbed
+   p "The prices for this summer are listed below"
    myTable ([["Registation (One Time)", "$45"]
             ,["Tuition (per week)", "$368"]
             ,["Activity (per week)", "$118"]
@@ -57,6 +63,9 @@ sat2018 = Program{
      a ! href "mailto:fiona@worldscholars.global" $ "fiona@worldscholars.global"
 }
 
+
+googleMapsEmbed :: String
+googleMapsEmbed = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3427827821965!2d-72.9242065845762!3d41.323158979270126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d9c07a82c48f%3A0x47d743a6be189b52!2s409+Prospect+St%2C+New+Haven%2C+CT+06511!5e0!3m2!1sen!2sus!4v1533434561880\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>"
 
 youtubeEmbed :: String 
 youtubeEmbed = "<iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/p2UQICvLgNM?rel=0&amp;showinfo=0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"
