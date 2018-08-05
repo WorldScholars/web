@@ -19,7 +19,7 @@ signup = do
       h1 ! class_ "margin-bottom" $ "Sign up for an account on World Scholars"
       section ! class_ "form-wrap" $ do
         h1 "Register"
-        p "Your password must have at least one of each:"
+        p "Your password be at least 8 characters long and must have at least one of each:"
         ul $ do
           li "number"
           li "special character"

@@ -48,6 +48,19 @@
             bgColor = '#fb7a4a';
             incorrectByCategory[ans.questionType] = (incorrectByCategory[ans.questionType] || 0) + 1;
           }
+          var sectionName;
+          switch (sectionNum) {
+            case 1:
+              sectionName = "Reading";
+            case 2:
+              sectionName = "Writing and Language";
+            case 3:
+              sectionName = "Math (no calculator)";
+            case 4:
+              sectionName = "Math (calculator)";
+            default: 
+              sectionName = "Section "+sectionNum;
+
           newRow  = '<tr style=\"background-color:' + bgColor + '\">';
           newRow += '<td>' + sectionNum + '<'+slash+'td>';
           newRow += '<td>' + questionNum + '<'+slash+'td>';
