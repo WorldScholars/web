@@ -34,6 +34,10 @@ signin = do
           input ! type_ "email" ! A.id "emailInputSignin" ! placeholder "Email" ! required ""
           input ! type_ "password" ! A.id "passwordInputSignin" ! placeholder "Password" ! pattern ".*" ! required ""
           input ! type_ "submit" ! value "Sign In"
+        h1 "Or, if you do not yet have an account:"
+        h2 $ do
+           a ! href "signup.html" $ "Sign up"
+           "for a new account."
 
 
 verify :: Html

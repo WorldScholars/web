@@ -25,7 +25,3 @@ examSummary = do
               th "Answer"
           tbody mempty
 
-
-      script ! src "aws_js/profile.js" $ mempty
-
-  

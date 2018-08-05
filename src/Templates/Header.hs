@@ -5,6 +5,7 @@ module Templates.Header where
 import Prelude
 import qualified Prelude as P
 import Data.Monoid (mempty)
+import Control.Monad (when)
 
 import Text.Blaze.Html5
 import qualified Text.Blaze.Html5 as H
@@ -18,8 +19,8 @@ import qualified Pages.Programs.Util as P
 import Data.Time.Clock.POSIX
 import System.IO.Unsafe
 
-htmlHeader :: Html
-htmlHeader =
+htmlHeader :: Bool -> Html
+htmlHeader isInteractive =
     header ! A.id "header" $ do
       H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 overflow" $ H.div ! class_ "social-icons pull-right" $ ul ! class_ "nav nav-pills" $ do
           li $ a ! href "https://www.facebook.com/worldscholarsllc/" $ i ! class_ "fa fa-facebook" $ mempty
@@ -59,6 +60,8 @@ htmlHeader =
                     (\p -> li $ a ! href (toValue $ P.linkTo p) $ (string $ (P.name p)))
                     (reverse $ filter (\p -> P.epoch p < today) P.allPrograms)
               li $ a ! href "faq.html" $ "FAQ"
+              when isInteractive $ li $ a ! href "profile.html" $ "Profile"
+              when (not isInteractive) $ li $ a ! href "signin.html" $ "Sign in"
 
 today = round (unsafePerformIO getPOSIXTime)
 

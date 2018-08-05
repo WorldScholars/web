@@ -21,7 +21,7 @@ embedInTemplate isInteractive x = do
     docTypeHtml ! lang "en" $ do
       htmlHead isInteractive
       body $ do
-          htmlHeader
+          htmlHeader isInteractive
           x
           htmlFooter
           htmlScripts

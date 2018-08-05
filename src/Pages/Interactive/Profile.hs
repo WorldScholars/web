@@ -28,7 +28,6 @@ profile = do
               th "Submission Time"
               th "Link to results"
           tbody mempty
-      script ! src "aws_js/profile.js" $ mempty
 
   
 testLink tNum = p $ do
