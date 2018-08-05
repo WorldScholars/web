@@ -18,12 +18,12 @@ examSummary = do
     section ! A.id "Profile" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       h1 ! A.id "testName" $ "Your results for Exam #"
       h2 ! A.id "submissionTime" $ "Submitted at: "
-      {-table $ do
+      table ! A.style "text-center" $ do
           thead $ tr $ do
               th "Section"
               th "Question"
               th "Answer"
-          tbody mempty-}
+          tbody mempty
 
 
       awsScripts
