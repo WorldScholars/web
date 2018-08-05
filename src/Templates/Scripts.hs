@@ -43,4 +43,5 @@ awsScripts =
     , "aws_js/vendor/amazon-cognito-identity.min.js" 
     , "aws_js/config.js"
     , "aws_js/cognito-auth.js" 
+    , "aws_js/profile.js" 
     ]
