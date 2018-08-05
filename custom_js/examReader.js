@@ -41,11 +41,12 @@
           sectionNum = ans.name[2];
           questionNum = ans.name.substring(6);
           slash = "/";
+          var bgCol;
           if (ans.value==ans.correctAnswer) {
-            bgColor = 'springgreen'
+            bgColor = 'springgreen';
           }
           else {
-            bgCol = '#fb7a4a'
+            bgCol = '#fb7a4a';
           }
           newRow  = '<tr style=\"background-color:' + bgCol + '\">';
           newRow += '<td>' + sectionNum + '<'+slash+'td>';
