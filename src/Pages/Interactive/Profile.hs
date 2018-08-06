@@ -18,7 +18,9 @@ profile = do
     section ! A.id "Profile" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       h1 ! class_ "margin-bottom" $ "Your account"
       p ! A.id "username" $ ""
-
+      p $ do
+        "If this is your first time signing up, please take the following survey: "
+        a ! href "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf" $ "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf"
       mapM_ testLink [4]
 
       h2 "Your past Exams"
