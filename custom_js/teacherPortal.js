@@ -42,7 +42,7 @@ WorldScholars.map = WorldScholars.map || {};
       console.log(data);
         data.allSummaries.forEach(function(oneExam){
           slash = "/";
-          newRow = ('<tr><td>' + oneExam.StudentId+ '<'+slash+'td>' +
+          newRow = ('<tr><td>' + oneExam.studentId+ '<'+slash+'td>' +
                     '<td>' + oneExam.Section_1 + '<'+slash+'td>'+
                     '<td>' + oneExam.Section_2 + '<'+slash+'td>'+
                     '<td>' + oneExam.Section_3 + '<'+slash+'td>'+
@@ -60,8 +60,8 @@ WorldScholars.map = WorldScholars.map || {};
         if (window.location.pathname=="/teacherPortal.html" 
             //this is so insecure its not even funny, move this to server side
             && useremail.endsWith("-at-worldscholars.global")){
-          document.getElementById('teacherWelcome').innertHTML += useremail;
-          document.getElementById('whichExam').innertHTML += getUrlParameter('examNum');
+          document.getElementById('teacherWelcome').innerHTML += useremail;
+          document.getElementById('whichExam').innerHTML += getUrlParameter('examNum');
           getExamSummary()
         }
 
