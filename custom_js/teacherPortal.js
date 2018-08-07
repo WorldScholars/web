@@ -63,15 +63,15 @@ WorldScholars.map = WorldScholars.map || {};
     }
 
     function examSummaryInHtml(data) {
-      console.log(data);
         data.allSummaries.forEach(wrongBySec);
         wrongBySec(data.fullSummary);
-
-        var qTypes = Object.keys(data.fullSummary).filter(k => (!k.startsWith("Section")) && (!k.startsWith("s_")));
-        var qNames1 = Object.keys(data.fullSummary).filter(k => k.startsWith("s_1"));
-        var qNames2 = Object.keys(data.fullSummary).filter(k => k.startsWith("s_2"));
-        var qNames3 = Object.keys(data.fullSummary).filter(k => k.startsWith("s_3"));
-        var qNames4 = Object.keys(data.fullSummary).filter(k => k.startsWith("s_4"));
+        
+        var sortedKeys = Object.keys(data.fullSummary).sort(function(a,b){return data.fullSummary[a] - data.fullSummary[b]}
+        var qTypes = sortedKeys.filter(k => (!k.startsWith("Section")) && (!k.startsWith("s_")));
+        var qNames1 = sortedKeys.filter(k => k.startsWith("s_1"));
+        var qNames2 = sortedKeys.filter(k => k.startsWith("s_2"));
+        var qNames3 = sortedKeys.filter(k => k.startsWith("s_3"));
+        var qNames4 = sortedKeys.filter(k => k.startsWith("s_4"));
 
         makeGeneralTable(data.fullSummary,qTypes);
         makeGeneralTable(data.fullSummary,qNames1);
