@@ -47,9 +47,9 @@ WorldScholars.map = WorldScholars.map || {};
                     '<td>' + oneExam.Section_2 + '<'+slash+'td>'+
                     '<td>' + oneExam.Section_3 + '<'+slash+'td>'+
                     '<td>' + oneExam.Section_4 + '<'+slash+'td>'+
-                    '<td>' + sortedKeys[0] +" - "+oneExam.(sortedKeys[0]) + '<'+slash+'td>'+
-                    '<td>' + sortedKeys[1] +" - "+oneExam.(sortedKeys[1]) + '<'+slash+'td>'+
-                    '<td>' + sortedKeys[2] +" - "+oneExam.(sortedKeys[2]) + '<'+slash+'td>'+
+                    '<td>' + sortedKeys[0] +" - "+oneExam[sortedKeys[0]] + '<'+slash+'td>'+
+                    '<td>' + sortedKeys[1] +" - "+oneExam[sortedKeys[1]] + '<'+slash+'td>'+
+                    '<td>' + sortedKeys[2] +" - "+oneExam[sortedKeys[2]] + '<'+slash+'td>'+
                     '<'+slash+'tr>');
           $('tbody').append(newRow);
     }
