@@ -21,10 +21,14 @@ teacherPortal = do
       table ! A.class_ "answer-table" $ do
           thead $ tr $ do
               th "Student"
+              th "Link to exam details"
               th "Section 1"
               th "Section 2"
               th "Section 3 "
               th "Section 4"
+              th "Top Problem Area 1"
+              th "Top Problem Area 2"
+              th "Top Problem Area 3"
           tbody mempty
       H.div ! A.id "tables" $ ""
       p ! A.id "summary" $ ""
