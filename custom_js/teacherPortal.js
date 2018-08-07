@@ -58,8 +58,8 @@ WorldScholars.map = WorldScholars.map || {};
         headers.forEach(function(header) {
             myTable += '<td>' + data[header] + '<'+slash+'td>'
         });
-        myTable += '<'+slash+'tr>'+'<'+slash+'table>';
-        return myTable;
+        myTable += '<'+slash+'tr>'+'<'+slash+'table><hr>';
+        document.getElementById('tables').innerHTML += myTable
     }
 
     function examSummaryInHtml(data) {
@@ -68,10 +68,16 @@ WorldScholars.map = WorldScholars.map || {};
         wrongBySec(data.fullSummary);
 
         var qTypes = Object.keys(data.fullSummary).filter(k => (!k.startsWith("Section")) && (!k.startsWith("s_")));
-        var qNames = Object.keys(data.fullSummary).filter(k => k.startsWith("s_"));
+        var qNames1 = Object.keys(data.fullSummary).filter(k => k.startsWith("s_1"));
+        var qNames2 = Object.keys(data.fullSummary).filter(k => k.startsWith("s_2"));
+        var qNames3 = Object.keys(data.fullSummary).filter(k => k.startsWith("s_3"));
+        var qNames4 = Object.keys(data.fullSummary).filter(k => k.startsWith("s_4"));
 
-        document.getElementById('qTypeTable').innerHTML = makeGeneralTable(data.fullSummary,qTypes);
-        document.getElementById('qNameTable').innerHTML = makeGeneralTable(data.fullSummary,qNames);
+        makeGeneralTable(data.fullSummary,qTypes);
+        makeGeneralTable(data.fullSummary,qNames1);
+        makeGeneralTable(data.fullSummary,qNames2);
+        makeGeneralTable(data.fullSummary,qNames3);
+        makeGeneralTable(data.fullSummary,qNames4);
     }
 
     $(function onDocReady() {

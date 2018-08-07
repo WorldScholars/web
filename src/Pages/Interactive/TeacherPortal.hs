@@ -26,7 +26,6 @@ teacherPortal = do
               th "Section 3 "
               th "Section 4"
           tbody mempty
-      H.div ! A.id "qTypeTable" $ ""
-      H.div ! A.id "qNameTable" $ ""
+      H.div ! A.id "tables" $ ""
       p ! A.id "summary" $ ""
 
