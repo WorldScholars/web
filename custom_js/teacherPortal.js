@@ -38,9 +38,7 @@ WorldScholars.map = WorldScholars.map || {};
         });
     }
 
-    function examSummaryInHtml(data) {
-      console.log(data);
-        data.allSummaries.forEach(function(oneExam){
+    function wrongBySec(oneExam) {
           slash = "/";
           newRow = ('<tr><td>' + oneExam.studentId+ '<'+slash+'td>' +
                     '<td>' + oneExam.Section_1 + '<'+slash+'td>'+
@@ -49,8 +47,12 @@ WorldScholars.map = WorldScholars.map || {};
                     '<td>' + oneExam.Section_4 + '<'+slash+'td>'+
                     '<'+slash+'tr>');
           $('tbody').append(newRow);
-        });
-        //data.fullSummary
+    }
+
+    function examSummaryInHtml(data) {
+      console.log(data);
+        data.allSummaries.forEach(wrongBySec);
+        wrongBySec(data.fullSummary);
 
 
     }
