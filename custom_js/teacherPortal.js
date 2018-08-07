@@ -24,7 +24,7 @@ WorldScholars.map = WorldScholars.map || {};
 
         $.ajax({
             method: 'GET',
-            url: _config.api.invokeUrl + '/teacher/examallsummary?examNum'+getUrlParameter('examNum'),
+            url: _config.api.invokeUrl + '/teacher/examallsummary?examNum='+getUrlParameter('examNum'),
             headers: {
                 Authorization: authToken
             },
