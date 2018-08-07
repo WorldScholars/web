@@ -41,7 +41,7 @@ WorldScholars.map = WorldScholars.map || {};
     function wrongBySec(oneExam) {
           slash = "/";
           var sortedKeys = Object.keys(oneExam).sort(function(a,b){return oneExam[b] - oneExam[a]});
-          sortedKeys = sortedKeys.filter(k => (!k.startsWith("Section")) && k!="studentId");
+          sortedKeys = sortedKeys.filter(k => (!k.startsWith("Section")) && k!="studentId" && k!="ExamId");
           newRow = ('<tr><td>' + oneExam.studentId+ '<'+slash+'td>' +
                     '<td><a href=\"examsummary.html?id=' + oneExam.ExamId + '\">Exam Details<'+slash+'a><'+slash+'td>'+
                     '<td>' + oneExam.Section_1 + '<'+slash+'td>'+
