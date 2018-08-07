@@ -29,6 +29,9 @@ teacherPortal = do
               th "Top Problem Area 1"
               th "Top Problem Area 2"
               th "Top Problem Area 3"
+              th "Top Problem Area 4"
+              th "Top Problem Area 5"
+              th "Top Problem Area 6"
           tbody mempty
       H.div ! A.id "tables" $ ""
       p ! A.id "summary" $ ""
