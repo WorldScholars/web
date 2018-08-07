@@ -66,7 +66,7 @@ WorldScholars.map = WorldScholars.map || {};
         data.allSummaries.forEach(wrongBySec);
         wrongBySec(data.fullSummary);
         
-        var sortedKeys = Object.keys(data.fullSummary).sort(function(a,b){return data.fullSummary[a] - data.fullSummary[b]});
+        var sortedKeys = Object.keys(data.fullSummary).sort(function(a,b){return data.fullSummary[b] - data.fullSummary[a]});
         var qTypes = sortedKeys.filter(k => (!k.startsWith("Section")) && (!k.startsWith("s_")));
         var qNames1 = sortedKeys.filter(k => k.startsWith("s_1"));
         var qNames2 = sortedKeys.filter(k => k.startsWith("s_2"));
