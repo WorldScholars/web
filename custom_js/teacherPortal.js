@@ -49,12 +49,29 @@ WorldScholars.map = WorldScholars.map || {};
           $('tbody').append(newRow);
     }
 
+    function makeGeneralTable(data,headers) {
+        var myTable = '<table><tr>'
+        headers.forEach(function(header) {
+            myTable += '<td>' + header + '<'+slash+'td>'
+        });
+        myTable += '<'+slash+'tr>'+'<tr>'
+        headers.forEach(function(header) {
+            myTable += '<td>' + data[header] + '<'+slash+'td>'
+        });
+        myTable += '<'+slash+'tr>'+'<'+slash+'table>';
+        return myTable;
+    }
+
     function examSummaryInHtml(data) {
       console.log(data);
         data.allSummaries.forEach(wrongBySec);
         wrongBySec(data.fullSummary);
 
+        var qTypes = Object.keys(data.fullSummary).filter(k => (!k.startsWith("Section")) && (!k.startsWith("s_")));
+        var qNames = Object.keys(data.fullSummary).filter(k => k.startsWith("s_"));
 
+        document.getElementById('qTypeTable').innerHTML = makeGeneralTable(data.fullSummary,qTypes);
+        document.getElementById('qNameTable').innerHTML = makeGeneralTable(data.fullSummary,qNames);
     }
 
     $(function onDocReady() {
