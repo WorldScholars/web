@@ -24,6 +24,7 @@ import Pages.Interactive.SignInUp
 import Pages.Interactive.Profile
 import Pages.Interactive.Scantron
 import Pages.Interactive.ExamSummary
+import Pages.Interactive.TeacherPortal
 
 import Template
 
@@ -48,6 +49,7 @@ main = do
   makeInteractivePage "html/profile.html" [] profile --TODO move profile.js here
   makeInteractivePage "html/scantron.html" ["custom_js/clickRecorder.js"] scantron
   makeInteractivePage "html/examsummary.html" ["custom_js/examReader.js"] examSummary
+  makeInteractivePage "html/teacherPortal.html" ["custom_js/teacherPortal.js"] teacherPortal
 
 
 writeSigninup :: IO()
