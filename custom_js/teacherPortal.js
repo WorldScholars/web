@@ -1,4 +1,3 @@
-/*global WorldScholars _config*/
 
 var WorldScholars = window.WorldScholars || {};
 WorldScholars.map = WorldScholars.map || {};
@@ -21,7 +20,7 @@ WorldScholars.map = WorldScholars.map || {};
         window.location.href = '/signin.html';
     });
 
-    function getExaxmSummary() {
+    function getExamSummary() {
 
         $.ajax({
             method: 'GET',
