@@ -39,6 +39,7 @@ WorldScholars.map = WorldScholars.map || {};
     }
 
     function examSummaryInHtml(data) {
+      console.log(data);
         data.allSummaries.forEach(function(oneExam){
           slash = "/";
           newRow = ('<tr><td>' + oneExam.StudentId+ '<'+slash+'td>' +
