@@ -22,7 +22,8 @@ profile = do
         "If this is your first time signing up, please take the following survey: "
         a ! href "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf" $ "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf"
       p ! A.class_ "alert alert-info" $ do
-        "UPDATE: Take this on friday please!"
+        "UPDATE: Take this on Friday please!"
+        br
         a ! href "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf" $ "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf"
       mapM_ testLink [4]
 
