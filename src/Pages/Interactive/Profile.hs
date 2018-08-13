@@ -21,7 +21,7 @@ profile = do
       p $ do
         "If this is your first time signing up, please take the following survey: "
         a ! href "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf" $ "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf"
-      mapM_ testLink [4,6]
+      mapM_ testLink [3,4,6]
 
       h2 "Your past Exams"
       table ! A.class_ "answer-table" $ do
