@@ -76,4 +76,5 @@ multiChoice section qNum = do
       input ! type_ "radio" 
           ! A.id (stringValue choice) 
           ! A.value (stringValue choice) 
+          ! (if isHidden then (A.checked "checked") else mempty)
           ! A.name (stringValue $ "s_"++(show section)++"_q_"++(show qNum))
