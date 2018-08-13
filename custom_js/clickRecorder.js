@@ -41,11 +41,11 @@ $('#scantronForm input').click(function () {
         //console.log(authToken);
 
         filteredExamAnswers = $('#scantronForm').serializeArray().
-          map(ans => 
-            if (ans.value != "0.00") {
+          map(ans => {
+            if (ans.value == "0.00") {
               ans.value = "none"
             }
-            return ans)
+            return ans})
 
 
         $.ajax({
