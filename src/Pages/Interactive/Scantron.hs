@@ -65,11 +65,15 @@ multiChoice :: Int -> Int -> Html
 multiChoice section qNum = do
   tr $ do
     td $ H.span $ string $ show qNum
-    mapM_ oneChoice ["A","B","C","D"]
+    mapM_ (oneChoice False) ["A","B","C","D"]
+    oneChoice True "none"
  where
-  oneChoice :: String -> Html
-  oneChoice choice = td $ do
-    H.label ! A.for (stringValue choice) $ string choice
-    br
-    input ! type_ "radio" ! A.id (stringValue choice) ! A.value (stringValue choice)
-        ! A.name (stringValue $ "s_"++(show section)++"_q_"++(show qNum))
+  oneChoice :: Bool -> String -> Html
+  oneChoice isHidden choice = 
+    td ! A.style (stringValue $ "visibility:"++(if isHidden then "hidden" else "visible")) $ do
+      H.label ! A.for (stringValue choice) $ string choice
+      br
+      input ! type_ "radio" 
+          ! A.id (stringValue choice) 
+          ! A.value (stringValue choice) 
+          ! A.name (stringValue $ "s_"++(show section)++"_q_"++(show qNum))
