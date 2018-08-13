@@ -36,6 +36,7 @@ $('#scantronForm input').click(function () {
 
     function writeExam(event) {
         event.preventDefault();
+        $("#scantronFormSubmitButton").attr("disabled", "disabled");
         //console.log(JSON.stringify($('#scantronForm').serializeArray()));
         //console.log(localStorage.getItem('clicks'));
         //console.log(authToken);
@@ -74,6 +75,7 @@ $('#scantronForm input').click(function () {
         console.log('Succsefully wrote exam data to database: ', result);
         localStorage.removeItem('clicks');
         $('form').sisyphus().manuallyReleaseData();
+        $("#scantronFormSubmitButton").attr("disabled", "enabled");
         window.location.href = "/profile.html";
     }
     
