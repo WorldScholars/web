@@ -40,7 +40,13 @@ $('#scantronForm input').click(function () {
         //console.log(localStorage.getItem('clicks'));
         //console.log(authToken);
 
-        filteredExamAnswers = $('#scantronForm').serializeArray().filter(ans => ans.value != "0.00")
+        filteredExamAnswers = $('#scantronForm').serializeArray().
+          map(ans => 
+            if (ans.value != "0.00") {
+              ans.value = "none"
+            }
+            return ans)
+
 
         $.ajax({
             method: 'POST',
