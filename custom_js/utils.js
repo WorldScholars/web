@@ -1,4 +1,12 @@
 var getUrlParameter = function getUrlParameter(sParam) {
+  return getUrlData('&',sParam);
+}
+
+var getUrlFitbit = function getUrlFitbit(sParam) {
+  return getUrlData('#',sParam);
+}
+
+var getUrlData = function getUrlData(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
         sParameterName,

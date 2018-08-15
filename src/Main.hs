@@ -25,6 +25,7 @@ import Pages.Interactive.Profile
 import Pages.Interactive.Scantron
 import Pages.Interactive.ExamSummary
 import Pages.Interactive.TeacherPortal
+import Pages.Interactive.Fitbit
 
 import Template
 
@@ -51,6 +52,7 @@ main = do
   makeInteractivePage "html/examsummary.html" ["custom_js/examReader.js"] examSummary
   makeInteractivePage "html/teacherPortal.html" ["custom_js/teacherPortal.js"] teacherPortal
 
+  makeInteractivePage "html/fitbit_auth.html" [] fitbitAuthResponse 
 
 writeSigninup :: IO()
 writeSigninup = do
