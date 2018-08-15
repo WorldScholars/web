@@ -52,7 +52,7 @@ main = do
   makeInteractivePage "html/examsummary.html" ["custom_js/examReader.js"] examSummary
   makeInteractivePage "html/teacherPortal.html" ["custom_js/teacherPortal.js"] teacherPortal
 
-  makeInteractivePage "html/fitbit_auth.html" [] fitbitAuthResponse 
+  makeInteractivePage "html/fitbit_auth.html" ["custom_js/fitbitAuthSaver.js"] fitbitAuthResponse 
 
 writeSigninup :: IO()
 writeSigninup = do
