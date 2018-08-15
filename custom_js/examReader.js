@@ -41,7 +41,8 @@
           questionNum = ans.name.substring(6);
           slash = "/";
           var bgColor;
-          if (ans.correctAnswer.includes(ans.value)) {
+          if (ans.value == ans.correctAnswer ||
+              (ans.correctAnswer.includes(",") && ans.correctAnswer.includes(ans.value))) {
             bgColor = 'springgreen';
           }
           else {

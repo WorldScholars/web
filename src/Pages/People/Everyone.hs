@@ -38,7 +38,7 @@ everyone = --sortWith name $
   ,rahel
   ,dao
   ,murphy
-  ,diana
+--  ,diana
   ,stefan
 --  ,sangwoo
 --  ,felix
