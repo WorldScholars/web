@@ -1,14 +1,15 @@
 var getUrlParameter = function getUrlParameter(sParam) {
-  return getUrlData('&',sParam);
+  sPageURL = decodeURIComponent(window.location.search.substring(1)),
+  return getUrlData(sPageURL);
 }
 
 var getUrlFitbit = function getUrlFitbit(sParam) {
-  return getUrlData('#',sParam);
+  sPageURL = decodeURIComponent(window.location.hash.substring(1)),
+  return getUrlData(sPageURL);
 }
 
-var getUrlData = function getUrlData(delim, sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split(delim),
+var getUrlData = function getUrlData(sPageURL) {
+    var sURLVariables = sPageURL.split('&'),
         sParameterName,
         i;
 
