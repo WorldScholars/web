@@ -6,9 +6,9 @@ var getUrlFitbit = function getUrlFitbit(sParam) {
   return getUrlData('#',sParam);
 }
 
-var getUrlData = function getUrlData(sParam) {
+var getUrlData = function getUrlData(delim, sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
+        sURLVariables = sPageURL.split(delim),
         sParameterName,
         i;
 
