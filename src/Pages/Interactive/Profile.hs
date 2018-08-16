@@ -21,6 +21,11 @@ profile = do
       p $ do
         "If this is your first time signing up, please take the following survey: "
         a ! href "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf" $ "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf"
+      p $ do
+        "If you haven't already done so, please " 
+        a ! href "https://www.fitbit.com/oauth2/authorize?client_id=22CYBG&response_type=token&scope=activity%20nutrition%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=31536000" $ "grant us permissions to you FitBit data."
+        "This will allow us to make cool graphs for you. Just follow the link, select \"Allow All\" (you may need to de-select and select again) and click \"Allow\"."
+
       mapM_ testLink [3,4,6]
 
       h2 "Your past Exams"
