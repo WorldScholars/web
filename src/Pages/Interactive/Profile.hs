@@ -18,9 +18,12 @@ profile = do
     section ! A.id "Profile" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       h1 ! class_ "margin-bottom" $ "Your account"
       p ! A.id "username" $ ""
-      p $ do
-        "If this is your first time signing up, please take the following survey: "
-        a ! href "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf" $ "https://tccolumbia.qualtrics.com/jfe/form/SV_6Ygd9RMCNpwCjHf"
+      p ! class_ "alert alert-info" $ do
+        "Last day of world scholars! New students, please take the following survey: "
+        a ! href "https://tccolumbia.qualtrics.com/jfe/form/SV_eEdYpMKnmRKfgUt" $ "https://tccolumbia.qualtrics.com/jfe/form/SV_eEdYpMKnmRKfgUt"
+      p ! class_ "alert alert-info" $ do
+        "Two week students, please take the following survey: "
+        a ! href "https://tccolumbia.qualtrics.com/jfe/form/SV_bjy9bkujBdmY2Fv" $ "https://tccolumbia.qualtrics.com/jfe/form/SV_bjy9bkujBdmY2Fv"
       p $ do
         "If you haven't already done so, please " 
         a ! href "https://www.fitbit.com/oauth2/authorize?client_id=22CYBG&response_type=token&scope=activity%20nutrition%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=31536000" $ "grant us permissions to you FitBit data."
