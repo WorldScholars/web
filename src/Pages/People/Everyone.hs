@@ -36,12 +36,8 @@ everyone = --sortWith name $
   ,rahul
   ,klumpp
   ,rahel
-  ,dao
   ,murphy
---  ,diana
   ,stefan
---  ,sangwoo
---  ,felix
   ]
 
 sortWith :: Ord b => (a -> b) -> [a] -> [a]
