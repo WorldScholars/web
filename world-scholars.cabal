@@ -22,7 +22,7 @@ executable world-scholars
   other-extensions:    OverloadedStrings
   build-depends:       base >=4.8 && <5.0, 
                        time,
-                       blaze-html >=0.8 && <0.9,
+                       blaze-html >=0.8 ,
                        blaze-markup >=0.7,
                        bytestring,
                        split
