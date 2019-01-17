@@ -13,6 +13,7 @@ import Pages.Apply
 import Pages.About
 import Pages.FAQ
 import Pages.People
+import Pages.HR
 import qualified Pages.People.Everyone as E
 import Pages.Programs
 import qualified Pages.Programs.AllPrograms as P
@@ -53,6 +54,10 @@ main = do
   makeInteractivePage "html/teacherPortal.html" ["custom_js/teacherPortal.js"] teacherPortal
 
   makeInteractivePage "html/fitbit_auth.html" ["custom_js/fitbitAuthSaver.js"] fitbitAuthResponse 
+  
+  gnuCanvas <- readFile "src/gnuCanvas.html"
+  writeFile "html/hr.html" $ renderHtml $ embedInTemplate False (map ("gnu_js/"++) ["canvasmath.js", "fitbit_graph.js", "gnuplot_common.js", "gnuplot_mouse.js"]) $ hrPrototype gnuCanvas
+
 
 writeSigninup :: IO()
 writeSigninup = do
