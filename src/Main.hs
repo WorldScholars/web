@@ -56,7 +56,7 @@ main = do
   makeInteractivePage "html/fitbit_auth.html" ["custom_js/fitbitAuthSaver.js"] fitbitAuthResponse 
   
   gnuCanvas <- readFile "src/gnuCanvas.html"
-  writeFile "html/hr.html" $ renderHtml $ embedInTemplate False (map ("gnu_js/"++) ["canvasmath.js", "fitbit_graph.js", "gnuplot_common.js", "gnuplot_mouse.js"]) $ hrPrototype gnuCanvas
+  writeFile "html/hr.html" $ renderHtml $ embedInTemplate False (map ("gnu_js/"++) ["canvasmath.js", "fitbit_graph.js", "gnuplot_common.js", "gnuplot_mouse.js", "gnuplot_page.js"]) $ hrPrototype gnuCanvas
 
 
 writeSigninup :: IO()
