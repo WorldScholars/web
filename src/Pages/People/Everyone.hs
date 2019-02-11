@@ -28,9 +28,9 @@ everyone :: [Person]
 everyone = --sortWith name $ 
  map addHeadshot
   [
-   maria
+   fiona
+  ,maria
   ,jacob
-  ,fiona
   ,santolucito
   ,aaron
   ,rahul
