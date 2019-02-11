@@ -58,7 +58,7 @@ data Person = Person {
 
 fiona = Person{
   headshotLink = "",
-  name = "Fiona Santolucito (VP of Operations)",
+  name = "Fiona Santolucito (Head of Operations)",
   title = "Organizing Opportunities",
   bio = "Fiona Santolucito is a graduate of Johns Hopkins University as a Hodson Trust Scholar and is entering Yale University as a graduate student this fall. She is fluent in Mandarin Chinese (HSK-5) and has studied at Beijing #80 High School. She has also studied at Yonsei University, South Korea, where she worked with The Associated Press to promote children's health issues in North Korea. Fiona worked with Tuscany Strategy, an education and health care consulting firm, for two years where she built models for business opportunities. Fiona acts as the Director of Operations at World Scholars."
 }
@@ -111,7 +111,7 @@ diana = Person{
 
 santolucito = Person{
   headshotLink = "",
-  name = "Mark Santolucito (VP of Technology)",
+  name = "Mark Santolucito (Head of Technology)",
   title = "Computer Science Without Computers",
   bio = do 
           p "Mark Santolucito is a Computer Science PhD student at Yale University, where he is studying programming languages with Ruzica Piskac. Mark started at Yale with Paul Hudak, working on interactive computer music and Functional Reactive Programming (FRP). Mark is now working with Ruzica Piskac on various forms of program synthesis. Recently, their work has focused on synthesis of FRP programs from logical specifications. Mark also graduated Cum Laude from Amherst College with a BA in both Computer Science and Music, where he was awarded the Best Computer Science Thesis Award in addition to the Lerner Piano Prize upon graduation. In the summer of 2018, Mark will work at Amazon applying his research in practice." 
@@ -120,7 +120,7 @@ santolucito = Person{
 
 maria = Person{
   headshotLink = "",
-  name = "Maria Hwang (President)",
+  name = "Maria Hwang (Head of Design)",
   title = "Education Across Cultures",
   bio = do
           p "Maria Hwang is a post-doctoral researcher at the Columbia University Medical Center's (CUMC) Biomedical Informatics Department working with Lena Mamykina. Maria received her doctorate of education at Teachers College, Columbia University in Instructional Technology and Media under the supervision of Charles Kinzer, focusing on persuasive messages for behavior change in a digital game environment. For her dissertation she developed a game, Monster Appetite, and embedded persuasive messages to see if people would be receptive to those tailored messages that emphasized consequences of a positive or negative behavior. She continues her research on persuasive messages at her post-doc at CUMC with diabetic patients. In the Fall of 2018, Maria will begin a new position as a tenure-track Assistant Professor of Computer Science at the Fashion Institute of Technology (FIT) in NYC, NY."
@@ -143,7 +143,7 @@ murphy = Person{
 
 jacob = Person{
   headshotLink = "",
-  name = "Jacob Li (VP of Business Development)",
+  name = "Jacob Li (Head of Business Development)",
   title = "The Methodology of Philosophy",
   bio = "Prior to joining World Scholars, Jacob was a venture creation intern at Yale Tsai Center for Innovative Thinking (formerly, \"Yale Entrepreneurial Institute\"), and organized one of the nation's first blockchain executive education partnering with Harvard and Yale law and management faculty members in early 2016. He also served as an instructional technologist at Yale College, a core member of Yale Law School Non-profit Organization Clinic, and a technical assistant for Professor Akhil Amar in 2014. Jacob Li is a 2012 John Templeton Fellowship recipient and a Yale graduate. "
 }
