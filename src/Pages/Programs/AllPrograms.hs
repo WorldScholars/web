@@ -15,6 +15,7 @@ import qualified Text.Blaze.Html5.Attributes as A hiding (name)
 import Pages.Programs.Util
 import Pages.Programs.Feb2018
 import Pages.Programs.SATPlus2018
+import Pages.Programs.SATPlus2019
 
 
 allPrograms :: [Program]
@@ -25,6 +26,7 @@ allPrograms = sortWith epoch
   ,aug2017
   ,feb2018
   ,sat2018
+  ,sat2019
   ]
 
 may2016 = Program{

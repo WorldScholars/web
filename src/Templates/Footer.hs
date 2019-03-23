@@ -37,7 +37,7 @@ htmlFooter =
             br
           h2 "Address"
           address $ do
-            "225 E 110th, Suite C"
+            "..."
             br
             "New York, NY"
             br
@@ -51,5 +51,5 @@ htmlFooter =
             H.div ! class_ "form-group" $ textarea ! name "message" ! A.id "message" ! required "required" ! class_ "form-control" ! rows "8" ! placeholder "Your text here" $ mempty
             H.div ! class_ "form-group" $ input ! type_ "submit" ! name "submit" ! class_ "btn btn-submit" ! value "Submit"-}
       H.div ! class_ "col-sm-12" $ H.div ! class_ "copyright-text text-center" $ do
-          p "World Scholars, LLC 2018. All Rights Reserved."
+          p "World Scholars, LLC 2019. All Rights Reserved."
     -- /#footer

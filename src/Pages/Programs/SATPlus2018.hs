@@ -32,7 +32,8 @@ sat2018 = Program{
    --myTable ([["August 6th - 10th", "See WeChat group for registration"]
    --         ,["August 13th - 17th", "See WeChat group for registration"]]::[[Html]])
    myTable ([["August 6th - 10th", "Registration now closed"] --a !  href "registration.html" $ "Register now"]
-            ,["August 13th - 17th", a ! href "registration.html" $ "Register now"]]::[[Html]])
+            ,["August 13th - 17th", "Registration now closed"] --a ! href "registration.html" $ "Register now"]i
+            ]::[[Html]])
 
    h2 "Key Information"
    p $ do

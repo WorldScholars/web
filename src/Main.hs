@@ -18,6 +18,7 @@ import qualified Pages.People.Everyone as E
 import Pages.Programs
 import qualified Pages.Programs.AllPrograms as P
 import qualified Pages.Programs.SATPlus2018 as SAT2018
+import qualified Pages.Programs.SATPlus2019 as SAT2019
 import qualified Pages.Programs.Util as P
 
 --User stuff
@@ -45,7 +46,7 @@ main = do
   makePage "html/thankyou.html" thankyou
 
   paypalButton <- readFile "src/paypalButton.html"
-  makePage "html/registration.html" $ SAT2018.registration paypalButton
+  makePage "html/registration.html" $ SAT2019.registration paypalButton
 
   writeSigninup
   makeInteractivePage "html/profile.html" [] profile --TODO move profile.js here
