@@ -29,8 +29,9 @@ sat2019 = Program{
  ,captionedPics = []
  ,extraHTML = do
    p "Students may choose to register for one of the two week sessions."
-   myTable ([["July 22th - August 2nd", a !  href "registration.html" $ "Register now"]
-            ,["August 5th - 16th", a ! href "registration.html" $ "Register now"]]::[[Html]])
+   myTable ([["July 22th - August 2nd", "Registration coming soon"] --a !  href "registration.html" $ "Register now"]
+            ,["August 5th - 16th", "Registration coming soon"] --a ! href "registration.html" $ "Register now"]
+            ]::[[Html]])
 
    h2 "Key Information"
    p $ do
@@ -56,11 +57,11 @@ sat2019 = Program{
    p "What is a Passion Project? In America and around the globe, educators are moving away from test-centric summative evaluations for learning. The educational landscape is moving towards a formative assessment in which students are expressing their learning in a more comprehensive way through projects. Project-based learning is the inspiration behind Passion Projects. We value the multi-dimensional ways of expressing learning through topics that students care about and we want to make sure that we provide an opportunity for students to make that happen. The Passion Projects will allow students to collaborate, innovate, and design a project (whether it be an idea or a product) of their choosing and we will facilitate to see through the project's completion.  Guest lecturers will come on Tuesdays and Thursdays to expose students to potential academic and professional career paths as well as inspire Passion Project work."
    p "By participating in the World Scholars program, students will develop the skills to present themselves, not just as strong students, but as future leaders. The final project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their Passion Project after the program, but all students will use those skills to find the next Passion Project to work on."
    p "Enrollment for this program is capped at 12 student per session per section, and we run two sections simultaneously in both sessions."
-   p "The prices for this summer are listed below"
-   myTable ([["Registation (One Time)", "$45"]
+   p "The prices for this summer will be announced soon " --are listed below"
+{-   myTable ([["Registation (One Time)", "$45"]
             ,["Tuition (per week)", "$368"]
             ,["Activity (per week)", "$118"]
-            ,["Venue (per week)", "$126"]] :: [[String]])
+            ,["Venue (per week)", "$126"]] :: [[String]])-}
    h2 "What is changing from SAT+2018?"
    p "We are making a few changes to SAT+2019 from SAT+2018 to improve the program. We have expanded the hours of the program to make it easier for the parents' schedule with an earlier dropoff time and later pickup time. We have added an extra hour at the end of the day's program to allow students to explore more of the academic subject they care about the most or need the most help on."
    p $ do
