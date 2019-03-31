@@ -26,7 +26,7 @@ allPrograms = sortWith epoch
   ,aug2017
   ,feb2018
   ,sat2018
---  ,sat2019
+  ,sat2019
   ]
 
 may2016 = Program{
