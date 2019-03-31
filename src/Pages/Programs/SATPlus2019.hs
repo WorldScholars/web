@@ -30,8 +30,8 @@ sat2019 = Program{
  ,captionedPics = []
  ,extraHTML = do
    p "Students may choose to register for one of the two week sessions."
-   myTable ([["July 22th - August 2nd", "Registration coming soon"] --a !  href "registration.html" $ "Register now"]
-            ,["August 5th - 16th", "Registration coming soon"] --a ! href "registration.html" $ "Register now"]
+   myTable ([["July 22th - August 2nd", "Applicaiton form coming soon"] --a !  href "registration.html" $ "Register now"]
+            ,["August 5th - 16th", "Application form coming soon"] --a ! href "registration.html" $ "Register now"]
             ]::[[Html]])
 
    h2 "Key Information"
