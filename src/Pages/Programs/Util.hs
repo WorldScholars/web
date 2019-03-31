@@ -34,8 +34,8 @@ sortWith f = L.sortBy (\x y -> compare (f x) (f y))
 linkTo :: Program -> String
 linkTo p =
   case pageName p of
-  Just l -> l
-  _ -> (filter (/=' ') $ dates p)
+  Just l -> l++".html"
+  _ -> (filter (/=' ') $ dates p)++".html"
 
 data Program = Program {
   name :: String,
