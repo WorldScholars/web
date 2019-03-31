@@ -22,6 +22,7 @@ sat2018 = Program{
   name = "SAT+ 2018"
  ,location = "Greater New Haven Area (Exact Location TBA), CT"
  ,dates = "Aug 2018"
+ ,pageName = Nothing
  ,epoch = 1534529026 
  ,summary = do
    p "This year World Scholars will bring its SAT+ program back to the community, condensed into a two week program from August 6-17. This intensive SAT prep program goes beyond just preparing students for standardized testing, but helps hone their academic and interpersonal skills to prepare them for the college admissions process. The program is best suited for students in grades 9-12."

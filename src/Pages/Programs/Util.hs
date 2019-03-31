@@ -33,12 +33,15 @@ sortWith f = L.sortBy (\x y -> compare (f x) (f y))
 
 linkTo :: Program -> String
 linkTo p =
-  (filter (/=' ') $ dates p)++".html"
+  case pageName p of
+  Just l -> l++".html"
+  _ -> (filter (/=' ') $ dates p)++".html"
 
 data Program = Program {
   name :: String,
   location :: String,
   dates :: String,
+  pageName :: Maybe String,
   epoch :: Int,
   summary :: Html,
   mainPic :: AttributeValue,

@@ -18,6 +18,7 @@ feb2018 = Program{
   name = "Intercultural Exchange through the Lens of Liberal Arts"
  ,location = "New Haven, CT"
  ,dates = "February 2018"
+ ,pageName = Nothing
  ,epoch = 1517493707
  ,summary = do
     p ! A.style "color:red" $ "Due to number of high quality applicants requesting financial aid, this program has been postponed while we organize to provide adequate assistance for all qualified students. Stay tuned for updates!"

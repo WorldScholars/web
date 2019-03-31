@@ -33,6 +33,7 @@ may2016 = Program{
   name = "World Scholars in Korea"
  ,location = "Nonsan, South Korea"
  ,dates = "May 2016"
+ ,pageName = Nothing
  ,epoch = 1462111307
  ,summary = do
     p "This week long series hosted at Guemgang University brought 9 World Scholars to campus for lectures and one-on-one sessions. Each World Scholar presented a lecture/workshop on the particular field of interest. Each lecture included Korean language translation support so that every student benefited from the experience, no matter their prior experience."
@@ -50,6 +51,7 @@ feb2017 = Program{
   name = "Young Undergraduates Overseas Immersion Program"
  ,location = "New Haven, CT"
  ,dates = "Feb 2017"
+ ,pageName = Nothing
  ,epoch = 1485957707
  ,summary = do
     p "There were 300 applicants for 15 spots for this 10 day program. The overall aim of the program is to create a greater awareness in the minds of the delegation to understand the philosophy and the practice of education outside China, and to learn new skills in the area of liberal arts, which are not emphasized in their current degree program."
@@ -66,6 +68,7 @@ aug2017 = Program{
   name = "SAT+ 2017"
  ,location = "Woodbridge, CT"
  ,dates = "Aug 2017"
+ ,pageName = Nothing
  ,epoch = 1501596107
  ,summary = do
     p "This month long program combined SAT prep with passion projects. Designed for student grades 7-12, the program helped students not only prepare for college entrance exams, but also for long-term success after they arrive at college." 
