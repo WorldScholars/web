@@ -30,8 +30,8 @@ sat2019 = Program{
  ,captionedPics = []
  ,extraHTML = do
    p "Students may choose to register for one of the two week sessions."
-   myTable ([["July 22th - August 2nd", "Applicaiton form coming soon"] --a !  href "registration.html" $ "Register now"]
-            ,["August 5th - 16th", "Application form coming soon"] --a ! href "registration.html" $ "Register now"]
+   myTable ([["July 22th - August 2nd", a !  href "registration.html" $ "Register now"]
+            ,["August 5th - 16th", a ! href "registration.html" $ "Register now"]
             ]::[[Html]])
 
    h2 "Key Information"
@@ -108,8 +108,8 @@ registration buttonHTML = do
         dl $ do
           dt "Address"
           dd "World Scholars LLC"
-          dd "Address TBA "
-          dd "..."
+          dd "26 Tilton St"
+          dd "New Haven, CT 06511"
       H.div ! class_ "col-sm-6 text-center" $ do
         h2 "Option 2: Paypal"
         preEscapedToHtml $ buttonHTML
