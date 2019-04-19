@@ -116,4 +116,4 @@ registration buttonHTML = do
 
 
 registrationFormEmbed :: String
-registrationFormEmbed = "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSfqSMvspvKAxzSncYoFggVdNwjjHvWleL-xkxiON6Z8b_Ga3Q/viewform?embedded=true\" width=\"640\" height=\"900\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe>" 
+registrationFormEmbed = "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSfqSMvspvKAxzSncYoFggVdNwjjHvWleL-xkxiON6Z8b_Ga3Q/viewform?embedded=true\" width=\"100%\" height=\"900\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe>" 
