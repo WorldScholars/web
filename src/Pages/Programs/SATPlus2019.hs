@@ -106,7 +106,7 @@ registration buttonHTML = do
           a ! href "Registration_Form.pdf" $ "this registration form"
           "or include a note with the sessions (session 1 or session 2) for which you are enrolling, preferred t-shirt size, as well as the parent's WeChat ID."
         dl $ do
-          dt "Address"
+          dt "Mailing Address"
           dd "World Scholars LLC"
           dd "26 Tilton St"
           dd "New Haven, CT 06511"
