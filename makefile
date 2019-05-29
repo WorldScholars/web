@@ -1,11 +1,11 @@
 
 
 default:
-	cabal install
+	cabal v1-install
 	.cabal-sandbox/bin/world-scholars
 
 full:
-	cabal install
+	cabal v1-install
 	rm -f html/*
 	.cabal-sandbox/bin/world-scholars
 	cp -r html/* ../WorldScholars.github.io

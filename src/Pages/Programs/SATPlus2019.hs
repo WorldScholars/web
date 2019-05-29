@@ -30,7 +30,7 @@ sat2019 = Program{
  ,captionedPics = []
  ,extraHTML = do
    p "Students may choose to register for one of the two week sessions."
-   myTable ([["July 22th - August 2nd", a !  href "registration.html" $ "Register now"]
+   myTable ([["July 22nd - August 2nd", a !  href "registration.html" $ "Register now"]
             ,["August 5th - 16th", a ! href "registration.html" $ "Register now"]
             ]::[[Html]])
 
@@ -88,16 +88,16 @@ registration:: String -> Html
 registration buttonHTML = do
     section ! A.id "about-company" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       h1 ! class_ "margin-bottom" $ "SAT+ 2019 Registration"
-      p "Thank you for your interest in SAT+2019. The cost the program this year is listed below. Please register using one of our payment methods by June 1st. If your payment is not postmarked by June 1st, you will be moved to the end of the waitlist."
+      p "Thank you for your interest in SAT+2019. The cost the program this year is listed below. Please register using one of our payment methods by July 1st. If your payment is not postmarked by July 1st, you will be moved to the end of the waitlist."
       priceTable
       preEscapedToHtml $ registrationFormEmbed
       H.div ! class_ "col-sm-12 text-center" $ do
         p "Thank you for choosing World Scholars this summer. Should extenuating circumstances arise such that you cannot attend the progrm, our refund policy is as follows:"
         ul $ do
-          li "100% payment back (except the $45 registration fee) before June 15th"
-          li "70% payment back before July 1st"
-          li "40% payment before July 10th"
-          li "No refund on or after July 10th" 
+          li "100% payment back (except the $45 registration fee) before July 5th"
+          li "70% payment back before July 12th"
+          li "40% payment before July 19th"
+          li "No refund on or after July 19th" 
     section ! A.id "payment-options-check" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
       H.div ! class_ "col-sm-6 text-center" $ do
         h2 "Option 1: Check (Preferred)"
