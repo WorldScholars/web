@@ -20,9 +20,10 @@ tutoringRegistration:: String -> Html
 tutoringRegistration buttonHTML = do
     section ! A.id "about-company" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       h1 ! class_ "margin-bottom" $ "Tutoring"
-      p "World Scholars is excited to be offering tutoring on a personal referal basis."
+      p "World Scholars is excited to be offering tutoring on a personal referal basis. Please only complete payment below if you are been in contact with us."
     section ! A.id "payment-options-check" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
-      H.div ! class_ "col-sm-6 text-center" $ do
-        h2 "We are currently only accepting Paypal"
+      H.div ! class_ "col-sm-12 text-center" $ do
+        h2 "Payment"
+        p "We are currently only aceepting payment via Paypal."
         preEscapedToHtml $ buttonHTML
 
