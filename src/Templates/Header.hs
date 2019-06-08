@@ -60,6 +60,7 @@ htmlHeader isInteractive =
                     (\p -> li $ a ! href (toValue $ P.linkTo p) $ (string $ (P.name p)))
                     (reverse $ filter (\p -> P.epoch p < today) P.allPrograms)
               li $ a ! href "faq.html" $ "FAQ"
+              li $ a ! href "tutoring.html" $ "Tutoring"
               when isInteractive $ 
                 li ! class_ "dropdown" $ do
                   a ! href "profile.html" $ do
