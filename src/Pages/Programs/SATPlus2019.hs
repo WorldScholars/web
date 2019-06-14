@@ -41,7 +41,7 @@ sat2019 = Program{
      "for your student for this program. We will also have copies available on the first day of the program if you are not able to print these ahead of time."
    p "This year our program will be located on the campus of Yale University Divinity School (409 Prospect St). World Scholars teachers will be present to direct you to the appropriate location for parking, pickup, and dropoff."
    H.div ! A.style "width:60%; margin:0 auto;" $ preEscapedToHtml googleMapsEmbed
-   p "The program will run from 8:30 AM to 5:30 PM, Monday through Friday. Below is an outline of a student’s typical day. The schedule will change slightly depending in the particular goals of the day (for example when full SAT practice exams are administered)."
+   p "The program will run from 8:30 AM to 5:30 PM, Monday through Friday. Below is an outline of a student’s typical day. The schedule will change slightly depending on the particular goals of the day (for example when full SAT practice exams are administered)."
    myTable ([["8:25 AM", "Students dropped off"]
             ,["9:00 AM", "SAT English lecture"]
             ,["10:00 AM", "SAT English practice problems"]
@@ -56,12 +56,12 @@ sat2019 = Program{
    h2 "Passion Projects"
  --  H.div ! A.style "width:60%; margin:0 auto;" $ preEscapedToHtml youtubeEmbed
    p "What is a Passion Project? In America and around the globe, educators are moving away from test-centric summative evaluations for learning. The educational landscape is moving towards a formative assessment in which students are expressing their learning in a more comprehensive way through projects. Project-based learning is the inspiration behind Passion Projects. We value the multi-dimensional ways of expressing learning through topics that students care about and we want to make sure that we provide an opportunity for students to make that happen. The Passion Projects will allow students to collaborate, innovate, and design a project (whether it be an idea or a product) of their choosing and we will facilitate to see through the project's completion.  Guest lecturers will come on Tuesdays and Thursdays to expose students to potential academic and professional career paths as well as inspire Passion Project work."
-   p "By participating in the World Scholars program, students will develop the skills to present themselves, not just as strong students, but as future leaders. The final project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their Passion Project after the program, but all students will use those skills to find the next Passion Project to work on."
-   p "Enrollment for this program is capped at 12 student per session per section, and we run two sections simultaneously in both sessions."
-   p "The prices for this summer are listed below"
+   p "By participating in the World Scholars program, students will develop the skills to present themselves, not just as strong students, but as future leaders. The final project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their Passion Project after the program, but all students will use those skills to find their next Passion Project."
+   p "Enrollment for this program is capped at 12 students per sections, and we run two sections simultaneously in both sessions."
+   p "The prices for this summer are listed below:"
    priceTable
    h2 "What is changing from SAT+2018?"
-   p "We are making a number of changes to SAT+2019 from SAT+2018 to improve the program. We have expanded the hours of the program to make it easier for the parents' schedule with an earlier dropoff time and later pickup time. We have added an extra hour at the end of the day's program to allow students to explore more of the academic subject they care about the most or need the most help on. We have also reduced the maximum classroom size significantly to give an even more personalized expereince."
+   p "We are making a number of changes to SAT+2019 from SAT+2018 to improve the program. We have expanded the hours of the program to make it easier for the parents' schedule with an earlier dropoff time and later pickup time. We have added an extra hour at the end of the day's program to allow students to explore more of the academic subject they care about the most or with which they need the most help. Last but not least, we have also reduced the maximum classroom size significantly to give an even more personalized expereince."
    p $ do
      "For more information please contact: "
      a ! href "mailto:fiona@worldscholars.global" $ "fiona@worldscholars.global"
