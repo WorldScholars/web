@@ -13,6 +13,7 @@ import Data.String
 
 import System.IO.Unsafe
 
+-- | load common javascript files needs for all pages
 htmlScripts :: [String] -> Html
 htmlScripts jsSources = do
   mapM_ (\x-> script ! type_ "text/javascript" ! src x $ mempty)
@@ -26,7 +27,6 @@ htmlScripts jsSources = do
     ]
   script ! type_ "text/javascript" $ "$( function() { $( \"form\" ).sisyphus(); });"
 
-  -- TODO put these into seperate files in compilation so we dont load all the js in every html page (and the browser can then cache the js)
   -- TODO minify using 'hjsmin'?
   script ! type_ "text/javascript" $ readJS "custom_js/utils.js"
 
@@ -35,6 +35,7 @@ htmlScripts jsSources = do
 
 readJS = string . unsafePerformIO . readFile
 
+-- | load scripts needed just for the interactive pages
 awsScripts :: Html
 awsScripts =
   mapM_ (\x-> script ! type_ "text/javascript" ! src x $ mempty)

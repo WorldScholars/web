@@ -23,12 +23,7 @@ import qualified Pages.Programs.Util as P
 import Pages.Tutoring
 
 --User stuff
-import Pages.Interactive.SignInUp
-import Pages.Interactive.Profile
-import Pages.Interactive.Scantron
-import Pages.Interactive.ExamSummary
-import Pages.Interactive.TeacherPortal
-import Pages.Interactive.Fitbit
+import Pages.Interactive
 
 import Template
 
