@@ -21,6 +21,7 @@ import qualified Pages.Programs.SATPlus2018 as SAT2018
 import qualified Pages.Programs.SATPlus2019 as SAT2019
 import qualified Pages.Programs.Util as P
 import Pages.Tutoring
+import Pages.Lau
 
 --User stuff
 import Pages.Interactive
@@ -46,6 +47,10 @@ main = do
 
   paypalButtonTutoring <- readFile "src/paypalButton_tutoring.html"
   makePage "html/tutoring.html" $ tutoringRegistration paypalButtonTutoring
+
+  lauButton <- readFile "src/lauButton.html"
+  makePage "html/lau.html" $ lau lauButton
+
 
   writeSigninup
   makeInteractivePage "html/profile.html" [] profile --TODO move profile.js here
