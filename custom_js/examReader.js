@@ -79,6 +79,7 @@
           $('tbody').append(newRow);
         });
 
+        console.log(correctBySection)
         finalScore = score(
                       correctBySection[2] + correctBySection[3],
                       correctBySection[0], correctBySection[1])
