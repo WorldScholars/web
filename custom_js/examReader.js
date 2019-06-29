@@ -35,6 +35,7 @@
         document.getElementById('testName').innerHTML += examData.ExamNumber;
         document.getElementById('submissionTime').innerHTML += readISODateString(examData.submitTime);
         var incorrectByCategory = {};
+        var correctBySection = {};
         examData.Answers.forEach(function(ans){
           //TODO hardcoding parsing of section and question, this should just be in the json object
           sectionNum = ans.name[2];
@@ -44,6 +45,7 @@
           if (ans.value == ans.correctAnswer ||
               (ans.correctAnswer.includes(",") && ans.correctAnswer.includes(ans.value))) {
             bgColor = 'springgreen';
+            correctBySection[sectionNum] = (correctBySection[sectionNum] || 0) + 1; 
           }
           else {
             bgColor = '#fb7a4a';
@@ -77,7 +79,10 @@
           $('tbody').append(newRow);
         });
 
-        console.log(incorrectByCategory);
+        finalScore = score(
+                      correctBySection[2] + correctBySection[3],
+                      correctBySection[0], correctBySection[1])
+        console.log(finalScore);
         document.getElementById('summary').innertHTML += incorrectByCategory.toString();
         console.log('Succsefully read exam data from database: ', results);
     }
