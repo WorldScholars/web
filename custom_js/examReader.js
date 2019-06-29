@@ -87,11 +87,11 @@
 
         document.getElementById('totalScore').innerHTML += (finalScore.total)+ '';
         document.getElementById('math').innerHTML += 
-          "Math Score: " + (finalScore.mathScaled)+ " | Percentile: " + (finalScore.mathPercentile) + "%";
+          "Math Score: " + (finalScore.mathScaled) // + " | Percentile: " + (finalScore.mathPercentile) + "%";
         document.getElementById('reading').innerHTML += 
-          "Reading Score: " + (finalScore.readingScaled)+ " | Percentile: " + (finalScore.readingPercentile) + "%";
+          "Reading Score: " + (finalScore.readingScaled) //+ " | Percentile: " + (finalScore.readingPercentile) + "%";
         document.getElementById('writing').innerHTML += 
-          "Writing score: " + (finalScore.writingScaled) + " | Percentile: " + (finalScore.writingPercentile) + "%";
+          "Writing score: " + (finalScore.writingScaled) //+ " | Percentile: " + (finalScore.writingPercentile) + "%";
 
         var incorrectSorted = [];
         console.log(incorrectByCategory)
