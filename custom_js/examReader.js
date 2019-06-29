@@ -95,7 +95,7 @@
 
         var summarySorted = [];
         for (var category in summary) {
-            summarySorted.push([category, summary[category]);
+            summarySorted.push([category, summary[category]]);
         }
 
         summarySorted.sort(function(a, b) {
