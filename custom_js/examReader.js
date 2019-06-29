@@ -79,12 +79,12 @@
           $('tbody').append(newRow);
         });
 
-        console.log(correctBySection)
         finalScore = score(
                       correctBySection["3"] + correctBySection["4"] || 0,
                       correctBySection["1"] || 0, correctBySection["2"] || 0)
-        console.log(finalScore);
-        document.getElementById('summary').innertHTML += incorrectByCategory.toString();
+
+        document.getElementById('totalScore').innerHTML += (finalScore.totalScore)+ '';
+        document.getElementById('summary').innerHTML += incorrectByCategory.toString();
         console.log('Succsefully read exam data from database: ', results);
     }
     

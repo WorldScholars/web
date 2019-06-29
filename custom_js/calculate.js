@@ -568,7 +568,7 @@ function score(mathRaw, readingRaw, writingRaw) {
   finalScore.writingScaled = writingScore[writingRaw + ''] 
   finalScore.writingPercentile = writingScorePercent[finalScore.writingScaled + '']
  
-  finalScore.total = mathScaled + readingScaled + writingScaled
+  finalScore.total = finalScore.mathScaled + finalScore.readingScaled + finalScore.writingScaled
  
   return finalScore
   
