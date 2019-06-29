@@ -44,7 +44,7 @@
           var bgColor;
           if (ans.value == ans.correctAnswer ||
               (ans.correctAnswer.includes(",") && ans.correctAnswer.includes(ans.value)) || 
-              (ans.correctAnswer.includes("OR") && ans.correctAnswer.includes(ans.value)) || 
+              (ans.correctAnswer.includes("OR") && ans.correctAnswer.includes(ans.value)) 
              ) {
             bgColor = 'springgreen';
             correctBySection[sectionNum] = (correctBySection[sectionNum] || 0) + 1; 
