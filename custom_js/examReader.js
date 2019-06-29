@@ -87,13 +87,25 @@
 
         document.getElementById('totalScore').innerHTML += (finalScore.total)+ '';
         document.getElementById('math').innerHTML += 
-          "Math Score: " + (finalScore.mathScaled)+ " Percentile: " + (finalScore.mathPercentile) + "%";
+          "Math Score: " + (finalScore.mathScaled)+ " | Percentile: " + (finalScore.mathPercentile) + "%";
         document.getElementById('reading').innerHTML += 
-          "Reading Score: " + (finalScore.readingScaled)+ " Percentile: " + (finalScore.readingPercentile) + "%";
+          "Reading Score: " + (finalScore.readingScaled)+ " | Percentile: " + (finalScore.readingPercentile) + "%";
         document.getElementById('writing').innerHTML += 
-          "Writing score: " + (finalScore.writingScaled) + " Percentile: " + (finalScore.writingPercentile) + "%";
+          "Writing score: " + (finalScore.writingScaled) + " | Percentile: " + (finalScore.writingPercentile) + "%";
 
-        document.getElementById('summary').innerHTML += incorrectByCategory.toString();
+        var summarySorted = [];
+        for (var category in summary) {
+            summarySorted.push([category, summary[category]);
+        }
+
+        summarySorted.sort(function(a, b) {
+          return a[1] - b[1];
+        });
+        
+        for (var category in summarySorted) {
+          document.getElementById('summary').innerHTML += category[0] + ": " + category[1] + "<br>"
+        }
+
         console.log('Succsefully read exam data from database: ', results);
     }
     

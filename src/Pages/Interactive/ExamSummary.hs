@@ -30,5 +30,6 @@ examSummary = do
               th "Correct Answer"
               th "Question Type"
           tbody mempty
+      p ! A.id "summaryTitle" $ "You had trouble with the following types of questions:"
       p ! A.id "summary" $ ""
 
