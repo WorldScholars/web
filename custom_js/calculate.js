@@ -289,11 +289,11 @@ function score(mathRaw, readingRaw, writingRaw) {
   var finalScore = {}
   finalScore.mathScaled = mathScore[mathRaw + ''] 
   console.log(finalScore.mathScaled)
-  finalScore.mathPercentile = mathScorePercent[finalScore.mathScaled + '']
+  //finalScore.mathPercentile = mathScorePercent[finalScore.mathScaled + '']
   finalScore.readingScaled = readingScore[readingRaw + ''] 
-  finalScore.readingPercentile = readingScorePercent[finalScore.readingScaled + '']
+  //finalScore.readingPercentile = readingScorePercent[finalScore.readingScaled + '']
   finalScore.writingScaled = writingScore[writingRaw + ''] 
-  finalScore.writingPercentile = writingScorePercent[finalScore.writingScaled + '']
+  //finalScore.writingPercentile = writingScorePercent[finalScore.writingScaled + '']
  
   finalScore.total = finalScore.mathScaled + finalScore.readingScaled + finalScore.writingScaled
  
