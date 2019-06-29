@@ -94,14 +94,17 @@
           "Writing score: " + (finalScore.writingScaled) + " | Percentile: " + (finalScore.writingPercentile) + "%";
 
         var incorrectSorted = [];
+        console.log(incorrectByCategory)
         for (var category in incorrectByCategory) {
             incorrectSorted.push([category, incorrectByCategory[category]]);
         }
 
+        console.log(incorrectSorted)
         incorrectSorted.sort(function(a, b) {
           return a[1] - b[1];
         });
         
+        console.log(incorrectSorted)
         for (var category in incorrectSorted) {
           document.getElementById('summary').innerHTML += category[0] + ": " + category[1] + "<br>"
         }
