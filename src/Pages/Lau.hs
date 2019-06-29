@@ -19,8 +19,8 @@ import Templates.Blocks
 lau :: String -> Html
 lau buttonHTML = do
     section ! A.id "about-company" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
-      h1 ! class_ "margin-bottom" $ "Tutoring"
-      p $ "Hi Mr. Lau, sorry for the trouble, please click this link to complete payment."
+      h1 ! class_ "margin-bottom" $ "Payment correction"
+      p $ "Hi Mr. Lau, sorry for the technical trouble, please click this link to complete payment."
     section ! A.id "payment-options-check" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ do
       H.div ! class_ "col-sm-12 text-center" $ do
         h2 "Payment"
