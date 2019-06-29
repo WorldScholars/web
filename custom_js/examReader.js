@@ -106,7 +106,7 @@
         
         console.log(incorrectSorted)
         for (var category in incorrectSorted) {
-          document.getElementById('summary').innerHTML += category[0] + ": " + category[1] + "<br>"
+          document.getElementById('summary').innerHTML += incorrectSorted[category][0] + ": " + incorrectSorted[category][1] + "<br>"
         }
 
         console.log('Succsefully read exam data from database: ', results);
