@@ -93,18 +93,16 @@
         document.getElementById('writing').innerHTML += 
           "Writing score: " + (finalScore.writingScaled) + " | Percentile: " + (finalScore.writingPercentile) + "%";
 
-        summ = summary
-        console.log(summary)
-        var summarySorted = [];
-        for (var category in summary) {
-            summarySorted.push([category, summary[category]]);
+        var incorrectSorted = [];
+        for (var category in incorrectByCategory) {
+            incorrectSorted.push([category, incorrectByCategory[category]]);
         }
 
-        summarySorted.sort(function(a, b) {
+        incorrectSorted.sort(function(a, b) {
           return a[1] - b[1];
         });
         
-        for (var category in summarySorted) {
+        for (var category in incorrectSorted) {
           document.getElementById('summary').innerHTML += category[0] + ": " + category[1] + "<br>"
         }
 
