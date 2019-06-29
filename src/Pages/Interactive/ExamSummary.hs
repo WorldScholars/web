@@ -19,6 +19,9 @@ examSummary = do
       h1 ! A.id "testName" $ "Your results for Exam #"
       h2 ! A.id "submissionTime" $ "Submitted at: "
       h2 ! A.id "totalScore" $ "Total Score: "
+      h2 ! A.id "math" $ ""
+      h2 ! A.id "reading" $ ""
+      h2 ! A.id "writing" $ ""
       table ! A.class_ "answer-table" $ do
           thead $ tr $ do
               th "Section"
