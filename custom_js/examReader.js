@@ -93,6 +93,8 @@
         document.getElementById('writing').innerHTML += 
           "Writing score: " + (finalScore.writingScaled) + " | Percentile: " + (finalScore.writingPercentile) + "%";
 
+        summ = summary
+        console.log(summary)
         var summarySorted = [];
         for (var category in summary) {
             summarySorted.push([category, summary[category]]);
