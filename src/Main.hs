@@ -55,7 +55,7 @@ main = do
   writeSigninup
   makeInteractivePage "html/profile.html" [] profile --TODO move profile.js here
   makeInteractivePage "html/scantron.html" ["custom_js/clickRecorder.js"] scantron
-  makeInteractivePage "html/examsummary.html" ["custom_js/examReader.js"] examSummary
+  makeInteractivePage "html/examsummary.html" ["custom_js/calculate.js", "custom_js/examReader.js"] examSummary
   makeInteractivePage "html/teacherPortal.html" ["custom_js/teacherPortal.js"] teacherPortal
 
   makeInteractivePage "html/fitbit_auth.html" ["custom_js/fitbitAuthSaver.js"] fitbitAuthResponse 

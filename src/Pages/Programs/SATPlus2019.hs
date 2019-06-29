@@ -80,9 +80,10 @@ myTable xs = table ! A.class_ "price-table" $ forM_ xs (tr . mapM_ (td . toHtml)
 
 priceTable = 
    myTable ([["Registation (One Time)", "$45"]
-            ,["Tuition (per week)", "$401"]
+            ,["Tuition (per week)", "$167"]
             ,["Activity (per week)", "$151"]
-            ,["Venue & Tech (per week)", "$159"]] :: [[String]])
+            ,["Venue & Tech (per week)", "$159"]
+            ,["Total per 2 week session", "$999"]] :: [[String]])
 
 registration:: String -> Html
 registration buttonHTML = do

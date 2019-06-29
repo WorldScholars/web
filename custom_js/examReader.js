@@ -35,6 +35,7 @@
         document.getElementById('testName').innerHTML += examData.ExamNumber;
         document.getElementById('submissionTime').innerHTML += readISODateString(examData.submitTime);
         var incorrectByCategory = {};
+        var correctBySection = {};
         examData.Answers.forEach(function(ans){
           //TODO hardcoding parsing of section and question, this should just be in the json object
           sectionNum = ans.name[2];
@@ -42,8 +43,11 @@
           slash = "/";
           var bgColor;
           if (ans.value == ans.correctAnswer ||
-              (ans.correctAnswer.includes(",") && ans.correctAnswer.includes(ans.value))) {
+              (ans.correctAnswer.includes(",") && ans.correctAnswer.includes(ans.value)) || 
+              (ans.correctAnswer.includes("OR") && ans.correctAnswer.includes(ans.value)) 
+             ) {
             bgColor = 'springgreen';
+            correctBySection[sectionNum] = (correctBySection[sectionNum] || 0) + 1; 
           }
           else {
             bgColor = '#fb7a4a';
@@ -77,8 +81,34 @@
           $('tbody').append(newRow);
         });
 
-        console.log(incorrectByCategory);
-        document.getElementById('summary').innertHTML += incorrectByCategory.toString();
+        finalScore = score(
+                      correctBySection["3"] + correctBySection["4"] || 0,
+                      correctBySection["1"] || 0, correctBySection["2"] || 0)
+
+        document.getElementById('totalScore').innerHTML += (finalScore.total)+ '';
+        document.getElementById('math').innerHTML += 
+          "Math Score: " + (finalScore.mathScaled) // + " | Percentile: " + (finalScore.mathPercentile) + "%";
+        document.getElementById('reading').innerHTML += 
+          "Reading Score: " + (finalScore.readingScaled) //+ " | Percentile: " + (finalScore.readingPercentile) + "%";
+        document.getElementById('writing').innerHTML += 
+          "Writing score: " + (finalScore.writingScaled) //+ " | Percentile: " + (finalScore.writingPercentile) + "%";
+
+        var incorrectSorted = [];
+        console.log(incorrectByCategory)
+        for (var category in incorrectByCategory) {
+            incorrectSorted.push([category, incorrectByCategory[category]]);
+        }
+
+        console.log(incorrectSorted)
+        incorrectSorted.sort(function(a, b) {
+          return b[1] - a[1];
+        });
+        
+        console.log(incorrectSorted)
+        for (var category in incorrectSorted) {
+          document.getElementById('summary').innerHTML += incorrectSorted[category][0] + ": " + incorrectSorted[category][1] + "<br>"
+        }
+
         console.log('Succsefully read exam data from database: ', results);
     }
     
