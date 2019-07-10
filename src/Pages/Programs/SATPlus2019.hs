@@ -58,13 +58,16 @@ sat2019 = Program{
    p "What is a Passion Project? In America and around the globe, educators are moving away from test-centric summative evaluations for learning. The educational landscape is moving towards a formative assessment in which students are expressing their learning in a more comprehensive way through projects. Project-based learning is the inspiration behind Passion Projects. We value the multi-dimensional ways of expressing learning through topics that students care about and we want to make sure that we provide an opportunity for students to make that happen. The Passion Projects will allow students to collaborate, innovate, and design a project (whether it be an idea or a product) of their choosing and we will facilitate to see through the project's completion.  Guest lecturers will come on Tuesdays and Thursdays to expose students to potential academic and professional career paths as well as inspire Passion Project work."
    p "By participating in the World Scholars program, students will develop the skills to present themselves, not just as strong students, but as future leaders. The final project gives students the first push to take charge of their own education and find passion in their work. Not all students will continue to work on their Passion Project after the program, but all students will use those skills to find their next Passion Project."
    p "Enrollment for this program is capped at 15 students per session."
-   p "The prices for this summer are listed below:"
+   p "The prices for this summer are listed below. Please note these prices are for domestic students. Please contact us directly for more information on international student details."
    priceTable
    h2 "What is changing from SAT+2018?"
    p "We are making a number of changes to SAT+2019 from SAT+2018 to improve the program. We have expanded the hours of the program to make it easier for the parents' schedule with an earlier dropoff time and later pickup time. We have added an extra hour at the end of the day's program to allow students to explore more of the academic subject they care about the most or with which they need the most help. Last but not least, we have also reduced the maximum classroom size significantly to give an even more personalized expereince."
    p $ do
-     "For more information please contact: "
+     "For more information for domestic applicants, please contact: "
      a ! href "mailto:fiona@worldscholars.global" $ "fiona@worldscholars.global"
+   p $ do
+     "For more information for international applicants, please contact: "
+     a ! href "mailto:jacob@worldscholars.global" $ "jacob@worldscholars.global"
 }
 
 

@@ -48,9 +48,6 @@ main = do
   paypalButtonTutoring <- readFile "src/paypalButton_tutoring.html"
   makePage "html/tutoring.html" $ tutoringRegistration paypalButtonTutoring
 
-  lauButton <- readFile "src/lauButton.html"
-  makePage "html/lau.html" $ lau lauButton
-
 
   writeSigninup
   makeInteractivePage "html/profile.html" [] profile --TODO move profile.js here
