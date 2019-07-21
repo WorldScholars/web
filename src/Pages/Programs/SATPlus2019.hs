@@ -39,7 +39,7 @@ sat2019 = Program{
      "Please sign the "
      a ! href "docs/SAT2019_Forms.pdf" $ "release, consent and classroom behavior forms" 
      "for your student for this program. We will also have copies available on the first day of the program if you are not able to print these ahead of time."
-   p "This year our program will be located on the campus of Yale University Divinity School (409 Prospect St). World Scholars teachers will be present to direct you to the appropriate location for parking, pickup, and dropoff."
+   p "This year our program will be located on at 17 Hillhouse St. World Scholars teachers will be present to direct you to the appropriate location for parking, pickup, and dropoff. The location is subject to change later in the program, so please check back for updates!"
    H.div ! A.style "width:60%; margin:0 auto;" $ preEscapedToHtml googleMapsEmbed
    p "The program will run from 8:30 AM to 5:30 PM, Monday through Friday. Below is an outline of a student’s typical day. The schedule will change slightly depending on the particular goals of the day (for example when full SAT practice exams are administered)."
    myTable ([["8:25 AM", "Students dropped off"]
