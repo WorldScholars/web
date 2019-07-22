@@ -72,7 +72,7 @@ sat2019 = Program{
 
 
 googleMapsEmbed :: String
-googleMapsEmbed = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3427827821965!2d-72.9242065845762!3d41.323158979270126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d9c07a82c48f%3A0x47d743a6be189b52!2s409+Prospect+St%2C+New+Haven%2C+CT+06511!5e0!3m2!1sen!2sus!4v1533434561880\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>"
+googleMapsEmbed = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.82182743694!2d-72.92565114901667!3d41.31273950848082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d9b630dfb293%3A0xa99ebacb3026e777!2s17+Hillhouse+Ave%2C+New+Haven%2C+CT+06511!5e0!3m2!1sen!2sus!4v1563757557898!5m2!1sen!2sus\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>"
 
 youtubeEmbed :: String 
 youtubeEmbed = "<iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/p2UQICvLgNM?rel=0&amp;showinfo=0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"
