@@ -81,11 +81,9 @@
           $('tbody').append(newRow);
         });
 
-        /*finalScore = score(
-                      correctBySection["3"] + correctBySection["4"] || 0,
-                      correctBySection["1"] || 0, correctBySection["2"] || 0)*/
         finalScore = score(
-                      58, 52, 44)
+                      correctBySection["3"] + correctBySection["4"] || 0,
+                      correctBySection["1"] || 0, correctBySection["2"] || 0)
 
 
         if (examData.ExamNumber == 3) {
