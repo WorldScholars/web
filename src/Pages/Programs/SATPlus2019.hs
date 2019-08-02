@@ -39,7 +39,7 @@ sat2019 = Program{
      "Please sign the "
      a ! href "docs/SAT2019_Forms.pdf" $ "release, consent and classroom behavior forms" 
      "for your student for this program. We will also have copies available on the first day of the program if you are not able to print these ahead of time."
-   p "This year our program will be located on the campus of Yale University Divinity School (409 Prospect St). World Scholars teachers will be present to direct you to the appropriate location for parking, pickup, and dropoff."
+   p "This year our program will be located on at 17 Hillhouse St. World Scholars teachers will be present to direct you to the appropriate location for parking, pickup, and dropoff. The location is subject to change later in the program, so please check back for updates!"
    H.div ! A.style "width:60%; margin:0 auto;" $ preEscapedToHtml googleMapsEmbed
    p "The program will run from 8:30 AM to 5:30 PM, Monday through Friday. Below is an outline of a student’s typical day. The schedule will change slightly depending on the particular goals of the day (for example when full SAT practice exams are administered)."
    myTable ([["8:25 AM", "Students dropped off"]
@@ -72,7 +72,7 @@ sat2019 = Program{
 
 
 googleMapsEmbed :: String
-googleMapsEmbed = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3427827821965!2d-72.9242065845762!3d41.323158979270126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d9c07a82c48f%3A0x47d743a6be189b52!2s409+Prospect+St%2C+New+Haven%2C+CT+06511!5e0!3m2!1sen!2sus!4v1533434561880\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>"
+googleMapsEmbed = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.82182743694!2d-72.92565114901667!3d41.31273950848082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d9b630dfb293%3A0xa99ebacb3026e777!2s17+Hillhouse+Ave%2C+New+Haven%2C+CT+06511!5e0!3m2!1sen!2sus!4v1563757557898!5m2!1sen!2sus\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>"
 
 youtubeEmbed :: String 
 youtubeEmbed = "<iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/p2UQICvLgNM?rel=0&amp;showinfo=0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"
