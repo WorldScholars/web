@@ -90,6 +90,7 @@
            finalScore.mathScaled = Math.min(800, finalScore.mathScaled + 40)
            finalScore.writingScaled = Math.min(400, finalScore.writingScaled + 20)
            finalScore.readingScaled = Math.min(400, finalScore.readingScaled + 20)
+           finalScore.total = finalScore.mathScaled + finalScore.readingScaled + finalScore.writingScaled
         }
 
         document.getElementById('totalScore').innerHTML += (finalScore.total)+ '';
