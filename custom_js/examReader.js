@@ -81,9 +81,12 @@
           $('tbody').append(newRow);
         });
 
-        finalScore = score(
+        /*finalScore = score(
                       correctBySection["3"] + correctBySection["4"] || 0,
-                      correctBySection["1"] || 0, correctBySection["2"] || 0)
+                      correctBySection["1"] || 0, correctBySection["2"] || 0)*/
+        finalScore = score(
+                      58, 52, 44)
+
 
         if (examData.ExamNumber == 3) {
            finalScore.mathScaled = Math.min(800, finalScore.mathScaled + 40)
