@@ -86,7 +86,7 @@
                       correctBySection["1"] || 0, correctBySection["2"] || 0)
 
 
-        if (examData.ExamNumber == 3) {
+        if (examData.ExamNumber == 3 && finalScore.total < 1450) {
            finalScore.mathScaled = Math.min(800, finalScore.mathScaled + 40)
            finalScore.writingScaled = Math.min(400, finalScore.writingScaled + 20)
            finalScore.readingScaled = Math.min(400, finalScore.readingScaled + 20)
