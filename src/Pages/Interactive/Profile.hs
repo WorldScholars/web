@@ -18,10 +18,14 @@ profile = do
     section ! A.id "Profile" ! class_ "wow fadeInUp" ! dataAttribute "wow-duration" "400ms" $ H.div ! class_ "container" $ H.div ! class_ "row" $ H.div ! class_ "col-sm-12 text-center" $ do
       h1 ! class_ "margin-bottom" $ "Your account"
       p ! A.id "username" $ ""
-      p $ do
-        "In oder to give us permission to view your FitBit date, please grant us access" 
+      p ! class_ "alert alert-success" ! role "alert" $ do
+        "In order to give us permission to view your FitBit date, please grant us access" 
         a ! href "https://www.fitbit.com/oauth2/authorize?client_id=22CYBG&response_type=token&scope=activity%20nutrition%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=31536000" $ "grant us permissions to you FitBit data."
         "This will allow us to make cool graphs for you. Just follow the link, select \"Allow All\" (you may need to de-select and select again) and click \"Allow\"."
+      H.div ! class_ "alert alert-success" ! role "alert" $ do
+        p "Please help us make World Scholars better and fill out this survey form:" 
+        a ! href "https://tccolumbia.qualtrics.com/jfe/form/SV_eVsuKpCgWCH2JMx" $ "https://tccolumbia.qualtrics.com/jfe/form/SV_eVsuKpCgWCH2JMx"
+
 
       mapM_ testLink [3,4,5,6,9,318,419]
 
